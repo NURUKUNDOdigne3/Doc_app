@@ -1,19 +1,7 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Href, Redirect } from "expo-router";
+
+const loginRoute = "/login" as const;
 
 export default function Index() {
-  return (
-    <SafeAreaView style={{ flex: 1,}}>
-      {/* <Image source="../images/fav.png" style={styles.logo} /> */}
-      <Image source={require("../assets/images/fav.png")} style={styles.logo} />
-    
-    </SafeAreaView>
-  );
+  return <Redirect href={loginRoute as Href} />;
 }
-
-const styles = StyleSheet.create({
-  logo: {
-    width: 118,
-    height: 118,
-  }
-})
