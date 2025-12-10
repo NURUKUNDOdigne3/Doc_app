@@ -1,4 +1,4 @@
-import { Href, Link, useRouter } from "expo-router";
+import { Href, useRouter } from "expo-router";
 import { useState } from "react";
 import {
   Image,
@@ -14,12 +14,11 @@ import {
 import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 import { colors, spacing } from "./constants/theme";
 
-export default function LoginScreen() {
+export default function OtpScreen() {
   const router = useRouter();
-  const [email, setEmail] = useState("");
+  const [otp, setOtp] = useState("");
 
-  const signupRoute = "/signup" as const;
-  const passwordRoute = "/password" as const;
+  const homeRoute = "/(tabs)/home" as const;
 
   return (
     <View style={styles.safeArea}>
@@ -41,53 +40,47 @@ export default function LoginScreen() {
           </View>
 
           <View style={styles.loginText}>
-            <Text style={styles.title}>Welcome Back</Text>
+            <Text style={styles.title}>Welcome Digne!</Text>
             <Text style={styles.subtitle}>
-              Please type your email to log in
+              Enter a 6-digit access code sent to your email
             </Text>
           </View>
-          <View style={styles.emailContainer}>
+          <View style={styles.otpContainer}>
             <TextInput
-              placeholder="Type your e-mail"
+              placeholder="000000"
               placeholderTextColor="#5c5f6e"
-              textContentType="emailAddress"
-              onChangeText={setEmail}
-              value={email}
-              style={styles.emailInput}
+              onChangeText={setOtp}
+              keyboardType="number-pad"
+              secureTextEntry={true}
+              value={otp}
+              style={styles.otpInput}
             />
             <TouchableOpacity
-              onPress={() => router.replace(passwordRoute as Href)}
               activeOpacity={0.7}
+              onPress={() => router.replace(homeRoute as Href)}
               style={styles.nextButton}
             >
               <Text style={{ color: "white", fontSize: 16, fontWeight: 500 }}>
-                Next <FontAwesome6 name="chevron-right" />
+                Verify <FontAwesome6 name="chevron-right" />
               </Text>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.socialContainer}>
-            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
-              <FontAwesome6 name="google" size={20} color="#000" />
-              <Text style={styles.socialLabel}>Continue with Google</Text>
-              <View />
-            </TouchableOpacity>
-            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
-              <FontAwesome6 name="apple" size={22} color="#000" />
-              <Text style={styles.socialLabel}>Continue with Apple</Text>
-              <View />
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Don't have an account?{" "}
-              <Link
-                style={{ color: colors.primary, fontWeight: 700 }}
-                href={signupRoute}
-              >
-                Register account.
-              </Link>
+              Didn't get your OTP code?
+              <TouchableOpacity activeOpacity={0.6}>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    top: 4,
+                    color: colors.primary,
+                    fontWeight: 700,
+                  }}
+                >
+                  {"  "}Send again
+                </Text>
+              </TouchableOpacity>
             </Text>
           </View>
         </View>
@@ -146,16 +139,16 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 15,
     color: colors.textMuted,
     marginBottom: spacing.xl,
   },
-  emailContainer: {
+  otpContainer: {
     paddingHorizontal: 17,
     flexDirection: "row",
     gap: 7,
   },
-  emailInput: {
+  otpInput: {
     height: 48,
     borderRadius: 12,
     borderWidth: StyleSheet.hairlineWidth,
@@ -169,7 +162,7 @@ const styles = StyleSheet.create({
   nextButton: {
     height: 48,
     borderRadius: 12,
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -210,7 +203,7 @@ const styles = StyleSheet.create({
   footer: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 19,
+    marginTop: 29,
   },
   footerText: {
     fontSize: 16,

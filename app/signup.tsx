@@ -3,48 +3,52 @@ import { useState } from "react";
 import {
   KeyboardAvoidingView,
   Platform,
-  SafeAreaView,
-  ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
 
+import { AntDesign } from "@expo/vector-icons";
 import { PrimaryButton } from "./components/PrimaryButton";
 import { TextField } from "./components/TextField";
-import { colors, spacing, typography } from "./constants/theme";
+import { colors, spacing } from "./constants/theme";
 
 export default function SignupScreen() {
   const router = useRouter();
-  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
+  const [fullName, setFullName] = useState("");
   const [password, setPassword] = useState("");
 
-  const loginRoute = "/login" as const;
   const otpRoute = "/otp" as const;
+  const signInRoute = "/login" as const;
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <View style={styles.safeArea}>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : undefined}
-        style={styles.flex}
+        style={styles.container}
       >
-        <ScrollView
-          contentContainerStyle={styles.container}
-          keyboardShouldPersistTaps="handled"
-          showsVerticalScrollIndicator={false}
-        >
-          <View>
-            <Text style={styles.title}>Create account</Text>
+        <View>
+          <View style={styles.heroWrapper}>
+            <View style={styles.brandRow}>
+              <AntDesign name="cloud" size={28} color={colors.primary} />
+              <Text style={styles.brandName}>Bika</Text>
+            </View>
+          </View>
+
+          <View style={styles.headerText}>
+            <Text style={styles.title}>Create new account</Text>
             <Text style={styles.subtitle}>
-              Store, organize, and share documents securely with 15 GB of free
-              storage.
+              Please fill registration to create account
             </Text>
+          </View>
+
+          <View style={styles.emailContainer}>
             <TextField
               label="Full name"
               value={fullName}
               onChangeText={setFullName}
-              placeholder="Jane Doe"
+              placeholder="Type your full name"
               autoCapitalize="words"
             />
             <TextField
@@ -54,7 +58,7 @@ export default function SignupScreen() {
               autoComplete="email"
               value={email}
               onChangeText={setEmail}
-              placeholder="you@example.com"
+              placeholder="Type your email"
             />
             <TextField
               label="Password"
@@ -63,65 +67,157 @@ export default function SignupScreen() {
               onChangeText={setPassword}
               placeholder="Create a password"
             />
-          </View>
-          <View>
-            <PrimaryButton
-              label="Sign up"
-              onPress={() => router.replace(otpRoute as Href)}
+            <TextField
+              label="Confirm Password"
+              secureTextEntry
+              value={password}
+              onChangeText={setPassword}
+              placeholder="Repeat your password"
             />
-            <View style={styles.footerRow}>
-              <Text style={styles.footerText}>Already have an account?</Text>
-              <Link href={loginRoute as Href} style={styles.linkText}>
-                Sign in
-              </Link>
+            <View>
+              <PrimaryButton
+                label="Sign up"
+                onPress={() => router.replace(otpRoute as Href)}
+              />
+              <View style={styles.footer}>
+                <Text style={styles.footerText}>Already have an account?</Text>
+                <Link
+                  href={signInRoute as Href}
+                  style={{ color: colors.primary, fontWeight: 700 }}
+                >
+                  Sign in
+                </Link>
+              </View>
             </View>
           </View>
-        </ScrollView>
+        </View>
       </KeyboardAvoidingView>
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  flex: {
-    flex: 1,
-  },
   safeArea: {
     flex: 1,
-    backgroundColor: colors.surface,
+    backgroundColor: "white",
   },
   container: {
-    flexGrow: 1,
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.xl,
+    flex: 1,
     paddingBottom: spacing.lg,
     justifyContent: "space-between",
   },
-  title: {
-    fontSize: 32,
+  heroWrapper: {
+    alignItems: "center",
+    backgroundColor: "#edeaff",
+    borderBottomLeftRadius: 50,
+    borderBottomRightRadius: 50,
+    paddingTop: 70,
+    paddingBottom: 20,
+  },
+  brandRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  brandMark: {
+    width: 35,
+    height: 35,
+  },
+  brandName: {
+    fontSize: 38,
     fontWeight: "700",
+    color: colors.primary,
+    marginLeft: spacing.sm,
+  },
+  heroImage: {
+    width: "100%",
+    height: 300,
+    // marginBottom: spacing.lg,
+  },
+  headerText: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 24,
+  },
+
+  title: {
+    fontSize: 24,
+    fontWeight: "500",
     color: colors.text,
-    marginBottom: spacing.sm,
+    marginBottom: 5,
   },
   subtitle: {
-    fontSize: typography.body,
+    fontSize: 14,
     color: colors.textMuted,
     marginBottom: spacing.xl,
   },
-  footerRow: {
-    marginTop: spacing.lg,
+  emailContainer: {
+    marginTop: 5,
+    paddingHorizontal: 17,
+    gap: 7,
+  },
+  emailInput: {
+    height: 48,
+    borderRadius: 12,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.border,
+    backgroundColor: "#f9f9fa",
+    paddingHorizontal: spacing.md,
+    fontSize: 14,
+    color: colors.text,
+    width: "75%",
+  },
+  nextButton: {
+    height: 48,
+    borderRadius: 12,
+    paddingHorizontal: 20,
     flexDirection: "row",
-    justifyContent: "center",
     alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#651fff",
+  },
+  socialContainer: {
+    marginTop: 19,
+    paddingHorizontal: 17,
+    gap: spacing.sm,
+  },
+  socialButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: spacing.md,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    borderRadius: 14,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: colors.border,
+    backgroundColor: colors.surface,
+    shadowColor: "#000000",
+    shadowOpacity: 0.03,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    elevation: 1,
+  },
+  socialIcon: {
+    width: 20,
+    height: 20,
+    resizeMode: "contain",
+  },
+  socialLabel: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: colors.text,
+  },
+  footer: {
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 19,
+    flexDirection: "row",
+    gap: 5,
   },
   footerText: {
-    fontSize: typography.body,
+    fontSize: 16,
     color: colors.textMuted,
-    marginRight: spacing.xs,
-  },
-  linkText: {
-    color: colors.primary,
-    fontWeight: "600",
-    fontSize: typography.body,
+    fontWeight: 500,
   },
 });

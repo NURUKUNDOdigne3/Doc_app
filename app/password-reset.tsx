@@ -14,12 +14,12 @@ import {
 import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 import { colors, spacing } from "./constants/theme";
 
-export default function LoginScreen() {
+export default function PasswordResetScreen() {
   const router = useRouter();
   const [email, setEmail] = useState("");
 
-  const signupRoute = "/signup" as const;
-  const passwordRoute = "/password" as const;
+  const loginRoute = "/login" as const;
+  const otpRoute = "/otp" as const;
 
   return (
     <View style={styles.safeArea}>
@@ -41,10 +41,8 @@ export default function LoginScreen() {
           </View>
 
           <View style={styles.loginText}>
-            <Text style={styles.title}>Welcome Back</Text>
-            <Text style={styles.subtitle}>
-              Please type your email to log in
-            </Text>
+            <Text style={styles.title}>Forgotten Password?</Text>
+            <Text style={styles.subtitle}>Get reset link with your email</Text>
           </View>
           <View style={styles.emailContainer}>
             <TextInput
@@ -56,7 +54,7 @@ export default function LoginScreen() {
               style={styles.emailInput}
             />
             <TouchableOpacity
-              onPress={() => router.replace(passwordRoute as Href)}
+              onPress={() => router.replace(otpRoute as Href)}
               activeOpacity={0.7}
               style={styles.nextButton}
             >
@@ -66,27 +64,14 @@ export default function LoginScreen() {
             </TouchableOpacity>
           </View>
 
-          <View style={styles.socialContainer}>
-            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
-              <FontAwesome6 name="google" size={20} color="#000" />
-              <Text style={styles.socialLabel}>Continue with Google</Text>
-              <View />
-            </TouchableOpacity>
-            <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
-              <FontAwesome6 name="apple" size={22} color="#000" />
-              <Text style={styles.socialLabel}>Continue with Apple</Text>
-              <View />
-            </TouchableOpacity>
-          </View>
-
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Don't have an account?{" "}
+              Remember your password?{" "}
               <Link
                 style={{ color: colors.primary, fontWeight: 700 }}
-                href={signupRoute}
+                href={loginRoute}
               >
-                Register account.
+                Login
               </Link>
             </Text>
           </View>
@@ -210,7 +195,7 @@ const styles = StyleSheet.create({
   footer: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 19,
+    marginTop: 29,
   },
   footerText: {
     fontSize: 16,

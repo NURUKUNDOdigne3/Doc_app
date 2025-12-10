@@ -5,7 +5,7 @@ export const colors = {
   success: "#19ac65",
   background: "#f8f9ff",
   surface: "#ffffff",
-  border: "#e2e4ea",
+  border: "#d4d6dbff",
 };
 
 export const spacing = {
