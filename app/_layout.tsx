@@ -32,7 +32,7 @@ export default function RootLayout() {
         <Stack.Screen
           name="plan-details"
           options={({ navigation }) => ({
-            title: "Choose your plan",
+            title: "Pricing",
             headerTitleStyle: {
               color: colors.text,
               fontWeight: "700",
