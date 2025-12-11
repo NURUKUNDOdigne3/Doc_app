@@ -89,6 +89,7 @@ export default function RootLayout() {
             ),
           })}
         />
+        <Stack.Screen name="(tabs)/scan" options={{ headerShown: false }} />
         <Stack.Screen
           name="document-details"
           options={{ title: "Document Details" }}

@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#651fff",
+    backgroundColor: "#30a4f4",
   },
   socialContainer: {
     marginTop: 19,

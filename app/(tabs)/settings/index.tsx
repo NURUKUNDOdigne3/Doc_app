@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   quickCardInvite: {
-    backgroundColor: "#f9f6ff",
+    backgroundColor: "#e2eeffff",
   },
   quickTitle: {
     marginTop: spacing.md,
@@ -226,7 +226,7 @@ const styles = StyleSheet.create({
   quickPrimaryCta: {
     marginTop: spacing.md,
     borderRadius: 12,
-    backgroundColor: "#edeaff",
+    backgroundColor: "#c2d9faff",
     paddingVertical: spacing.sm,
     alignItems: "center",
   },
