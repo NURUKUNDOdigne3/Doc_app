@@ -1,5 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { Checkbox } from "expo-checkbox";
+import { Href, useRouter } from "expo-router";
 import {
   FlatList,
   ImageSourcePropType,
@@ -84,11 +85,19 @@ export default function F() {
   const [isChecked, setIsChecked] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "grid">("list");
   const [previewItem, setPreviewItem] = useState<FilePreviewItem | null>(null);
+  const router = useRouter();
 
   const isGrid = viewMode === "grid";
 
   const toggleViewMode = () => {
     setViewMode((prev) => (prev === "list" ? "grid" : "list"));
+  };
+
+  const openFolder = (id: string) => {
+    if (!id) {
+      return;
+    }
+    router.push(`/folder/${id}` as Href);
   };
 
   const handlePreview = (item: FileEntry) => {
@@ -212,6 +221,11 @@ export default function F() {
         visible={!!previewItem}
         item={previewItem}
         onClose={closePreview}
+        onOpenFolder={(item) => {
+          if (item.type === "folder") {
+            openFolder(item.id);
+          }
+        }}
       />
     </View>
   );

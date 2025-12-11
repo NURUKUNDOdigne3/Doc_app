@@ -48,9 +48,9 @@ const FOLDER_DIRECTORY: Record<
     filesCount: 24,
     path: ["Workspace", "Shared", "Documents"],
     sharedWith: [
-      require("../assets/images/pictures/pic1.jpg"),
-      require("../assets/images/pictures/pic2.jpg"),
-      require("../assets/images/pictures/pic3.jpg"),
+      require("../../assets/images/pictures/pic1.jpg"),
+      require("../../assets/images/pictures/pic2.jpg"),
+      require("../../assets/images/pictures/pic3.jpg"),
     ],
     pinned: [
       { id: "5", name: "Construct contract.docx", type: "file" },
@@ -62,7 +62,7 @@ const FOLDER_DIRECTORY: Record<
         name: "Construct contract.docx",
         detail: "1.8 MB · Edited yesterday",
         type: "file",
-        thumbnail: require("../assets/images/pictures/pic1.jpg"),
+        thumbnail: require("../../assets/images/pictures/pic1.jpg"),
       },
       {
         id: "9",
@@ -75,7 +75,7 @@ const FOLDER_DIRECTORY: Record<
         name: "HR Policies.pdf",
         detail: "3.4 MB · Updated 4 days ago",
         type: "file",
-        thumbnail: require("../assets/images/pictures/pic2.jpg"),
+        thumbnail: require("../../assets/images/pictures/pic2.jpg"),
       },
       {
         id: "11",
@@ -115,7 +115,7 @@ const FOLDER_DIRECTORY: Record<
         name: "Marketing Header.fig",
         detail: "26 MB · Updated today",
         type: "file",
-        thumbnail: require("../assets/images/pictures/pic3.jpg"),
+        thumbnail: require("../../assets/images/pictures/pic3.jpg"),
       },
       {
         id: "14",

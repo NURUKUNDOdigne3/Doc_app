@@ -23,6 +23,7 @@ export default function RootLayout() {
         <Stack.Screen name="password-reset" options={{ headerShown: false }} />
         <Stack.Screen name="signup" options={{ headerShown: false }} />
         <Stack.Screen name="otp" options={{ headerShown: false }} />
+        <Stack.Screen name="folder/[id]" options={{ headerShown: false }} />
         <Stack.Screen
           name="forget-password"
           options={{ title: "Reset Password" }}
