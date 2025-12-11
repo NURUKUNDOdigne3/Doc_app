@@ -55,11 +55,11 @@ export function FilePreviewModal({
     }
 
     const iconName = item.type === "folder" ? "folder" : "insert-drive-file";
-    const backgroundColor = item.type === "folder" ? "#edeaff" : "#f5f6fa";
+    const backgroundColor = item.type === "folder" ? "transparent" : "#f5f6fa";
 
     return (
       <View style={[styles.visualFallback, { backgroundColor }]}>
-        <MaterialIcons name={iconName} size={64} color={colors.primary} />
+        <MaterialIcons name={iconName} size={184} color={colors.primary} />
       </View>
     );
   };
