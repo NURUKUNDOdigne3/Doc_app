@@ -63,6 +63,33 @@ export default function RootLayout() {
           })}
         />
         <Stack.Screen
+          name="settings/[menu]"
+          options={({ navigation }) => ({
+            headerShadowVisible: false,
+            headerTintColor: colors.text,
+            headerTitleAlign: "left",
+
+            headerLeft: ({ tintColor }) => (
+              <Pressable
+                onPress={() => navigation.goBack()}
+                style={({ pressed }) => ({
+                  paddingHorizontal: 12,
+                  paddingVertical: 6,
+                  opacity: pressed ? 0.5 : 1,
+                  flexDirection: "row",
+                  alignItems: "center",
+                })}
+              >
+                <MaterialIcons
+                  name="arrow-back-ios"
+                  size={22}
+                  color={tintColor ?? colors.text}
+                />
+              </Pressable>
+            ),
+          })}
+        />
+        <Stack.Screen
           name="document-details"
           options={{ title: "Document Details" }}
         />

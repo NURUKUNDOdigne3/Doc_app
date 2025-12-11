@@ -11,6 +11,10 @@ import {
 
 import { Header } from "@/app/components/Header";
 import { AvatarStack } from "../../components/AvatarStack";
+import {
+  SETTINGS_MENU_CONFIG,
+  SettingsMenuKey,
+} from "../../constants/settingsMenu";
 import { colors, spacing, typography } from "../../constants/theme";
 
 export default function SettingsScreen() {
@@ -27,16 +31,22 @@ export default function SettingsScreen() {
 
   const devices = ["smartphone", "laptop", "tablet"];
 
-  const menuItems = [
-    { id: "settings", label: "Settings", icon: "settings" },
-    { id: "storage", label: "Storage", icon: "inventory" },
-    { id: "billing", label: "Billing", icon: "receipt-long" },
-    { id: "notification", label: "Notification", icon: "notifications-none" },
-    { id: "refer", label: "Refer a friend", icon: "share" },
-    { id: "application", label: "Application", icon: "apps" },
-    { id: "privacy", label: "Privacy", icon: "privacy-tip" },
-    { id: "security", label: "Security", icon: "security" },
+  const menuOrder: SettingsMenuKey[] = [
+    "settings",
+    "storage",
+    "billing",
+    "notification",
+    "refer",
+    "application",
+    "privacy",
+    "security",
   ];
+
+  const menuItems = menuOrder.map((key) => ({
+    id: key,
+    label: SETTINGS_MENU_CONFIG[key].title,
+    icon: SETTINGS_MENU_CONFIG[key].icon,
+  }));
 
   return (
     <View style={styles.screen}>
@@ -134,6 +144,12 @@ export default function SettingsScreen() {
                 key={item.id}
                 style={styles.menuTile}
                 activeOpacity={0.85}
+                onPress={() =>
+                  router.push({
+                    pathname: "/settings/[menu]",
+                    params: { menu: item.id },
+                  })
+                }
               >
                 <View style={styles.menuIconWrapper}>
                   <MaterialIcons
