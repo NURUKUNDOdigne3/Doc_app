@@ -1,4 +1,5 @@
 import { MaterialIcons } from "@expo/vector-icons";
+import { Link, useRouter } from "expo-router";
 import {
   Image,
   ScrollView,
@@ -13,6 +14,7 @@ import { AvatarStack } from "../../components/AvatarStack";
 import { colors, spacing, typography } from "../../constants/theme";
 
 export default function SettingsScreen() {
+  const router = useRouter();
   const usedGb = 4.5;
   const totalGb = 15;
   const usageRatio = usedGb / totalGb;
@@ -29,11 +31,9 @@ export default function SettingsScreen() {
     { id: "settings", label: "Settings", icon: "settings" },
     { id: "storage", label: "Storage", icon: "inventory" },
     { id: "billing", label: "Billing", icon: "receipt-long" },
-    // { id: "branding", label: "Branding", icon: "brush" },
     { id: "notification", label: "Notification", icon: "notifications-none" },
     { id: "refer", label: "Refer a friend", icon: "share" },
     { id: "application", label: "Application", icon: "apps" },
-    // { id: "developer", label: "Developer", icon: "code" },
     { id: "privacy", label: "Privacy", icon: "privacy-tip" },
     { id: "security", label: "Security", icon: "security" },
   ];
@@ -81,7 +81,11 @@ export default function SettingsScreen() {
             />
           </View>
 
-          <TouchableOpacity style={styles.upgradeButton} activeOpacity={0.9}>
+          <TouchableOpacity
+            style={styles.upgradeButton}
+            activeOpacity={0.9}
+            onPress={() => router.push("/plan-details")}
+          >
             <Text style={styles.upgradeLabel}>Upgrade</Text>
           </TouchableOpacity>
         </View>
@@ -145,7 +149,9 @@ export default function SettingsScreen() {
         </View>
 
         <TouchableOpacity style={styles.logoutButton} activeOpacity={0.8}>
-          <Text style={styles.logoutLabel}>Logout</Text>
+          <Link href="/login" style={styles.logoutLabel}>
+            Logout
+          </Link>
         </TouchableOpacity>
       </ScrollView>
     </View>
@@ -164,7 +170,7 @@ const styles = StyleSheet.create({
   accountCard: {
     backgroundColor: colors.surface,
     borderRadius: 24,
-    padding: spacing.lg,
+    // padding: spacing.lg,
     shadowColor: "#000",
     shadowOpacity: 0.04,
     shadowRadius: 10,

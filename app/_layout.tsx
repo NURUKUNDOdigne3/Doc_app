@@ -1,6 +1,7 @@
 import { Stack } from "expo-router";
 
-import { StatusBar } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Pressable, StatusBar } from "react-native";
 import { colors } from "./constants/theme";
 
 export default function RootLayout() {
@@ -30,7 +31,36 @@ export default function RootLayout() {
         />
         <Stack.Screen
           name="plan-details"
-          options={{ title: "Plan & Billing" }}
+          options={({ navigation }) => ({
+            title: "Choose your plan",
+            headerTitleStyle: {
+              color: colors.text,
+              fontWeight: "700",
+              fontSize: 20,
+            },
+            headerTintColor: colors.text,
+            headerShadowVisible: false,
+            headerTitleAlign: "left",
+            headerBackVisible: false,
+            headerLeft: ({ tintColor }) => (
+              <Pressable
+                onPress={() => navigation.goBack()}
+                style={({ pressed }) => ({
+                  paddingHorizontal: 12,
+                  paddingVertical: 6,
+                  opacity: pressed ? 0.5 : 1,
+                  flexDirection: "row",
+                  alignItems: "center",
+                })}
+              >
+                <MaterialIcons
+                  name="arrow-back-ios"
+                  size={22}
+                  color={tintColor ?? colors.text}
+                />
+              </Pressable>
+            ),
+          })}
         />
         <Stack.Screen
           name="document-details"
