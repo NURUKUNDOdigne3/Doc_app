@@ -5,6 +5,7 @@ import {
   ImageSourcePropType,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from "react-native";
 
@@ -15,6 +16,7 @@ type RecentItemCardProps = {
   title: string;
   subtitle: string;
   actionIcon?: ReactNode;
+  onPress?: () => void;
 };
 
 export function RecentItemCard({
@@ -22,9 +24,14 @@ export function RecentItemCard({
   title,
   subtitle,
   actionIcon,
+  onPress,
 }: RecentItemCardProps) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      activeOpacity={0.85}
+      onPress={onPress}
+    >
       <Image source={thumbnail} style={styles.thumbnail} />
       <View style={styles.textWrapper}>
         <Text style={styles.title}>{title}</Text>
@@ -35,7 +42,7 @@ export function RecentItemCard({
           <MaterialIcons name="more-vert" size={20} color={colors.textMuted} />
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

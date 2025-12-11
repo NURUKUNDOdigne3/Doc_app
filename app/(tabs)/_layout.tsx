@@ -7,7 +7,7 @@ const tabScreens = {
   home: { title: "Home", icon: "home" },
   folders: { title: "My Files", icon: "folder-open" },
   shared: { title: "Shared", icon: "group" },
-  settings: { title: "Settings", icon: "settings" },
+  settings: { title: "Account", icon: "account-box" },
 } as const;
 
 type TabName = keyof typeof tabScreens;

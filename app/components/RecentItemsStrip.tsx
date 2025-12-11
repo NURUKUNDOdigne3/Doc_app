@@ -13,6 +13,7 @@ type RecentItem = {
   thumbnail: ImageSourcePropType;
   title: string;
   subtitle: string;
+  onPress?: () => void;
 };
 
 type RecentItemsStripProps = {
@@ -32,13 +33,12 @@ export function RecentItemsStrip({
       keyExtractor={(item) => item.id}
       contentContainerStyle={[styles.contentContainer, contentContainerStyle]}
       renderItem={({ item }) => (
-        <>
-          <RecentItemCard
-            thumbnail={item.thumbnail}
-            title={item.title}
-            subtitle={item.subtitle}
-          />
-        </>
+        <RecentItemCard
+          thumbnail={item.thumbnail}
+          title={item.title}
+          subtitle={item.subtitle}
+          onPress={item.onPress}
+        />
       )}
     />
   );

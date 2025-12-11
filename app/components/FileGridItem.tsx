@@ -9,25 +9,22 @@ import {
 } from "react-native";
 
 import { colors, spacing, typography } from "../constants/theme";
+import { FileItemType } from "./FileItem";
 
-export type FileItemType = "file" | "folder";
-
-export type FileItemProps = {
+type FileGridItemProps = {
   name: string;
-  detail: string;
   type?: FileItemType;
   thumbnail?: ImageSourcePropType;
   onPress?: () => void;
 };
 
-export function FileItem({
+export function FileGridItem({
   name,
-  detail,
-  type = "file",
+  type = "folder",
   thumbnail,
   onPress,
-}: FileItemProps) {
-  const renderThumbnail = () => {
+}: FileGridItemProps) {
+  const renderVisual = () => {
     if (type === "file" && thumbnail) {
       return <Image source={thumbnail} style={styles.thumbnailImage} />;
     }
@@ -37,71 +34,64 @@ export function FileItem({
 
     return (
       <View style={[styles.thumbnailFallback, { backgroundColor }]}>
-        <MaterialIcons name={iconName} size={52} color={colors.primary} />
+        <MaterialIcons name={iconName} size={68} color={colors.primary} />
       </View>
     );
   };
 
   return (
     <TouchableOpacity
-      activeOpacity={0.7}
+      style={{ margin: spacing.sm / 2, flex: 1 }}
+      activeOpacity={0.8}
       onPress={onPress}
-      style={styles.container}
     >
-      {renderThumbnail()}
-      <View style={styles.textBlock}>
+      <View style={styles.container}>{renderVisual()}</View>
+      <View style={styles.footerRow}>
         <Text style={styles.name} numberOfLines={1}>
           {name}
         </Text>
-        <Text style={styles.detail} numberOfLines={1}>
-          {detail}
-        </Text>
+        <MaterialIcons name="more-vert" size={18} color={colors.textMuted} />
       </View>
-      <MaterialIcons name="more-vert" size={20} color={colors.textMuted} />
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
+    backgroundColor: "#f9f9fa",
     alignItems: "center",
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
-    borderRadius: 16,
-    backgroundColor: colors.surface,
-    shadowColor: "#000000",
+    borderRadius: 18,
+    padding: spacing.lg,
+    shadowColor: "#000",
     shadowOpacity: 0.03,
-    shadowRadius: 5,
+    shadowRadius: 8,
     shadowOffset: { width: 0, height: 2 },
     elevation: 1,
-    marginBottom: spacing.sm,
   },
   thumbnailImage: {
-    width: 52,
-    height: 52,
-    borderRadius: 12,
-    marginRight: spacing.md,
+    width: 68,
+    height: 68,
+    marginBottom: spacing.lg,
   },
   thumbnailFallback: {
-    width: 52,
-    height: 52,
-    borderRadius: 12,
+    width: 64,
+    height: 64,
+    borderRadius: 16,
     justifyContent: "center",
     alignItems: "center",
-    marginRight: spacing.md,
+    backgroundColor: "#edeaff",
+    marginBottom: spacing.lg,
   },
-  textBlock: {
-    flex: 1,
+  footerRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 5,
   },
   name: {
     fontSize: typography.subheading,
-    fontWeight: "700",
+    fontWeight: "600",
     color: colors.text,
-    marginBottom: spacing.xs / 1.5,
-  },
-  detail: {
-    fontSize: 13,
-    color: colors.textMuted,
+    marginRight: spacing.xs,
   },
 });
