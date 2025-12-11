@@ -5,8 +5,7 @@ import { colors } from "../constants/theme";
 
 const tabScreens = {
   home: { title: "Home", icon: "home" },
-  "my-files": { title: "Browse", icon: "apps" },
-  folders: { title: "Folders", icon: "folder-open" },
+  folders: { title: "My Files", icon: "folder-open" },
   shared: { title: "Shared", icon: "group" },
   settings: { title: "Settings", icon: "settings" },
 } as const;

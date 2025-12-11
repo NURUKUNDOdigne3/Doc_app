@@ -1,8 +1,10 @@
 import { MaterialIcons } from "@expo/vector-icons";
+import { Href } from "expo-router";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 import { CardHeader } from "../../components/CardHeader";
 import { Header } from "../../components/Header";
+import { OfflinePromoCard } from "../../components/OfflinePromoCard";
 import { RecentItemsStrip } from "../../components/RecentItemsStrip";
 import { SearchBar } from "../../components/SearchBar";
 import { StorageUsageCard } from "../../components/StorageUsageCard";
@@ -36,6 +38,13 @@ const TEAM_FOLDERS = [
   { id: "team-3", name: "Legals" },
   { id: "team-4", name: "Marketing" },
 ];
+
+const OFFLINE_PROMO = {
+  title: "Offline",
+  description: "Make your most important files available without internet",
+  href: "/offline" as Href,
+  illustration: require("../../../assets/images/illustrations/offline.png"),
+};
 
 export default function HomeScreen() {
   return (
@@ -90,6 +99,20 @@ export default function HomeScreen() {
             linkHref="/folders"
           />
           <TeamFoldersStrip data={TEAM_FOLDERS} />
+        </View>
+
+        <View style={styles.sectionCard}>
+          <CardHeader
+            icon={
+              <MaterialIcons name="wifi-off" size={24} color={colors.text} />
+            }
+            title="Offline"
+            linkHref="/folders"
+          />
+          <OfflinePromoCard
+            description={OFFLINE_PROMO.description}
+            illustration={OFFLINE_PROMO.illustration}
+          />
         </View>
 
         {/* <Text style={styles.placeholder}>Home Screen content</Text> */}
