@@ -221,6 +221,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "Autorisation d'appareil photo requise",
+      "button": "Autoriser l'accès"
+    },
+    "alerts": {
+      "errorTitle": "Une erreur est survenue",
+      "captureFailure": "Impossible de prendre la photo. Réessayez.",
+      "galleryFailure": "Impossible d'ouvrir la galerie. Réessayez."
+    },
+    "flash": {
+      "off": "Flash",
+      "on": "Flash activé",
+      "auto": "Auto"
+    },
+    "preview": {
+      "retake": "Reprendre",
+      "confirm": "Confirmer"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "Détection des bords",
+        "description": "Recadre automatiquement les documents"
+      },
+      "autoEnhance": {
+        "label": "Amélioration automatique",
+        "description": "Améliore la lisibilité après la capture"
+      }
+    },
+    "actions": {
+      "gallery": "Galerie"
+    }
+  },
+  "preview": {
+    "title": "Aperçu",
+    "close": "Fermer l'aperçu",
+    "actions": {
+      "comment": "Commenter",
+      "download": "Télécharger",
+      "delete": "Supprimer",
+      "link": "Obtenir le lien",
+      "share": "Partager",
+      "openFolder": "Ouvrir le dossier",
+      "manageAccess": "Gérer les accès"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Accueil",

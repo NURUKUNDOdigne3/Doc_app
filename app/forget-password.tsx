@@ -1,5 +1,6 @@
 import { Href, Link, useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   KeyboardAvoidingView,
   Platform,
@@ -14,6 +15,7 @@ import { TextField } from "./components/TextField";
 import { colors, spacing, typography } from "./constants/theme";
 
 export default function ForgetPasswordScreen() {
+  const { t } = useTranslation("auth");
   const router = useRouter();
   const [email, setEmail] = useState("");
 
@@ -27,29 +29,26 @@ export default function ForgetPasswordScreen() {
         style={styles.container}
       >
         <View>
-          <Text style={styles.title}>Reset password</Text>
-          <Text style={styles.subtitle}>
-            Enter the email associated with your account and we’ll send an OTP
-            to reset your password.
-          </Text>
+          <Text style={styles.title}>{t("forgetPassword.title")}</Text>
+          <Text style={styles.subtitle}>{t("forgetPassword.subtitle")}</Text>
           <TextField
-            label="Email"
+            label={t("forgetPassword.email")}
             keyboardType="email-address"
             autoCapitalize="none"
             autoComplete="email"
             value={email}
             onChangeText={setEmail}
-            placeholder="you@example.com"
+            placeholder={t("forgetPassword.emailPlaceholder")}
           />
         </View>
         <View>
           <PrimaryButton
-            label="Send OTP"
+            label={t("forgetPassword.sendOtp")}
             onPress={() => router.push(otpRoute as Href)}
           />
           <View style={styles.footerRow}>
             <Link href={loginRoute as Href} style={styles.linkText}>
-              Back to sign in
+              {t("forgetPassword.backToSignIn")}
             </Link>
           </View>
         </View>

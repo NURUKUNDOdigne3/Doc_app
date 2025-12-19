@@ -211,6 +211,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "مطلوب إذن الكاميرا",
+      "button": "السماح بالوصول"
+    },
+    "alerts": {
+      "errorTitle": "حدث خطأ",
+      "captureFailure": "تعذّر التقاط الصورة. الرجاء المحاولة مجددًا.",
+      "galleryFailure": "تعذّر فتح المعرض. الرجاء المحاولة مرة أخرى."
+    },
+    "flash": {
+      "off": "الفلاش",
+      "on": "الفلاش قيد التشغيل",
+      "auto": "تلقائي"
+    },
+    "preview": {
+      "retake": "أعد الالتقاط",
+      "confirm": "تأكيد"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "كشف الحواف",
+        "description": "يقص المستندات تلقائيًا"
+      },
+      "autoEnhance": {
+        "label": "تحسين تلقائي",
+        "description": "يُحسّن وضوح الصورة بعد الالتقاط"
+      }
+    },
+    "actions": {
+      "gallery": "المعرض"
+    }
+  },
+  "preview": {
+    "title": "معاينة",
+    "close": "إغلاق المعاينة",
+    "actions": {
+      "comment": "تعليق",
+      "download": "تنزيل",
+      "delete": "حذف",
+      "link": "نسخ الرابط",
+      "share": "مشاركة",
+      "openFolder": "فتح المجلد",
+      "manageAccess": "إدارة الصلاحيات"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "الرئيسية",

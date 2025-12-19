@@ -1,5 +1,6 @@
 import { Href, useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Image,
   KeyboardAvoidingView,
@@ -15,6 +16,7 @@ import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 import { colors, spacing } from "./constants/theme";
 
 export default function OtpScreen() {
+  const { t } = useTranslation("auth");
   const router = useRouter();
   const [otp, setOtp] = useState("");
 
@@ -30,7 +32,7 @@ export default function OtpScreen() {
           <View style={styles.heroWrapper}>
             <View style={styles.brandRow}>
               <AntDesign name="cloud" size={28} color={colors.primary} />
-              <Text style={styles.brandName}>Bika</Text>
+              <Text style={styles.brandName}>{t("brand")}</Text>
             </View>
             <Image
               source={require("../assets/images/illustrations/lgoin.png")}
@@ -40,14 +42,12 @@ export default function OtpScreen() {
           </View>
 
           <View style={styles.loginText}>
-            <Text style={styles.title}>Welcome Digne!</Text>
-            <Text style={styles.subtitle}>
-              Enter a 6-digit access code sent to your email
-            </Text>
+            <Text style={styles.title}>{t("otp.title")}</Text>
+            <Text style={styles.subtitle}>{t("otp.subtitle")}</Text>
           </View>
           <View style={styles.otpContainer}>
             <TextInput
-              placeholder="000000"
+              placeholder={t("otp.placeholder")}
               placeholderTextColor="#5c5f6e"
               onChangeText={setOtp}
               keyboardType="number-pad"
@@ -61,14 +61,14 @@ export default function OtpScreen() {
               style={styles.nextButton}
             >
               <Text style={{ color: "white", fontSize: 16, fontWeight: 500 }}>
-                Verify <FontAwesome6 name="chevron-right" />
+                {t("otp.verify")} <FontAwesome6 name="chevron-right" />
               </Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Didn't get your OTP code?
+              {t("otp.noCode")}
               <TouchableOpacity activeOpacity={0.6}>
                 <Text
                   style={{
@@ -78,7 +78,8 @@ export default function OtpScreen() {
                     fontWeight: 700,
                   }}
                 >
-                  {"  "}Send again
+                  {"  "}
+                  {t("otp.sendAgain")}
                 </Text>
               </TouchableOpacity>
             </Text>
@@ -92,7 +93,7 @@ export default function OtpScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   container: {
     flex: 1,

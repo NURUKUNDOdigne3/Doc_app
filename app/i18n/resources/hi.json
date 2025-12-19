@@ -221,6 +221,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "कैमरा अनुमिति आवश्यक है",
+      "button": "अनुमति दें"
+    },
+    "alerts": {
+      "errorTitle": "कुछ गलत हो गया",
+      "captureFailure": "हम फोटो कैप्चर नहीं कर पाए। कृपया दोबारा प्रयास करें।",
+      "galleryFailure": "हम आपकी गैलरी नहीं खोल पाए। कृपया फिर से प्रयास करें।"
+    },
+    "flash": {
+      "off": "फ़्लैश",
+      "on": "फ़्लैश चालू",
+      "auto": "स्वचालित"
+    },
+    "preview": {
+      "retake": "दोबारा लें",
+      "confirm": "पुष्टि करें"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "किनारा पहचान",
+        "description": "दस्तावेज़ों को स्वतः क्रॉप करें"
+      },
+      "autoEnhance": {
+        "label": "स्वचालित सुधार",
+        "description": "कैप्चर के बाद पढ़ने में आसानी बढ़ाएँ"
+      }
+    },
+    "actions": {
+      "gallery": "गैलरी"
+    }
+  },
+  "preview": {
+    "title": "पूर्वावलोकन",
+    "close": "पूर्वावलोकन बंद करें",
+    "actions": {
+      "comment": "टिप्पणी",
+      "download": "डाउनलोड",
+      "delete": "हटाएँ",
+      "link": "लिंक प्राप्त करें",
+      "share": "साझा करें",
+      "openFolder": "फ़ोल्डर खोलें",
+      "manageAccess": "पहुँच प्रबंधित करें"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "होम",

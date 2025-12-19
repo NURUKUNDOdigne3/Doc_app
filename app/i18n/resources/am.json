@@ -221,6 +221,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "የካሜራ ፍቃድ ያስፈልጋል",
+      "button": "ካሜራን አግባ"
+    },
+    "alerts": {
+      "errorTitle": "ችግኝ ተከስቷል",
+      "captureFailure": "ፎቶውን ማንሳት አልተቻለም። እባክዎ እንደገና ይሞክሩ።",
+      "galleryFailure": "ጋለሪውን መክፈት አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "flash": {
+      "off": "ፍላሽ",
+      "on": "ፍላሽ ነው",
+      "auto": "በራሱ"
+    },
+    "preview": {
+      "retake": "እንደገና ይውሰዱ",
+      "confirm": "ያረጋግጡ"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "የጠርዝ ማወቂያ",
+        "description": "ሰነዶችን በራሱ ይቆርጣል"
+      },
+      "autoEnhance": {
+        "label": "ራሱ የሚያሻሽል",
+        "description": "ፎቶውን ካስወጣችሁ በኋላ ንባቡን ያሻሽላል"
+      }
+    },
+    "actions": {
+      "gallery": "ጋለሪ"
+    }
+  },
+  "preview": {
+    "title": "ቅድመ እይታ",
+    "close": "ቅድመ እይታውን ዝጋ",
+    "actions": {
+      "comment": "አስተያየት",
+      "download": "አውርድ",
+      "delete": "ሰርዝ",
+      "link": "አግኝ አገናኝ",
+      "share": "አጋራ",
+      "openFolder": "ፎልደሩን ክፈት",
+      "manageAccess": "መዳረሻን አስተዳድር"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "መነሻ",

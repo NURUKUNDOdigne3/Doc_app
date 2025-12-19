@@ -221,6 +221,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "需要相机权限",
+      "button": "允许访问"
+    },
+    "alerts": {
+      "errorTitle": "出现问题",
+      "captureFailure": "无法拍摄此照片，请重试。",
+      "galleryFailure": "无法打开相册，请稍后再试。"
+    },
+    "flash": {
+      "off": "闪光灯",
+      "on": "闪光灯已开",
+      "auto": "自动"
+    },
+    "preview": {
+      "retake": "重新拍摄",
+      "confirm": "确认"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "边缘检测",
+        "description": "自动裁剪文档"
+      },
+      "autoEnhance": {
+        "label": "自动增强",
+        "description": "拍摄后提升可读性"
+      }
+    },
+    "actions": {
+      "gallery": "相册"
+    }
+  },
+  "preview": {
+    "title": "预览",
+    "close": "关闭预览",
+    "actions": {
+      "comment": "评论",
+      "download": "下载",
+      "delete": "删除",
+      "link": "获取链接",
+      "share": "分享",
+      "openFolder": "打开文件夹",
+      "manageAccess": "管理权限"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "首页",

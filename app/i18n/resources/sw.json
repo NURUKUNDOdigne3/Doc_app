@@ -221,6 +221,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "Inahitajika ruhusa ya kamera",
+      "button": "Ruhusu kamera"
+    },
+    "alerts": {
+      "errorTitle": "Hitilafu imetokea",
+      "captureFailure": "Hatukuweza kupiga picha hiyo. Tafadhali jaribu tena.",
+      "galleryFailure": "Hatukuweza kufungua maktaba yako ya picha. Jaribu tena."
+    },
+    "flash": {
+      "off": "Mwangaza",
+      "on": "Mwangaza ume Washwa",
+      "auto": "Otomatiki"
+    },
+    "preview": {
+      "retake": "Piga upya",
+      "confirm": "Thibitisha"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "Utambuzi wa kingo",
+        "description": "Hukata hati kiotomatiki"
+      },
+      "autoEnhance": {
+        "label": "Boresha kiotomatiki",
+        "description": "Huongeza usomekaji baada ya kupiga"
+      }
+    },
+    "actions": {
+      "gallery": "Maktaba"
+    }
+  },
+  "preview": {
+    "title": "Hakikisho",
+    "close": "Funga hakikisho",
+    "actions": {
+      "comment": "Toa maoni",
+      "download": "Pakua",
+      "delete": "Futa",
+      "link": "Pata kiungo",
+      "share": "Shiriki",
+      "openFolder": "Fungua folda",
+      "manageAccess": "Dhibiti ufikiaji"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Nyumbani",

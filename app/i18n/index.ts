@@ -15,7 +15,7 @@ import zh from "./resources/zh.json";
 
 type ResourceBundle = typeof en;
 
-type ResourceMap = Record<LocaleCode, ResourceBundle>;
+type ResourceMap = Record<LocaleCode, Partial<ResourceBundle>>;
 
 const resources: ResourceMap = {
   en,
@@ -66,6 +66,10 @@ if (!i18n.isInitialized) {
       "shared",
       "folders",
       "scan",
+      "preview",
+      "auth",
+      "folderDetail",
+      "stack",
     ],
     interpolation: {
       escapeValue: false,

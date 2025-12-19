@@ -221,6 +221,52 @@
       }
     }
   },
+  "scan": {
+    "permission": {
+      "message": "Ukeneye uburenganzira bwa kamera",
+      "button": "Emera kamera"
+    },
+    "alerts": {
+      "errorTitle": "Habaye ikibazo",
+      "captureFailure": "Ntitwabashije gufata iyo foto. Ongera ugerageze.",
+      "galleryFailure": "Ntitwabashije gufungura ububiko bwawe bwa amafoto. Ongera ugerageze."
+    },
+    "flash": {
+      "off": "Umuriro",
+      "on": "Umuriro wacanye",
+      "auto": "Byikora"
+    },
+    "preview": {
+      "retake": "Fata ubundi",
+      "confirm": "Emeza"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "Gupima imbibi",
+        "description": "Ikata inyandiko mu buryo bwikora"
+      },
+      "autoEnhance": {
+        "label": "Kunoza byikora",
+        "description": "Teza imbere isomeka nyuma yo gufata"
+      }
+    },
+    "actions": {
+      "gallery": "Ishusho"
+    }
+  },
+  "preview": {
+    "title": "Igaragaza",
+    "close": "Funga igaragaza",
+    "actions": {
+      "comment": "Tanga igitekerezo",
+      "download": "Kuramo",
+      "delete": "Siba",
+      "link": "Fata ihuriro",
+      "share": "Sangira",
+      "openFolder": "Fungura ububiko",
+      "manageAccess": "Tunganya uburenganzira"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Ahabanza",

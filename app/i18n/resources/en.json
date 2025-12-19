@@ -3,7 +3,10 @@
     "appName": "Doc App",
     "welcome": "Welcome back, {{name}}!",
     "syncing": "Syncing files to the cloud",
-    "synced": "All files synced"
+    "synced": "All files synced",
+    "actions": {
+      "seeAll": "See all"
+    }
   },
   "home": {
     "title": "Home",
@@ -524,6 +527,118 @@
     },
     "actions": {
       "gallery": "Gallery"
+    }
+  },
+  "preview": {
+    "title": "Preview",
+    "close": "Close preview",
+    "actions": {
+      "comment": "Comment",
+      "download": "Download",
+      "delete": "Delete",
+      "link": "Get link",
+      "share": "Share",
+      "openFolder": "Open folder",
+      "manageAccess": "Manage access"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Please type your email to log in",
+      "emailPlaceholder": "Type your e-mail",
+      "next": "Next",
+      "socialGoogle": "Continue with Google",
+      "socialApple": "Continue with Apple",
+      "noAccount": "Don't have an account?",
+      "register": "Register account."
+    },
+    "signup": {
+      "title": "Create new account",
+      "subtitle": "Please fill registration to create account",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Type your full name",
+      "email": "Email",
+      "emailPlaceholder": "Type your email",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submit": "Sign up",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "password": {
+      "title": "Are you Digne?",
+      "subtitle": "Confirm yourself by your password",
+      "passwordPlaceholder": "Type your password",
+      "login": "Login",
+      "forgot": "Forgotten your password?",
+      "reset": "Reset Password"
+    },
+    "passwordReset": {
+      "title": "Forgotten Password?",
+      "subtitle": "Get reset link with your email",
+      "emailPlaceholder": "Type your e-mail",
+      "next": "Next",
+      "remember": "Remember your password?",
+      "login": "Login"
+    },
+    "otp": {
+      "title": "Welcome Digne!",
+      "subtitle": "Enter a 6-digit access code sent to your email",
+      "placeholder": "000000",
+      "verify": "Verify",
+      "noCode": "Didn't get your OTP code?",
+      "sendAgain": "Send again"
+    },
+    "forgetPassword": {
+      "title": "Reset password",
+      "subtitle": "Enter the email associated with your account and we'll send an OTP to reset your password.",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Send OTP",
+      "backToSignIn": "Back to sign in"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Folder",
+      "subtitle": "Updated {{time}}"
+    },
+    "empty": {
+      "title": "Folder not found",
+      "description": "The folder you are looking for might have been moved or deleted.",
+      "cta": "Return to folders"
+    },
+    "hero": {
+      "meta": "{{count}} items • {{size}} • Owner {{owner}}",
+      "invite": "Invite"
+    },
+    "search": {
+      "placeholder": "Search within this folder"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Pinned",
+        "meta": "{{count}} items"
+      },
+      "allItems": {
+        "title": "All items",
+        "meta": "{{count}} total"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Favourites",
+      "activity": "Activity",
+      "security": "Security",
+      "forgetPassword": "Reset Password",
+      "planDetails": "Pricing",
+      "documentDetails": "Document Details",
+      "upload": "Upload"
     }
   },
   "navigation": {
