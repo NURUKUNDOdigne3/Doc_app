@@ -65,11 +65,126 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "खाता",
+      "planLabel": "निःशुल्क",
+      "planUsage": "{{total}} जीबी में से {{used}} जीबी",
+      "upgradeCta": "अपग्रेड",
+      "teamTitle": "टीम सदस्य",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "आमंत्रित करें",
+      "devicesTitle": "डिवाइस",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "प्रबंधित करें",
+      "menuTitle": "मेनू",
+      "logout": "लॉग आउट"
+    },
+    "menu": {
+      "settings": "सेटिंग्स",
+      "storage": "स्टोरेज",
+      "billing": "बिलिंग",
+      "notification": "सूचनाएँ",
+      "refer": "मित्र को आमंत्रित करें",
+      "language": "भाषा",
+      "privacy": "गोपनीयता",
+      "security": "सुरक्षा"
+    },
     "language": {
       "title": "भाषा बदलें",
       "subtitle": "अपनी भाषा चुनें।",
       "available": "उपलब्ध भाषाएँ",
       "apply": "भाषा लागू करें"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "साझा"
+    },
+    "search": {
+      "placeholder": "साझा की गई वस्तुओं में खोजें"
+    },
+    "collab": {
+      "title": "मिलकर काम करें",
+      "subtitle": "देखें किसने हाल ही में आपके साथ फ़ाइलें साझा की हैं और एक ही स्थान पर उनकी पहुँच प्रबंधित करें।",
+      "cta": "पहुँच प्रबंधित करें"
+    },
+    "actions": {
+      "viewAll": "सभी देखें"
+    },
+    "time": {
+      "twoHours": "2 घंटे पहले",
+      "yesterday": "कल",
+      "twoDays": "2 दिन पहले",
+      "threeDays": "3 दिन पहले",
+      "fiveDays": "5 दिन पहले",
+      "lastWeek": "पिछले सप्ताह",
+      "today": "आज"
+    },
+    "meta": {
+      "sharedBy": "{{name}} द्वारा साझा"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "आपकी समीक्षा की प्रतीक्षा में",
+        "requestEdit": "संपादन का अनुरोध"
+      },
+      "meta": {
+        "awaitingReview": "समीक्षा प्रतीक्षित",
+        "requestedToday": "आज अनुरोध किया गया"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "हाल ही में साझा",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "{{name}} द्वारा साझा · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "{{name}} द्वारा साझा · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "{{name}} द्वारा साझा · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "साझा फ़ोल्डर",
+        "items": {
+          "campaignAssets": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          },
+          "brandGuidelines": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          },
+          "productSpecs": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          },
+          "leadership": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          }
+        }
+      },
+      "pending": {
+        "title": "लंबित अनुमोदन",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · {{name}} द्वारा साझा"
+          },
+          "designSprint": {
+            "detail": "{{status}} · {{name}} द्वारा साझा"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "होम",
+      "shared": "साझा",
+      "scan": "स्कैन",
+      "files": "मेरी फ़ाइलें",
+      "account": "खाता"
     }
   }
 }

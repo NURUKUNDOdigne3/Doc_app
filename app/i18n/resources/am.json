@@ -65,11 +65,126 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "መለያ",
+      "planLabel": "ነጻ",
+      "planUsage": "{{used}} ጊቢ ከ {{total}} ጊቢ",
+      "upgradeCta": "አሻሽል",
+      "teamTitle": "የቡድን አባላት",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "ጋብዝ",
+      "devicesTitle": "መሣሪያዎች",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "አስተዳድር",
+      "menuTitle": "ምናሌ",
+      "logout": "ውጣ"
+    },
+    "menu": {
+      "settings": "ቅንብሮች",
+      "storage": "ማከማቻ",
+      "billing": "ክፍያ",
+      "notification": "ማሳወቂያዎች",
+      "refer": "ጓደኛ ጋብዝ",
+      "language": "ቋንቋ",
+      "privacy": "ግላዊነት",
+      "security": "ደህንነት"
+    },
     "language": {
       "title": "ቋንቋን ቀይር",
       "subtitle": "የሚፈለጉትን ቋንቋ ይምረጡ.",
       "available": "የሚገኙ ቋንቋዎች",
       "apply": "ቋንቋን ተግብር"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "ተጋራ"
+    },
+    "search": {
+      "placeholder": "ተጋሩ ንጥሎችን ፈልግ"
+    },
+    "collab": {
+      "title": "በአንድነት ስራ አድርጉ",
+      "subtitle": "በቅርቡ ፋይሎችን ማን እንደካፈሉ ይመልከቱ እና መዳረሻቸውን በአንድ ቦታ ያስተዳድሩ",
+      "cta": "መዳረሻን አስተዳድር"
+    },
+    "actions": {
+      "viewAll": "ሁሉንም ተመልከት"
+    },
+    "time": {
+      "twoHours": "ከ2 ሰዓት በፊት",
+      "yesterday": "ትናንት",
+      "twoDays": "ከ2 ቀን በፊት",
+      "threeDays": "ከ3 ቀን በፊት",
+      "fiveDays": "ከ5 ቀን በፊት",
+      "lastWeek": "ባለፈው ሳምንት",
+      "today": "ዛሬ"
+    },
+    "meta": {
+      "sharedBy": "በ{{name}} ተጋርቷል"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "የእርስዎን ግምገማ በመጠባበቅ ላይ",
+        "requestEdit": "ማስተካከያ ጥያቄ"
+      },
+      "meta": {
+        "awaitingReview": "በመጠባበቅ ላይ",
+        "requestedToday": "ዛሬ ተጠይቋል"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "በቅርቡ ተጋርቷል",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "በ{{name}} ተጋርቷል · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "በ{{name}} ተጋርቷል · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "በ{{name}} ተጋርቷል · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "ተጋራ ፎልደሮች",
+        "items": {
+          "campaignAssets": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          },
+          "brandGuidelines": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          },
+          "productSpecs": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          },
+          "leadership": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          }
+        }
+      },
+      "pending": {
+        "title": "በመጠባበቅ ላይ ያሉ እውቅናዎች",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · በ{{name}} ተጋርቷል"
+          },
+          "designSprint": {
+            "detail": "{{status}} · በ{{name}} ተጋርቷል"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "መነሻ",
+      "shared": "ተጋራ",
+      "scan": "ስካን",
+      "files": "ፋይሎቼ",
+      "account": "መለያ"
     }
   }
 }

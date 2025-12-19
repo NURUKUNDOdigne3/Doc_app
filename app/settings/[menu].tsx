@@ -1,6 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, useNavigation } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ScrollView,
@@ -13,6 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import {
+  CopyText,
   Section,
   SectionRow,
   SETTINGS_MENU_CONFIG,
@@ -49,7 +50,7 @@ function accumulateToggleDefaults(state: ToggleState, section: Section) {
 export default function SettingsMenuDetailScreen() {
   const params = useLocalSearchParams<{ menu?: string }>();
   const navigation = useNavigation();
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation("settingsMenu");
   const menuKey = params.menu;
 
   if (!isSettingsKey(menuKey)) {
@@ -61,9 +62,9 @@ export default function SettingsMenuDetailScreen() {
             size={36}
             color={colors.primary}
           />
-          <Text style={styles.emptyStateTitle}>Missing menu configuration</Text>
+          <Text style={styles.emptyStateTitle}>{t("error.title")}</Text>
           <Text style={styles.emptyStateDescription}>
-            The requested settings page could not be found.
+            {t("error.description")}
           </Text>
         </View>
       </SafeAreaView>
@@ -72,6 +73,17 @@ export default function SettingsMenuDetailScreen() {
 
   const config = SETTINGS_MENU_CONFIG[menuKey];
   const isLanguageMenu = config.key === "language";
+
+  const resolveCopy = useCallback(
+    (copy: CopyText | undefined) => {
+      if (!copy) return "";
+      if (typeof copy === "string") {
+        return copy;
+      }
+      return t(copy.key, copy.values);
+    },
+    [t]
+  );
 
   const normalizeLanguage = (code: string): LocaleCode => {
     const base = code.split("-")[0].toLowerCase();
@@ -89,7 +101,7 @@ export default function SettingsMenuDetailScreen() {
 
   useEffect(() => {
     navigation.setOptions({
-      title: config.title,
+      title: resolveCopy(config.title),
       headerTitleStyle: {
         color: colors.text,
         fontWeight: "700",
@@ -99,7 +111,7 @@ export default function SettingsMenuDetailScreen() {
       headerShadowVisible: false,
       headerTitleAlign: "left",
     });
-  }, [config, navigation]);
+  }, [config, navigation, resolveCopy]);
 
   const initialToggleState = useMemo(() => {
     return config.sections.reduce(accumulateToggleDefaults, {} as ToggleState);
@@ -145,10 +157,12 @@ export default function SettingsMenuDetailScreen() {
         {config.sections.map((section) => (
           <View key={section.id} style={styles.sectionCard}>
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>{section.title}</Text>
+              <Text style={styles.sectionTitle}>
+                {resolveCopy(section.title)}
+              </Text>
               {section.description ? (
                 <Text style={styles.sectionDescription}>
-                  {section.description}
+                  {resolveCopy(section.description)}
                 </Text>
               ) : null}
             </View>
@@ -167,6 +181,7 @@ export default function SettingsMenuDetailScreen() {
                     toggles,
                     (id, value) =>
                       setToggles((prev) => ({ ...prev, [id]: value })),
+                    resolveCopy,
                     isLanguageMenu
                       ? {
                           selectedLanguage: pendingLanguage,
@@ -200,7 +215,7 @@ export default function SettingsMenuDetailScreen() {
                     }}
                   >
                     <Text style={[styles.ctaLabel, styles.ctaLabelPrimary]}>
-                      {section.primaryCta.label}
+                      {resolveCopy(section.primaryCta.label)}
                     </Text>
                   </TouchableOpacity>
                 ) : null}
@@ -210,7 +225,7 @@ export default function SettingsMenuDetailScreen() {
                     activeOpacity={0.85}
                   >
                     <Text style={[styles.ctaLabel, styles.ctaLabelSecondary]}>
-                      {section.secondaryCta.label}
+                      {resolveCopy(section.secondaryCta.label)}
                     </Text>
                   </TouchableOpacity>
                 ) : null}
@@ -227,6 +242,7 @@ function renderRow(
   row: SectionRow,
   toggles: ToggleState,
   onToggleChange: ToggleUpdater,
+  resolveCopy: (copy: CopyText | undefined) => string,
   languageContext?: LanguageRowContext
 ) {
   switch (row.kind) {
@@ -234,7 +250,7 @@ function renderRow(
       return (
         <View style={styles.detailRow}>
           <View>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
             <Text
               style={[
                 styles.detailValue,
@@ -242,7 +258,7 @@ function renderRow(
                 row.accent === "success" && styles.detailValueSuccess,
               ]}
             >
-              {row.value}
+              {resolveCopy(row.value)}
             </Text>
           </View>
           {row.icon ? (
@@ -256,9 +272,11 @@ function renderRow(
       return (
         <View style={styles.toggleRow}>
           <View style={styles.toggleCopy}>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
             {row.description ? (
-              <Text style={styles.toggleDescription}>{row.description}</Text>
+              <Text style={styles.toggleDescription}>
+                {resolveCopy(row.description)}
+              </Text>
             ) : null}
           </View>
           <Switch
@@ -274,9 +292,9 @@ function renderRow(
       return (
         <View style={styles.progressRow}>
           <View style={styles.progressHeader}>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
             <Text style={styles.progressValue}>
-              {row.used} / {row.total} {row.unit}
+              {row.used} / {row.total} {resolveCopy(row.unit)}
             </Text>
           </View>
           <View style={styles.progressTrack}>
@@ -288,8 +306,8 @@ function renderRow(
     case "note":
       return (
         <View style={styles.noteRow}>
-          <Text style={styles.detailLabel}>{row.label}</Text>
-          <Text style={styles.noteBody}>{row.description}</Text>
+          <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
+          <Text style={styles.noteBody}>{resolveCopy(row.description)}</Text>
         </View>
       );
     case "action":
@@ -299,7 +317,7 @@ function renderRow(
             <View style={styles.actionIconCircle}>
               <MaterialIcons name={row.icon} size={20} color={colors.primary} />
             </View>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
           </View>
           <MaterialIcons
             name="chevron-right"
@@ -322,8 +340,10 @@ function renderRow(
           onPress={() => languageContext.onSelectLanguage(row.code)}
         >
           <View style={styles.languageCopy}>
-            <Text style={styles.languageLabel}>{row.label}</Text>
-            <Text style={styles.languageNative}>{row.nativeName}</Text>
+            <Text style={styles.languageLabel}>{resolveCopy(row.label)}</Text>
+            <Text style={styles.languageNative}>
+              {resolveCopy(row.nativeName)}
+            </Text>
           </View>
           <View
             style={[

@@ -65,11 +65,398 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "Account",
+      "planLabel": "Free",
+      "planUsage": "{{used}} GB of {{total}} GB",
+      "upgradeCta": "Upgrade",
+      "teamTitle": "Team members",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Invite",
+      "devicesTitle": "Devices",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Manage",
+      "menuTitle": "Menu",
+      "logout": "Logout"
+    },
+    "menu": {
+      "settings": "Settings",
+      "storage": "Storage",
+      "billing": "Billing",
+      "notification": "Notifications",
+      "refer": "Refer a friend",
+      "language": "Language",
+      "privacy": "Privacy",
+      "security": "Security"
+    },
     "language": {
       "title": "Change Language",
       "subtitle": "Choose your language.",
       "available": "Available languages",
       "apply": "Apply language"
+    }
+  },
+  "settingsMenu": {
+    "error": {
+      "title": "Menu unavailable",
+      "description": "The requested settings page could not be found."
+    },
+    "settings": {
+      "title": "General settings",
+      "subtitle": "Personalize how your workspace behaves and looks.",
+      "sections": {
+        "profile": {
+          "title": "Profile",
+          "description": "Update your personal details and workspace identity.",
+          "rows": {
+            "displayName": {
+              "label": "Display name"
+            },
+            "email": {
+              "label": "Email"
+            },
+            "darkMode": {
+              "label": "Dark appearance",
+              "description": "Match the system theme across the app."
+            },
+            "compactMode": {
+              "label": "Compact layout",
+              "description": "Reduce spacing for dense information views."
+            }
+          }
+        },
+        "shortcuts": {
+          "title": "Shortcuts",
+          "description": "Quickly access your most-used tools.",
+          "rows": {
+            "customizeCards": {
+              "label": "Customize home cards"
+            },
+            "keyboardShortcuts": {
+              "label": "Keyboard shortcuts"
+            },
+            "notificationPreferences": {
+              "label": "Notification preferences"
+            }
+          }
+        }
+      }
+    },
+    "language": {
+      "title": "Change language",
+      "subtitle": "Choose how the app is translated.",
+      "sections": {
+        "list": {
+          "title": "Available languages",
+          "description": "Select a language to apply across the app.",
+          "primaryCta": "Apply language"
+        }
+      }
+    },
+    "storage": {
+      "title": "Storage",
+      "subtitle": "Monitor usage and keep your workspace tidy.",
+      "sections": {
+        "usage": {
+          "title": "Usage overview",
+          "rows": {
+            "storage": {
+              "label": "Storage",
+              "unit": "GB"
+            },
+            "plan": {
+              "label": "Current plan",
+              "value": "Free • 15 GB"
+            },
+            "pinnedFolders": {
+              "label": "Pinned folders",
+              "value": "6 folders"
+            }
+          },
+          "primaryCta": "Upgrade plan"
+        },
+        "cleanup": {
+          "title": "Smart cleanup",
+          "description": "Identify large and unused files to reclaim space.",
+          "rows": {
+            "reviewLargeFiles": {
+              "label": "Review large files"
+            },
+            "emptyRecycleBin": {
+              "label": "Empty recycle bin"
+            }
+          }
+        }
+      }
+    },
+    "billing": {
+      "title": "Billing",
+      "subtitle": "Review plan details and payment history.",
+      "sections": {
+        "plan": {
+          "title": "Plan",
+          "rows": {
+            "currentPlan": {
+              "label": "Current plan",
+              "value": "Standard • paid 28 Nov"
+            },
+            "billingCycle": {
+              "label": "Billing cycle",
+              "value": "Monthly"
+            }
+          },
+          "primaryCta": "Change plan"
+        },
+        "payment": {
+          "title": "Payment methods",
+          "description": "Manage how you pay for your subscription.",
+          "rows": {
+            "primaryCard": {
+              "label": "Primary card",
+              "value": "Mastercard •••• 9284"
+            },
+            "addMethod": {
+              "label": "Add backup method"
+            }
+          }
+        },
+        "invoices": {
+          "title": "Invoices",
+          "rows": {
+            "lastInvoice": {
+              "label": "Last invoice",
+              "value": "Nov 2025 • Paid"
+            },
+            "viewAll": {
+              "label": "View all invoices"
+            }
+          }
+        }
+      }
+    },
+    "notification": {
+      "title": "Notifications",
+      "subtitle": "Stay in the loop without the noise.",
+      "sections": {
+        "channels": {
+          "title": "Channels",
+          "description": "Choose how we reach out when something important happens.",
+          "rows": {
+            "emailSummaries": {
+              "label": "Email summaries",
+              "description": "Weekly overview of shared items and storage."
+            },
+            "pushNotifications": {
+              "label": "Push notifications",
+              "description": "Instant updates for mentions, shares and approvals."
+            },
+            "smsAlerts": {
+              "label": "SMS alerts",
+              "description": "Security notifications like new logins."
+            }
+          }
+        },
+        "focus": {
+          "title": "Focus",
+          "description": "Customize quiet hours when notifications are paused.",
+          "rows": {
+            "quietHours": {
+              "label": "Quiet hours",
+              "value": "Daily • 10pm – 7am"
+            },
+            "editSchedule": {
+              "label": "Edit schedule"
+            }
+          }
+        }
+      }
+    },
+    "refer": {
+      "title": "Refer a friend",
+      "subtitle": "Share the workspace love and earn bonus storage.",
+      "sections": {
+        "referralCode": {
+          "title": "Your invite link",
+          "rows": {
+            "code": {
+              "label": "Referral code"
+            },
+            "reward": {
+              "label": "Reward",
+              "description": "Earn 2GB bonus storage for every friend who upgrades within 30 days."
+            }
+          },
+          "primaryCta": "Copy link",
+          "secondaryCta": "Share via email"
+        },
+        "status": {
+          "title": "Progress",
+          "rows": {
+            "invitesSent": {
+              "label": "Invites sent"
+            },
+            "rewardsEarned": {
+              "label": "Rewards earned"
+            }
+          }
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacy",
+      "subtitle": "Control data sharing and backup preferences.",
+      "sections": {
+        "data": {
+          "title": "Data visibility",
+          "rows": {
+            "activityInsights": {
+              "label": "Activity insights",
+              "description": "Allow teammates to see when you view shared files."
+            },
+            "productAnalytics": {
+              "label": "Product analytics",
+              "description": "Share anonymous usage data to improve the experience."
+            }
+          }
+        },
+        "backups": {
+          "title": "Backups",
+          "description": "Secure copies of your data for recovery.",
+          "rows": {
+            "autoBackup": {
+              "label": "Automatic cloud backup",
+              "value": "Weekly"
+            },
+            "manageSchedule": {
+              "label": "Manage backup schedule"
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "title": "Security",
+      "subtitle": "Keep your account locked down.",
+      "sections": {
+        "auth": {
+          "title": "Authentication",
+          "rows": {
+            "twoFactor": {
+              "label": "Two-factor authentication",
+              "description": "Require a 6-digit code on sign in."
+            },
+            "biometric": {
+              "label": "Biometric unlock",
+              "description": "Use Face ID or Touch ID on this device."
+            }
+          }
+        },
+        "sessions": {
+          "title": "Sessions",
+          "rows": {
+            "activeDevices": {
+              "label": "Active devices"
+            },
+            "reviewActivity": {
+              "label": "Review sign-in activity"
+            },
+            "signOutOthers": {
+              "label": "Sign out other devices"
+            }
+          }
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Shared"
+    },
+    "search": {
+      "placeholder": "Search shared items"
+    },
+    "collab": {
+      "title": "Work together",
+      "subtitle": "See who recently shared files with you and manage their access in one place.",
+      "cta": "Manage access"
+    },
+    "actions": {
+      "viewAll": "See all"
+    },
+    "time": {
+      "twoHours": "2h ago",
+      "yesterday": "Yesterday",
+      "twoDays": "2 days ago",
+      "threeDays": "3 days ago",
+      "fiveDays": "5 days ago",
+      "lastWeek": "Last week",
+      "today": "Today"
+    },
+    "meta": {
+      "sharedBy": "Shared by {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "Awaiting your review",
+        "requestEdit": "Request to edit"
+      },
+      "meta": {
+        "awaitingReview": "Awaiting review",
+        "requestedToday": "Requested today"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Recently shared",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Shared by {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Shared by {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Shared by {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Shared folders",
+        "items": {
+          "campaignAssets": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          },
+          "leadership": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Pending approvals",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Shared by {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Shared by {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Home",
+      "shared": "Shared",
+      "scan": "Scan",
+      "files": "My Files",
+      "account": "Account"
     }
   }
 }

@@ -53,7 +53,15 @@ if (!i18n.isInitialized) {
     compatibilityJSON: "v4",
     defaultNS: "common",
     fallbackNS: "common",
-    ns: ["common", "home", "settings"],
+    ns: [
+      "common",
+      "home",
+      "settings",
+      "settingsMenu",
+      "shared",
+      "folders",
+      "scan",
+    ],
     interpolation: {
       escapeValue: false,
     },

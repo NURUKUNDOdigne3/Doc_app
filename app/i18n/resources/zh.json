@@ -65,11 +65,126 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "账户",
+      "planLabel": "免费版",
+      "planUsage": "已用 {{used}} GB / 共 {{total}} GB",
+      "upgradeCta": "升级",
+      "teamTitle": "团队成员",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "邀请",
+      "devicesTitle": "设备",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "管理",
+      "menuTitle": "菜单",
+      "logout": "退出登录"
+    },
+    "menu": {
+      "settings": "设置",
+      "storage": "存储",
+      "billing": "账单",
+      "notification": "通知",
+      "refer": "邀请好友",
+      "language": "语言",
+      "privacy": "隐私",
+      "security": "安全"
+    },
     "language": {
       "title": "更改语言",
       "subtitle": "选择你的语言。",
       "available": "可用语言",
       "apply": "应用语言"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "共享"
+    },
+    "search": {
+      "placeholder": "搜索共享项目"
+    },
+    "collab": {
+      "title": "协同合作",
+      "subtitle": "查看最近与您共享文件的人，并在一个地方管理他们的访问权限。",
+      "cta": "管理访问"
+    },
+    "actions": {
+      "viewAll": "查看全部"
+    },
+    "time": {
+      "twoHours": "2 小时前",
+      "yesterday": "昨天",
+      "twoDays": "2 天前",
+      "threeDays": "3 天前",
+      "fiveDays": "5 天前",
+      "lastWeek": "上周",
+      "today": "今天"
+    },
+    "meta": {
+      "sharedBy": "由 {{name}} 共享"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "等待您的审核",
+        "requestEdit": "请求编辑"
+      },
+      "meta": {
+        "awaitingReview": "等待审核",
+        "requestedToday": "今日请求"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "最近共享",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "由 {{name}} 共享 · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "由 {{name}} 共享 · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "由 {{name}} 共享 · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "共享文件夹",
+        "items": {
+          "campaignAssets": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          },
+          "productSpecs": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          },
+          "leadership": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "待审批",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · 由 {{name}} 共享"
+          },
+          "designSprint": {
+            "detail": "{{status}} · 由 {{name}} 共享"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "首页",
+      "shared": "共享",
+      "scan": "扫描",
+      "files": "我的文件",
+      "account": "账户"
     }
   }
 }

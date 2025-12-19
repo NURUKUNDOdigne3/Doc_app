@@ -65,11 +65,116 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "الحساب",
+      "planLabel": "مجاني",
+      "planUsage": "{{used}} جيجابايت من أصل {{total}}",
+      "upgradeCta": "ترقية",
+      "teamTitle": "أعضاء الفريق",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "دعوة",
+      "devicesTitle": "الأجهزة",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "إدارة",
+      "menuTitle": "القائمة",
+      "logout": "تسجيل الخروج"
+    },
     "language": {
       "title": "تغيير اللغة",
       "subtitle": "اختر لغتك.",
       "available": "اللغات المتاحة",
       "apply": "تطبيق اللغة"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "المشتركة"
+    },
+    "search": {
+      "placeholder": "ابحث في العناصر المشتركة"
+    },
+    "collab": {
+      "title": "اعملوا معاً",
+      "subtitle": "اطّلع على من شاركك الملفات مؤخراً وقم بإدارة صلاحياتهم في مكان واحد.",
+      "cta": "إدارة الصلاحيات"
+    },
+    "actions": {
+      "viewAll": "عرض الكل"
+    },
+    "time": {
+      "twoHours": "منذ ساعتين",
+      "yesterday": "أمس",
+      "twoDays": "منذ يومين",
+      "threeDays": "منذ 3 أيام",
+      "fiveDays": "منذ 5 أيام",
+      "lastWeek": "الأسبوع الماضي",
+      "today": "اليوم"
+    },
+    "meta": {
+      "sharedBy": "تمت المشاركة بواسطة {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "بانتظار مراجعتك",
+        "requestEdit": "طلب تعديل"
+      },
+      "meta": {
+        "awaitingReview": "بانتظار المراجعة",
+        "requestedToday": "طُلب اليوم"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "مشترك حديثاً",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "تمت المشاركة بواسطة {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "تمت المشاركة بواسطة {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "تمت المشاركة بواسطة {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "المجلدات المشتركة",
+        "items": {
+          "campaignAssets": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          },
+          "productSpecs": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          },
+          "leadership": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "موافقات معلّقة",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · تمت المشاركة بواسطة {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · تمت المشاركة بواسطة {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "الرئيسية",
+      "shared": "المشتركة",
+      "scan": "مسح",
+      "files": "ملفاتي",
+      "account": "الحساب"
     }
   }
 }

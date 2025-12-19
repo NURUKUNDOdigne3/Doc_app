@@ -65,11 +65,126 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "Akaunti",
+      "planLabel": "Bure",
+      "planUsage": "{{used}} GB kati ya {{total}} GB",
+      "upgradeCta": "Boresha",
+      "teamTitle": "Wanachama wa timu",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Alika",
+      "devicesTitle": "Vifaa",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Dhibiti",
+      "menuTitle": "Menyu",
+      "logout": "Toka"
+    },
+    "menu": {
+      "settings": "Mipangilio",
+      "storage": "Hifadhi",
+      "billing": "Malipo",
+      "notification": "Arifa",
+      "refer": "Alika rafiki",
+      "language": "Lugha",
+      "privacy": "Faragha",
+      "security": "Usalama"
+    },
     "language": {
       "title": "Badilisha Lugha",
       "subtitle": "Chagua lugha yako.",
       "available": "Lugha zinazopatikana",
       "apply": "Tumia lugha"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Imeshirikiwa"
+    },
+    "search": {
+      "placeholder": "Tafuta katika vitu vilivyoshirikiwa"
+    },
+    "collab": {
+      "title": "Fanyeni kazi pamoja",
+      "subtitle": "Angalia ni nani aliyekushirikisha faili hivi karibuni na dhibiti upatikanaji wao mahali pamoja.",
+      "cta": "Dhibiti upatikanaji"
+    },
+    "actions": {
+      "viewAll": "Tazama vyote"
+    },
+    "time": {
+      "twoHours": "Saa 2 zilizopita",
+      "yesterday": "Jana",
+      "twoDays": "Siku 2 zilizopita",
+      "threeDays": "Siku 3 zilizopita",
+      "fiveDays": "Siku 5 zilizopita",
+      "lastWeek": "Wiki iliyopita",
+      "today": "Leo"
+    },
+    "meta": {
+      "sharedBy": "Imeshirikiwa na {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "Inasubiri ukaguzi wako",
+        "requestEdit": "Ombi la kuhariri"
+      },
+      "meta": {
+        "awaitingReview": "Inasubiri ukaguzi",
+        "requestedToday": "Imeombwa leo"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Imeshirikiwa hivi karibuni",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Imeshirikiwa na {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Imeshirikiwa na {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Imeshirikiwa na {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Folda zilizoshirikiwa",
+        "items": {
+          "campaignAssets": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          },
+          "leadership": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Inasubiri idhini",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Imeshirikiwa na {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Imeshirikiwa na {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Nyumbani",
+      "shared": "Imeshirikiwa",
+      "scan": "Changanua",
+      "files": "Faili Zangu",
+      "account": "Akaunti"
     }
   }
 }

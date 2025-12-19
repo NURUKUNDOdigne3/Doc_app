@@ -65,11 +65,126 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "Konti",
+      "planLabel": "Ku buntu",
+      "planUsage": "{{used}} GB muri {{total}} GB",
+      "upgradeCta": "Kwagura",
+      "teamTitle": "Abagize itsinda",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Tumiira",
+      "devicesTitle": "Ibikoresho",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Tunganya",
+      "menuTitle": "Ibikubiyemo",
+      "logout": "Sohoka"
+    },
+    "menu": {
+      "settings": "Igenamiterere",
+      "storage": "Ububiko",
+      "billing": "Kwishyura",
+      "notification": "Amatangazo",
+      "refer": "Saba inshuti",
+      "language": "Ururimi",
+      "privacy": "Ibanga",
+      "security": "Umutekano"
+    },
     "language": {
       "title": "Hindura Ururimi",
       "subtitle": "Hitamo ururimi ushaka gukoresha.",
       "available": "Indimi ziriho",
       "apply": "Shyira ururimi mu bikorwa"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Byasangijwe"
+    },
+    "search": {
+      "placeholder": "Shakisha ibyo wasangiye"
+    },
+    "collab": {
+      "title": "Mukorane",
+      "subtitle": "Reba abakuherukaho kugusangiza dosiye kandi utunganye uburenganzira bwabo ahantu hamwe.",
+      "cta": "Tunganya uburenganzira"
+    },
+    "actions": {
+      "viewAll": "Reba byose"
+    },
+    "time": {
+      "twoHours": "2h ishize",
+      "yesterday": "Ejo",
+      "twoDays": "Iminsi 2 ishize",
+      "threeDays": "Iminsi 3 ishize",
+      "fiveDays": "Iminsi 5 ishize",
+      "lastWeek": "Icyumweru gishize",
+      "today": "Uyu munsi"
+    },
+    "meta": {
+      "sharedBy": "Byasangijwe na {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "Itegereje isuzuma ryawe",
+        "requestEdit": "Gusaba guhindura"
+      },
+      "meta": {
+        "awaitingReview": "Itegereje",
+        "requestedToday": "Hasabwe uyu munsi"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Byaherukaga gusangizwa",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Byasangijwe na {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Byasangijwe na {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Byasangijwe na {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Ububiko busangijwe",
+        "items": {
+          "campaignAssets": {
+            "detail": "Byasangijwe na {{team}} • Byavuguruwe {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Byasangijwe na {{team}} • Byavuguruwe {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Byasangijwe na {{team}} • Byavuguruwe {{time}}"
+          },
+          "leadership": {
+            "detail": "Byasangijwe na {{team}} • Byavuguruwe {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Ibisaba kwemezwa",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Byasangijwe na {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Byasangijwe na {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Ahabanza",
+      "shared": "Byasangijwe",
+      "scan": "Sikana",
+      "files": "Amadosiye",
+      "account": "Konti"
     }
   }
 }

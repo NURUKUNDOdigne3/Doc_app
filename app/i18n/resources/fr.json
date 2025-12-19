@@ -65,11 +65,126 @@
     }
   },
   "settings": {
+    "screen": {
+      "title": "Compte",
+      "planLabel": "Gratuit",
+      "planUsage": "{{used}} Go sur {{total}} Go",
+      "upgradeCta": "Mettre à niveau",
+      "teamTitle": "Membres de l'équipe",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Inviter",
+      "devicesTitle": "Appareils",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Gérer",
+      "menuTitle": "Menu",
+      "logout": "Déconnexion"
+    },
+    "menu": {
+      "settings": "Paramètres",
+      "storage": "Stockage",
+      "billing": "Facturation",
+      "notification": "Notifications",
+      "refer": "Parrainer un ami",
+      "language": "Langue",
+      "privacy": "Confidentialité",
+      "security": "Sécurité"
+    },
     "language": {
       "title": "Changer de langue",
       "subtitle": "Choisissez votre langue.",
       "available": "Langues disponibles",
       "apply": "Appliquer la langue"
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Partagés"
+    },
+    "search": {
+      "placeholder": "Rechercher dans les éléments partagés"
+    },
+    "collab": {
+      "title": "Collaborez",
+      "subtitle": "Voyez qui a récemment partagé des fichiers avec vous et gérez leurs accès au même endroit.",
+      "cta": "Gérer les accès"
+    },
+    "actions": {
+      "viewAll": "Voir tout"
+    },
+    "time": {
+      "twoHours": "Il y a 2 h",
+      "yesterday": "Hier",
+      "twoDays": "Il y a 2 jours",
+      "threeDays": "Il y a 3 jours",
+      "fiveDays": "Il y a 5 jours",
+      "lastWeek": "La semaine dernière",
+      "today": "Aujourd'hui"
+    },
+    "meta": {
+      "sharedBy": "Partagé par {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "En attente de votre validation",
+        "requestEdit": "Demande de modification"
+      },
+      "meta": {
+        "awaitingReview": "En attente",
+        "requestedToday": "Demandé aujourd'hui"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Partagés récemment",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Partagé par {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Partagé par {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Partagé par {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Dossiers partagés",
+        "items": {
+          "campaignAssets": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          },
+          "leadership": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Approbations en attente",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Partagé par {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Partagé par {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Accueil",
+      "shared": "Partagés",
+      "scan": "Scanner",
+      "files": "Mes fichiers",
+      "account": "Compte"
     }
   }
 }
