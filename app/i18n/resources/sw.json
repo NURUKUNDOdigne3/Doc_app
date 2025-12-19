@@ -3,7 +3,10 @@
     "appName": "Programu ya Nyaraka",
     "welcome": "Karibu tena, {{name}}!",
     "syncing": "Inasawazisha faili na wingu",
-    "synced": "Faili zote zimesawazishwa"
+    "synced": "Faili zote zimesawazishwa",
+    "actions": {
+      "seeAll": "Ona yote"
+    }
   },
   "home": {
     "title": "Nyumbani",
@@ -255,8 +258,8 @@
     }
   },
   "preview": {
-    "title": "Hakikisho",
-    "close": "Funga hakikisho",
+    "title": "Hakiki",
+    "close": "Funga hakiki",
     "actions": {
       "comment": "Toa maoni",
       "download": "Pakua",
@@ -267,12 +270,111 @@
       "manageAccess": "Dhibiti ufikiaji"
     }
   },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Karibu tena",
+      "subtitle": "Tafadhali andika barua pepe yako ili uingie",
+      "emailPlaceholder": "Andika barua pepe",
+      "next": "Endelea",
+      "socialGoogle": "Endelea na Google",
+      "socialApple": "Endelea na Apple",
+      "noAccount": "Huna akaunti?",
+      "register": "Fungua akaunti."
+    },
+    "signup": {
+      "title": "Tengeneza akaunti mpya",
+      "subtitle": "Jaza taarifa ili kuunda akaunti",
+      "fullName": "Jina kamili",
+      "fullNamePlaceholder": "Andika jina lako kamili",
+      "email": "Barua pepe",
+      "emailPlaceholder": "Andika barua pepe",
+      "password": "Nenosiri",
+      "passwordPlaceholder": "Tengeneza nenosiri",
+      "confirmPassword": "Thibitisha nenosiri",
+      "confirmPasswordPlaceholder": "Rudia nenosiri",
+      "submit": "Jisajili",
+      "haveAccount": "Tayari una akaunti?",
+      "signIn": "Ingia"
+    },
+    "password": {
+      "title": "Je, wewe ni Digne?",
+      "subtitle": "Thibitisha kwa nenosiri lako",
+      "passwordPlaceholder": "Andika nenosiri",
+      "login": "Ingia",
+      "forgot": "Umesahau nenosiri?",
+      "reset": "Weka upya nenosiri"
+    },
+    "passwordReset": {
+      "title": "Umesahau nenosiri?",
+      "subtitle": "Pata kiungo cha kuweka upya kupitia barua pepe",
+      "emailPlaceholder": "Andika barua pepe",
+      "next": "Endelea",
+      "remember": "Unakumbuka nenosiri?",
+      "login": "Ingia"
+    },
+    "otp": {
+      "title": "Karibu Digne!",
+      "subtitle": "Weka msimbo wa tarakimu 6 uliotumwa kwenye barua pepe yako",
+      "placeholder": "000000",
+      "verify": "Thibitisha",
+      "noCode": "Hujapata msimbo wa OTP?",
+      "sendAgain": "Tuma tena"
+    },
+    "forgetPassword": {
+      "title": "Weka upya nenosiri",
+      "subtitle": "Weka barua pepe inayohusishwa na akaunti yako na tutatuma OTP ya kuweka upya nenosiri.",
+      "email": "Barua pepe",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Tuma OTP",
+      "backToSignIn": "Rudi kuingia"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Folda",
+      "subtitle": "Imesasishwa {{time}}"
+    },
+    "empty": {
+      "title": "Folda haijapatikana",
+      "description": "Folda unayotafuta huenda ilihamishwa au kufutwa.",
+      "cta": "Rudi kwenye folda"
+    },
+    "hero": {
+      "meta": "Vipengee {{count}} • {{size}} • Mmiliki {{owner}}",
+      "invite": "Alika"
+    },
+    "search": {
+      "placeholder": "Tafuta ndani ya folda hii"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Zilizobandikwa",
+        "meta": "Vipengee {{count}}"
+      },
+      "allItems": {
+        "title": "Vipengee vyote",
+        "meta": "Jumla {{count}}"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Vipendwa",
+      "activity": "Shughuli",
+      "security": "Usalama",
+      "forgetPassword": "Weka upya nenosiri",
+      "planDetails": "Bei",
+      "documentDetails": "Maelezo ya hati",
+      "upload": "Pakia"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Nyumbani",
       "shared": "Imeshirikiwa",
-      "scan": "Changanua",
-      "files": "Faili Zangu",
+      "scan": "Skani",
+      "files": "Faili zangu",
       "account": "Akaunti"
     }
   }

@@ -3,7 +3,10 @@
     "appName": "መለያ መተግበሪያ",
     "welcome": "እንኳን ደህና መጡ፣ {{name}}!",
     "syncing": "ፋይሎች ጋር በክላውድ ማመሳሰል በመካከል ነው",
-    "synced": "ሁሉም ፋይሎች ተመሳሰሉ"
+    "synced": "ሁሉም ፋይሎች ተመሳሰሉ",
+    "actions": {
+      "seeAll": "ሁሉንም አሳይ"
+    }
   },
   "home": {
     "title": "መነሻ",
@@ -256,15 +259,114 @@
   },
   "preview": {
     "title": "ቅድመ እይታ",
-    "close": "ቅድመ እይታውን ዝጋ",
+    "close": "ቅድመ እይታን ዝጋ",
     "actions": {
       "comment": "አስተያየት",
       "download": "አውርድ",
       "delete": "ሰርዝ",
-      "link": "አግኝ አገናኝ",
+      "link": "ሊንክ አግኝ",
       "share": "አጋራ",
-      "openFolder": "ፎልደሩን ክፈት",
+      "openFolder": "ፎልደር ክፈት",
       "manageAccess": "መዳረሻን አስተዳድር"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "እንኳን ደህና መጡ",
+      "subtitle": "ለመግባት ኢሜልዎን ያስገቡ",
+      "emailPlaceholder": "ኢሜል ያስገቡ",
+      "next": "ቀጣይ",
+      "socialGoogle": "በ Google ቀጥል",
+      "socialApple": "በ Apple ቀጥል",
+      "noAccount": "መለያ የለዎትም?",
+      "register": "መለያ ይመዝገቡ።"
+    },
+    "signup": {
+      "title": "አዲስ መለያ ፍጠር",
+      "subtitle": "መለያ ለመፍጠር መረጃ ያስገቡ",
+      "fullName": "ሙሉ ስም",
+      "fullNamePlaceholder": "ሙሉ ስምዎን ያስገቡ",
+      "email": "ኢሜል",
+      "emailPlaceholder": "ኢሜልዎን ያስገቡ",
+      "password": "የይለፍ ቃል",
+      "passwordPlaceholder": "የይለፍ ቃል ፍጠር",
+      "confirmPassword": "የይለፍ ቃል አረጋግጥ",
+      "confirmPasswordPlaceholder": "የይለፍ ቃል ደግመው ያስገቡ",
+      "submit": "ተመዝገብ",
+      "haveAccount": "መለያ አለዎት?",
+      "signIn": "ግባ"
+    },
+    "password": {
+      "title": "እርስዎ Digne ነዎት?",
+      "subtitle": "በይለፍ ቃልዎ ያረጋግጡ",
+      "passwordPlaceholder": "የይለፍ ቃል ያስገቡ",
+      "login": "ግባ",
+      "forgot": "የይለፍ ቃል ረሱ?",
+      "reset": "የይለፍ ቃል ዳግም አስጀምር"
+    },
+    "passwordReset": {
+      "title": "የይለፍ ቃል ረሱ?",
+      "subtitle": "በኢሜል የዳግም አስጀምር ሊንክ ያግኙ",
+      "emailPlaceholder": "ኢሜል ያስገቡ",
+      "next": "ቀጣይ",
+      "remember": "የይለፍ ቃልዎን ትዝ አለዎት?",
+      "login": "ግባ"
+    },
+    "otp": {
+      "title": "እንኳን ደህና መጡ Digne!",
+      "subtitle": "በኢሜልዎ የተላከ 6 አሃዝ ኮድ ያስገቡ",
+      "placeholder": "000000",
+      "verify": "አረጋግጥ",
+      "noCode": "OTP ኮድ አልደረሰዎትም?",
+      "sendAgain": "እንደገና ላክ"
+    },
+    "forgetPassword": {
+      "title": "የይለፍ ቃል ዳግም አስጀምር",
+      "subtitle": "ከመለያዎ ጋር የተገናኘ ኢሜል ያስገቡ፣ የይለፍ ቃል ለመቀየር OTP እንልካለን።",
+      "email": "ኢሜል",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "OTP ላክ",
+      "backToSignIn": "ወደ መግባት ተመለስ"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "ፎልደር",
+      "subtitle": "ተዘምኗል {{time}}"
+    },
+    "empty": {
+      "title": "ፎልደር አልተገኘም",
+      "description": "የሚፈልጉት ፎልደር ሊተካ ወይም ሊሰርዝ ይችላል።",
+      "cta": "ወደ ፎልደሮች ተመለስ"
+    },
+    "hero": {
+      "meta": "{{count}} ንጥሎች • {{size}} • ባለቤት {{owner}}",
+      "invite": "ጋብዝ"
+    },
+    "search": {
+      "placeholder": "በዚህ ፎልደር ውስጥ ፈልግ"
+    },
+    "sections": {
+      "pinned": {
+        "title": "የተቆለፉ",
+        "meta": "{{count}} ንጥሎች"
+      },
+      "allItems": {
+        "title": "ሁሉም ንጥሎች",
+        "meta": "ጠቅላላ {{count}}"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "ተወዳጆች",
+      "activity": "እንቅስቃሴ",
+      "security": "ደህንነት",
+      "forgetPassword": "የይለፍ ቃል ዳግም አስጀምር",
+      "planDetails": "ዋጋ",
+      "documentDetails": "የሰነድ ዝርዝር",
+      "upload": "ጫን"
     }
   },
   "navigation": {

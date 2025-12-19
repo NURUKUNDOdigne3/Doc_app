@@ -1,12 +1,15 @@
 import { Stack } from "expo-router";
 
 import { MaterialIcons } from "@expo/vector-icons";
+import { useTranslation } from "react-i18next";
 import { Pressable, StatusBar } from "react-native";
 import { colors } from "./constants/theme";
 
 import "./i18n";
 
 export default function RootLayout() {
+  const { t } = useTranslation("stack");
+
   return (
     <>
       <Stack
@@ -18,9 +21,18 @@ export default function RootLayout() {
       >
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="favourites" options={{ title: "Favourites" }} />
-        <Stack.Screen name="activity" options={{ title: "Activity" }} />
-        <Stack.Screen name="security" options={{ title: "Security" }} />
+        <Stack.Screen
+          name="favourites"
+          options={{ title: t("titles.favourites") }}
+        />
+        <Stack.Screen
+          name="activity"
+          options={{ title: t("titles.activity") }}
+        />
+        <Stack.Screen
+          name="security"
+          options={{ title: t("titles.security") }}
+        />
         <Stack.Screen name="login" options={{ headerShown: false }} />
         <Stack.Screen name="password" options={{ headerShown: false }} />
         <Stack.Screen name="password-reset" options={{ headerShown: false }} />
@@ -29,12 +41,12 @@ export default function RootLayout() {
         <Stack.Screen name="folder/[id]" options={{ headerShown: false }} />
         <Stack.Screen
           name="forget-password"
-          options={{ title: "Reset Password" }}
+          options={{ title: t("titles.forgetPassword") }}
         />
         <Stack.Screen
           name="plan-details"
           options={({ navigation }) => ({
-            title: "Pricing",
+            title: t("titles.planDetails"),
             headerTitleStyle: {
               color: colors.text,
               fontWeight: "700",
@@ -94,9 +106,9 @@ export default function RootLayout() {
         <Stack.Screen name="(tabs)/scan" options={{ headerShown: false }} />
         <Stack.Screen
           name="document-details"
-          options={{ title: "Document Details" }}
+          options={{ title: t("titles.documentDetails") }}
         />
-        <Stack.Screen name="upload" options={{ title: "Upload" }} />
+        <Stack.Screen name="upload" options={{ title: t("titles.upload") }} />
       </Stack>
       <StatusBar barStyle="dark-content" />
     </>

@@ -3,7 +3,10 @@
     "appName": "تطبيق المستندات",
     "welcome": "مرحباً بعودتك، {{name}}!",
     "syncing": "جارٍ مزامنة الملفات مع السحابة",
-    "synced": "تمت مزامنة جميع الملفات"
+    "synced": "تمت مزامنة جميع الملفات",
+    "actions": {
+      "seeAll": "عرض الكل"
+    }
   },
   "home": {
     "title": "الرئيسية",
@@ -255,6 +258,105 @@
       "share": "مشاركة",
       "openFolder": "فتح المجلد",
       "manageAccess": "إدارة الصلاحيات"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "مرحبًا بعودتك",
+      "subtitle": "يرجى إدخال بريدك الإلكتروني لتسجيل الدخول",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "next": "التالي",
+      "socialGoogle": "المتابعة باستخدام Google",
+      "socialApple": "المتابعة باستخدام Apple",
+      "noAccount": "ليس لديك حساب؟",
+      "register": "إنشاء حساب."
+    },
+    "signup": {
+      "title": "إنشاء حساب جديد",
+      "subtitle": "يرجى تعبئة البيانات لإنشاء حساب",
+      "fullName": "الاسم الكامل",
+      "fullNamePlaceholder": "اكتب اسمك الكامل",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "اكتب بريدك الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "أنشئ كلمة مرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+      "submit": "إنشاء حساب",
+      "haveAccount": "لديك حساب بالفعل؟",
+      "signIn": "تسجيل الدخول"
+    },
+    "password": {
+      "title": "هل أنت Digne؟",
+      "subtitle": "أكد هويتك بكلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "login": "تسجيل الدخول",
+      "forgot": "هل نسيت كلمة المرور؟",
+      "reset": "إعادة تعيين كلمة المرور"
+    },
+    "passwordReset": {
+      "title": "هل نسيت كلمة المرور؟",
+      "subtitle": "احصل على رابط إعادة التعيين عبر بريدك الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "next": "التالي",
+      "remember": "تتذكر كلمة المرور؟",
+      "login": "تسجيل الدخول"
+    },
+    "otp": {
+      "title": "مرحبًا Digne!",
+      "subtitle": "أدخل رمز وصول مكون من 6 أرقام تم إرساله إلى بريدك الإلكتروني",
+      "placeholder": "000000",
+      "verify": "تحقق",
+      "noCode": "لم يصلك رمز OTP؟",
+      "sendAgain": "إرسال مرة أخرى"
+    },
+    "forgetPassword": {
+      "title": "إعادة تعيين كلمة المرور",
+      "subtitle": "أدخل البريد الإلكتروني المرتبط بحسابك وسنرسل رمز OTP لإعادة تعيين كلمة المرور.",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "إرسال OTP",
+      "backToSignIn": "العودة إلى تسجيل الدخول"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "مجلد",
+      "subtitle": "تم التحديث {{time}}"
+    },
+    "empty": {
+      "title": "المجلد غير موجود",
+      "description": "قد يكون المجلد الذي تبحث عنه قد تم نقله أو حذفه.",
+      "cta": "العودة إلى المجلدات"
+    },
+    "hero": {
+      "meta": "{{count}} عنصر • {{size}} • المالك {{owner}}",
+      "invite": "دعوة"
+    },
+    "search": {
+      "placeholder": "ابحث داخل هذا المجلد"
+    },
+    "sections": {
+      "pinned": {
+        "title": "مثبت",
+        "meta": "{{count}} عنصر"
+      },
+      "allItems": {
+        "title": "كل العناصر",
+        "meta": "{{count}} إجمالي"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "المفضلة",
+      "activity": "النشاط",
+      "security": "الأمان",
+      "forgetPassword": "إعادة تعيين كلمة المرور",
+      "planDetails": "الأسعار",
+      "documentDetails": "تفاصيل المستند",
+      "upload": "رفع"
     }
   },
   "navigation": {

@@ -70,6 +70,8 @@ if (!i18n.isInitialized) {
       "auth",
       "folderDetail",
       "stack",
+      "security",
+      "planDetails",
     ],
     interpolation: {
       escapeValue: false,

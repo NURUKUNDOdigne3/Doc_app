@@ -641,6 +641,59 @@
       "upload": "Upload"
     }
   },
+  "security": {
+    "screen": {
+      "title": "Security overview",
+      "description": "Review device sign-ins, sessions, and harden your account.",
+      "cta": "Go to settings"
+    },
+    "sections": {
+      "status": {
+        "title": "Status",
+        "ok": "No suspicious activity detected"
+      },
+      "recommended": {
+        "title": "Recommended actions",
+        "items": {
+          "twoFactor": "Enable two-factor authentication",
+          "thirdParty": "Review third-party integrations"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Choose your plan"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Monthly",
+        "annually": "Annually"
+      },
+      "meta": {
+        "monthly": "Billed monthly",
+        "annually": "Billed annually"
+      },
+      "period": {
+        "month": "month",
+        "year": "year"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Basic"
+      },
+      "standard": {
+        "title": "Standard"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Upgrade"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Home",

@@ -3,7 +3,10 @@
     "appName": "Application Doc",
     "welcome": "Bon retour, {{name}} !",
     "syncing": "Synchronisation des fichiers avec le cloud",
-    "synced": "Tous les fichiers sont synchronisés"
+    "synced": "Tous les fichiers sont synchronisés",
+    "actions": {
+      "seeAll": "Voir tout"
+    }
   },
   "home": {
     "title": "Accueil",
@@ -267,10 +270,109 @@
       "manageAccess": "Gérer les accès"
     }
   },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Veuillez saisir votre e-mail pour vous connecter",
+      "emailPlaceholder": "Saisissez votre e-mail",
+      "next": "Suivant",
+      "socialGoogle": "Continuer avec Google",
+      "socialApple": "Continuer avec Apple",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "register": "Créer un compte."
+    },
+    "signup": {
+      "title": "Créer un nouveau compte",
+      "subtitle": "Veuillez remplir le formulaire pour créer un compte",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Saisissez votre nom complet",
+      "email": "E-mail",
+      "emailPlaceholder": "Saisissez votre e-mail",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Créez un mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Répétez votre mot de passe",
+      "submit": "S'inscrire",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter"
+    },
+    "password": {
+      "title": "Êtes-vous Digne ?",
+      "subtitle": "Confirmez-vous avec votre mot de passe",
+      "passwordPlaceholder": "Saisissez votre mot de passe",
+      "login": "Connexion",
+      "forgot": "Mot de passe oublié ?",
+      "reset": "Réinitialiser le mot de passe"
+    },
+    "passwordReset": {
+      "title": "Mot de passe oublié ?",
+      "subtitle": "Recevez un lien de réinitialisation par e-mail",
+      "emailPlaceholder": "Saisissez votre e-mail",
+      "next": "Suivant",
+      "remember": "Vous vous souvenez de votre mot de passe ?",
+      "login": "Connexion"
+    },
+    "otp": {
+      "title": "Bienvenue Digne !",
+      "subtitle": "Saisissez le code d'accès à 6 chiffres envoyé à votre e-mail",
+      "placeholder": "000000",
+      "verify": "Vérifier",
+      "noCode": "Vous n'avez pas reçu votre code OTP ?",
+      "sendAgain": "Renvoyer"
+    },
+    "forgetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Saisissez l'e-mail associé à votre compte et nous vous enverrons un OTP pour réinitialiser votre mot de passe.",
+      "email": "E-mail",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Envoyer l'OTP",
+      "backToSignIn": "Retour à la connexion"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Dossier",
+      "subtitle": "Mis à jour {{time}}"
+    },
+    "empty": {
+      "title": "Dossier introuvable",
+      "description": "Le dossier que vous recherchez a peut-être été déplacé ou supprimé.",
+      "cta": "Retour aux dossiers"
+    },
+    "hero": {
+      "meta": "{{count}} éléments • {{size}} • Propriétaire {{owner}}",
+      "invite": "Inviter"
+    },
+    "search": {
+      "placeholder": "Rechercher dans ce dossier"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Épinglés",
+        "meta": "{{count}} éléments"
+      },
+      "allItems": {
+        "title": "Tous les éléments",
+        "meta": "{{count}} au total"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Favoris",
+      "activity": "Activité",
+      "security": "Sécurité",
+      "forgetPassword": "Réinitialiser le mot de passe",
+      "planDetails": "Tarifs",
+      "documentDetails": "Détails du document",
+      "upload": "Téléverser"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Accueil",
-      "shared": "Partagés",
+      "shared": "Partagé",
       "scan": "Scanner",
       "files": "Mes fichiers",
       "account": "Compte"

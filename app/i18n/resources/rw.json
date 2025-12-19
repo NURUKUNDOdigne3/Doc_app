@@ -3,7 +3,10 @@
     "appName": "Porogaramu y'inyandiko",
     "welcome": "Murakaza neza, {{name}}!",
     "syncing": "Turimo kohereza dosiye ku bubiko bwa cloud",
-    "synced": "Dosiye zose zoherejwe"
+    "synced": "Dosiye zose zoherejwe",
+    "actions": {
+      "seeAll": "Reba byose"
+    }
   },
   "home": {
     "title": "Ahabanza",
@@ -261,17 +264,116 @@
       "comment": "Tanga igitekerezo",
       "download": "Kuramo",
       "delete": "Siba",
-      "link": "Fata ihuriro",
-      "share": "Sangira",
+      "link": "Fata umurongo",
+      "share": "Sangiza",
       "openFolder": "Fungura ububiko",
-      "manageAccess": "Tunganya uburenganzira"
+      "manageAccess": "Genzura uburenganzira"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Murakaza neza",
+      "subtitle": "Andika imeri yawe kugira ngo winjire",
+      "emailPlaceholder": "Andika imeri",
+      "next": "Komeza",
+      "socialGoogle": "Komeza na Google",
+      "socialApple": "Komeza na Apple",
+      "noAccount": "Nta konti ufite?",
+      "register": "Fungura konti."
+    },
+    "signup": {
+      "title": "Fungura konti nshya",
+      "subtitle": "Uzuza ibisabwa kugira ngo ufungure konti",
+      "fullName": "Amazina",
+      "fullNamePlaceholder": "Andika amazina yawe",
+      "email": "Imeri",
+      "emailPlaceholder": "Andika imeri",
+      "password": "Ijambo ry'ibanga",
+      "passwordPlaceholder": "Kora ijambo ry'ibanga",
+      "confirmPassword": "Emeza ijambo ry'ibanga",
+      "confirmPasswordPlaceholder": "Subiramo ijambo ry'ibanga",
+      "submit": "Iyandikishe",
+      "haveAccount": "Usanzwe ufite konti?",
+      "signIn": "Injira"
+    },
+    "password": {
+      "title": "Uri Digne?",
+      "subtitle": "Emeza ukoresheje ijambo ry'ibanga",
+      "passwordPlaceholder": "Andika ijambo ry'ibanga",
+      "login": "Injira",
+      "forgot": "Wibagiwe ijambo ry'ibanga?",
+      "reset": "Hindura ijambo ry'ibanga"
+    },
+    "passwordReset": {
+      "title": "Wibagiwe ijambo ry'ibanga?",
+      "subtitle": "Akira umurongo wo kongera gukora ijambo ry'ibanga ukoresheje imeri",
+      "emailPlaceholder": "Andika imeri",
+      "next": "Komeza",
+      "remember": "Uracyibuka ijambo ry'ibanga?",
+      "login": "Injira"
+    },
+    "otp": {
+      "title": "Murakaza neza Digne!",
+      "subtitle": "Andika kode y'imibare 6 yo kwinjira yoherejwe kuri imeri",
+      "placeholder": "000000",
+      "verify": "Emeza",
+      "noCode": "Ntabwo wakiriye kode ya OTP?",
+      "sendAgain": "Ohereza nanone"
+    },
+    "forgetPassword": {
+      "title": "Hindura ijambo ry'ibanga",
+      "subtitle": "Andika imeri yanditse kuri konti yawe, tuzohereza OTP yo guhindura ijambo ry'ibanga.",
+      "email": "Imeri",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Ohereza OTP",
+      "backToSignIn": "Subira ku kwinjira"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Ububiko",
+      "subtitle": "Byavuguruwe {{time}}"
+    },
+    "empty": {
+      "title": "Ububiko ntibubonetse",
+      "description": "Ububiko ushaka bushobora kuba bwarimuwe cyangwa bwasibwe.",
+      "cta": "Subira ku bubiko"
+    },
+    "hero": {
+      "meta": "{{count}} ibintu • {{size}} • Nyirabyo {{owner}}",
+      "invite": "Tumira"
+    },
+    "search": {
+      "placeholder": "Shakisha muri ubu bubiko"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Byafashwe",
+        "meta": "{{count}} ibintu"
+      },
+      "allItems": {
+        "title": "Ibintu byose",
+        "meta": "{{count}} byose"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Ibyo ukunda",
+      "activity": "Ibikorwa",
+      "security": "Umutekano",
+      "forgetPassword": "Hindura ijambo ry'ibanga",
+      "planDetails": "Ibiciro",
+      "documentDetails": "Ibisobanuro by'inyandiko",
+      "upload": "Ohereza"
     }
   },
   "navigation": {
     "tabs": {
       "home": "Ahabanza",
-      "shared": "Byasangijwe",
-      "scan": "Sikana",
+      "shared": "Bihuriweho",
+      "scan": "Scan",
       "files": "Amadosiye",
       "account": "Konti"
     }

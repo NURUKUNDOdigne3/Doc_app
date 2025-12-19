@@ -3,7 +3,10 @@
     "appName": "डॉक ऐप",
     "welcome": "वापसी पर स्वागत है, {{name}}!",
     "syncing": "क्लाउड पर फ़ाइलें सिंक की जा रही हैं",
-    "synced": "सभी फ़ाइलें सिंक हो गईं"
+    "synced": "सभी फ़ाइलें सिंक हो गईं",
+    "actions": {
+      "seeAll": "सभी देखें"
+    }
   },
   "home": {
     "title": "मुखपृष्ठ",
@@ -264,7 +267,7 @@
       "link": "लिंक प्राप्त करें",
       "share": "साझा करें",
       "openFolder": "फ़ोल्डर खोलें",
-      "manageAccess": "पहुँच प्रबंधित करें"
+      "manageAccess": "एक्सेस प्रबंधित करें"
     }
   },
   "navigation": {
@@ -274,6 +277,105 @@
       "scan": "स्कैन",
       "files": "मेरी फ़ाइलें",
       "account": "खाता"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "वापसी पर स्वागत है",
+      "subtitle": "लॉगिन करने के लिए अपना ईमेल दर्ज करें",
+      "emailPlaceholder": "अपना ईमेल लिखें",
+      "next": "आगे",
+      "socialGoogle": "Google के साथ जारी रखें",
+      "socialApple": "Apple के साथ जारी रखें",
+      "noAccount": "खाता नहीं है? ",
+      "register": "खाता बनाएं।"
+    },
+    "signup": {
+      "title": "नया खाता बनाएं",
+      "subtitle": "खाता बनाने के लिए विवरण भरें",
+      "fullName": "पूरा नाम",
+      "fullNamePlaceholder": "अपना पूरा नाम लिखें",
+      "email": "ईमेल",
+      "emailPlaceholder": "अपना ईमेल लिखें",
+      "password": "पासवर्ड",
+      "passwordPlaceholder": "पासवर्ड बनाएं",
+      "confirmPassword": "पासवर्ड पुष्टि",
+      "confirmPasswordPlaceholder": "पासवर्ड दोहराएँ",
+      "submit": "साइन अप",
+      "haveAccount": "पहले से खाता है? ",
+      "signIn": "साइन इन"
+    },
+    "password": {
+      "title": "क्या आप Digne हैं? ",
+      "subtitle": "अपने पासवर्ड से पुष्टि करें",
+      "passwordPlaceholder": "अपना पासवर्ड लिखें",
+      "login": "लॉगिन",
+      "forgot": "पासवर्ड भूल गए? ",
+      "reset": "पासवर्ड रीसेट करें"
+    },
+    "passwordReset": {
+      "title": "पासवर्ड भूल गए? ",
+      "subtitle": "ईमेल से रीसेट लिंक प्राप्त करें",
+      "emailPlaceholder": "अपना ईमेल लिखें",
+      "next": "आगे",
+      "remember": "पासवर्ड याद है? ",
+      "login": "लॉगिन"
+    },
+    "otp": {
+      "title": "स्वागत है Digne! ",
+      "subtitle": "ईमेल पर भेजा गया 6-अंकों का कोड दर्ज करें",
+      "placeholder": "000000",
+      "verify": "सत्यापित करें",
+      "noCode": "OTP कोड नहीं मिला? ",
+      "sendAgain": "फिर से भेजें"
+    },
+    "forgetPassword": {
+      "title": "पासवर्ड रीसेट",
+      "subtitle": "अपने खाते से जुड़े ईमेल को दर्ज करें और हम पासवर्ड रीसेट के लिए OTP भेजेंगे।",
+      "email": "ईमेल",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "OTP भेजें",
+      "backToSignIn": "साइन इन पर वापस जाएँ"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "फ़ोल्डर",
+      "subtitle": "अपडेट किया गया {{time}}"
+    },
+    "empty": {
+      "title": "फ़ोल्डर नहीं मिला",
+      "description": "आप जिस फ़ोल्डर को ढूंढ रहे हैं वह स्थानांतरित या हटाया जा सकता है।",
+      "cta": "फ़ोल्डर्स पर वापस जाएँ"
+    },
+    "hero": {
+      "meta": "{{count}} आइटम • {{size}} • मालिक {{owner}}",
+      "invite": "आमंत्रित करें"
+    },
+    "search": {
+      "placeholder": "इस फ़ोल्डर में खोजें"
+    },
+    "sections": {
+      "pinned": {
+        "title": "पिन किए गए",
+        "meta": "{{count}} आइटम"
+      },
+      "allItems": {
+        "title": "सभी आइटम",
+        "meta": "{{count}} कुल"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "पसंदीदा",
+      "activity": "गतिविधि",
+      "security": "सुरक्षा",
+      "forgetPassword": "पासवर्ड रीसेट",
+      "planDetails": "मूल्य निर्धारण",
+      "documentDetails": "दस्तावेज़ विवरण",
+      "upload": "अपलोड"
     }
   }
 }

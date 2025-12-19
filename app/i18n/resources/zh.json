@@ -3,7 +3,10 @@
     "appName": "文档应用",
     "welcome": "欢迎回来，{{name}}！",
     "syncing": "正在将文件同步到云端",
-    "synced": "所有文件已同步"
+    "synced": "所有文件已同步",
+    "actions": {
+      "seeAll": "查看全部"
+    }
   },
   "home": {
     "title": "首页",
@@ -264,7 +267,106 @@
       "link": "获取链接",
       "share": "分享",
       "openFolder": "打开文件夹",
-      "manageAccess": "管理权限"
+      "manageAccess": "管理访问"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "请输入邮箱以登录",
+      "emailPlaceholder": "输入邮箱",
+      "next": "下一步",
+      "socialGoogle": "使用 Google 继续",
+      "socialApple": "使用 Apple 继续",
+      "noAccount": "还没有账号？",
+      "register": "注册账号。"
+    },
+    "signup": {
+      "title": "创建新账号",
+      "subtitle": "请填写信息以创建账号",
+      "fullName": "姓名",
+      "fullNamePlaceholder": "输入你的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "输入你的邮箱",
+      "password": "密码",
+      "passwordPlaceholder": "创建密码",
+      "confirmPassword": "确认密码",
+      "confirmPasswordPlaceholder": "再次输入密码",
+      "submit": "注册",
+      "haveAccount": "已有账号？",
+      "signIn": "登录"
+    },
+    "password": {
+      "title": "你是 Digne 吗？",
+      "subtitle": "请输入密码确认身份",
+      "passwordPlaceholder": "输入密码",
+      "login": "登录",
+      "forgot": "忘记密码？",
+      "reset": "重置密码"
+    },
+    "passwordReset": {
+      "title": "忘记密码？",
+      "subtitle": "通过邮箱获取重置链接",
+      "emailPlaceholder": "输入邮箱",
+      "next": "下一步",
+      "remember": "记得密码？",
+      "login": "登录"
+    },
+    "otp": {
+      "title": "欢迎 Digne！",
+      "subtitle": "请输入发送到邮箱的 6 位验证码",
+      "placeholder": "000000",
+      "verify": "验证",
+      "noCode": "没有收到 OTP？",
+      "sendAgain": "重新发送"
+    },
+    "forgetPassword": {
+      "title": "重置密码",
+      "subtitle": "输入与你的账号关联的邮箱，我们将发送 OTP 用于重置密码。",
+      "email": "邮箱",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "发送 OTP",
+      "backToSignIn": "返回登录"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "文件夹",
+      "subtitle": "更新于 {{time}}"
+    },
+    "empty": {
+      "title": "未找到文件夹",
+      "description": "你要查找的文件夹可能已被移动或删除。",
+      "cta": "返回文件夹"
+    },
+    "hero": {
+      "meta": "{{count}} 项 • {{size}} • 所有者 {{owner}}",
+      "invite": "邀请"
+    },
+    "search": {
+      "placeholder": "在此文件夹中搜索"
+    },
+    "sections": {
+      "pinned": {
+        "title": "已置顶",
+        "meta": "{{count}} 项"
+      },
+      "allItems": {
+        "title": "全部项目",
+        "meta": "共 {{count}} 项"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "收藏",
+      "activity": "活动",
+      "security": "安全",
+      "forgetPassword": "重置密码",
+      "planDetails": "价格",
+      "documentDetails": "文档详情",
+      "upload": "上传"
     }
   },
   "navigation": {
