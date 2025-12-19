@@ -369,6 +369,59 @@
       "upload": "Téléverser"
     }
   },
+  "security": {
+    "screen": {
+      "title": "Aperçu de la sécurité",
+      "description": "Consultez les connexions, les sessions et sécurisez votre compte.",
+      "cta": "Aller aux paramètres"
+    },
+    "sections": {
+      "status": {
+        "title": "Statut",
+        "ok": "Aucune activité suspecte détectée"
+      },
+      "recommended": {
+        "title": "Actions recommandées",
+        "items": {
+          "twoFactor": "Activer l'authentification à deux facteurs",
+          "thirdParty": "Vérifier les intégrations tierces"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Choisissez votre forfait"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Mensuel",
+        "annually": "Annuel"
+      },
+      "meta": {
+        "monthly": "Facturé mensuellement",
+        "annually": "Facturé annuellement"
+      },
+      "period": {
+        "month": "mois",
+        "year": "an"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Basique"
+      },
+      "standard": {
+        "title": "Standard"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Passer à la version supérieure"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Accueil",

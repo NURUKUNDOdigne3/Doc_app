@@ -377,5 +377,58 @@
       "documentDetails": "दस्तावेज़ विवरण",
       "upload": "अपलोड"
     }
+  },
+  "security": {
+    "screen": {
+      "title": "सुरक्षा अवलोकन",
+      "description": "डिवाइस साइन-इन, सेशंस देखें और अपने खाते को सुरक्षित करें।",
+      "cta": "सेटिंग्स पर जाएँ"
+    },
+    "sections": {
+      "status": {
+        "title": "स्थिति",
+        "ok": "कोई संदिग्ध गतिविधि नहीं मिली"
+      },
+      "recommended": {
+        "title": "अनुशंसित कार्रवाइयाँ",
+        "items": {
+          "twoFactor": "दो-कारक प्रमाणीकरण सक्षम करें",
+          "thirdParty": "थर्ड-पार्टी इंटीग्रेशन की समीक्षा करें"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "अपना प्लान चुनें"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "मासिक",
+        "annually": "वार्षिक"
+      },
+      "meta": {
+        "monthly": "मासिक बिलिंग",
+        "annually": "वार्षिक बिलिंग"
+      },
+      "period": {
+        "month": "महीना",
+        "year": "वर्ष"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "बेसिक"
+      },
+      "standard": {
+        "title": "स्टैंडर्ड"
+      },
+      "pro": {
+        "title": "प्रो"
+      }
+    },
+    "actions": {
+      "upgrade": "अपग्रेड"
+    }
   }
 }

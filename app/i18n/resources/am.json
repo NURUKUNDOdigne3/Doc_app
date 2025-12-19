@@ -369,6 +369,59 @@
       "upload": "ጫን"
     }
   },
+  "security": {
+    "screen": {
+      "title": "የደህንነት አጠቃላይ እይታ",
+      "description": "የመግባት መረጃዎችን፣ ሴሽኖችን እና መሣሪያዎችን ይመልከቱ እና መለያዎን ያስጠናክሩ።",
+      "cta": "ወደ ቅንብሮች ሂድ"
+    },
+    "sections": {
+      "status": {
+        "title": "ሁኔታ",
+        "ok": "ምንም የሚያጠራጥር እንቅስቃሴ አልተገኘም"
+      },
+      "recommended": {
+        "title": "የሚመከሩ እርምጃዎች",
+        "items": {
+          "twoFactor": "የሁለት-እርከን ማረጋገጫን አንቃ",
+          "thirdParty": "የሶስተኛ ወገን ትግበራዎችን ይመልከቱ"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "እቅድዎን ይምረጡ"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "ወርሃዊ",
+        "annually": "ዓመታዊ"
+      },
+      "meta": {
+        "monthly": "በወር ይከፈላል",
+        "annually": "በዓመት ይከፈላል"
+      },
+      "period": {
+        "month": "ወር",
+        "year": "ዓመት"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "መሠረታዊ"
+      },
+      "standard": {
+        "title": "መደበኛ"
+      },
+      "pro": {
+        "title": "ፕሮ"
+      }
+    },
+    "actions": {
+      "upgrade": "አሻሽል"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "መነሻ",

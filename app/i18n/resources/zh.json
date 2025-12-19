@@ -369,6 +369,59 @@
       "upload": "上传"
     }
   },
+  "security": {
+    "screen": {
+      "title": "安全概览",
+      "description": "查看设备登录与会话，并加强你的账户安全。",
+      "cta": "前往设置"
+    },
+    "sections": {
+      "status": {
+        "title": "状态",
+        "ok": "未检测到可疑活动"
+      },
+      "recommended": {
+        "title": "推荐操作",
+        "items": {
+          "twoFactor": "启用双重验证",
+          "thirdParty": "检查第三方集成"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "选择你的方案"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "按月",
+        "annually": "按年"
+      },
+      "meta": {
+        "monthly": "按月计费",
+        "annually": "按年计费"
+      },
+      "period": {
+        "month": "月",
+        "year": "年"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "基础"
+      },
+      "standard": {
+        "title": "标准"
+      },
+      "pro": {
+        "title": "专业"
+      }
+    },
+    "actions": {
+      "upgrade": "升级"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "首页",

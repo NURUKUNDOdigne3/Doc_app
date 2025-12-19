@@ -119,8 +119,15 @@ export default function SettingsMenuDetailScreen() {
 
   const [toggles, setToggles] = useState<ToggleState>(initialToggleState);
 
-  const handleSelectLanguage = (code: LocaleCode) => {
+  const handleSelectLanguage = async (code: LocaleCode) => {
     setPendingLanguage(code);
+    if (!isLanguageMenu) return;
+    if (code === currentLanguage) return;
+    try {
+      await changeLanguage(code);
+    } catch (error) {
+      console.warn("settings: failed to change language", error);
+    }
   };
 
   const handleApplyLanguage = async () => {

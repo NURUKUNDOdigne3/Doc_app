@@ -369,6 +369,59 @@
       "upload": "Pakia"
     }
   },
+  "security": {
+    "screen": {
+      "title": "Muhtasari wa usalama",
+      "description": "Kagua kuingia kwenye kifaa, vipindi na uimarisha akaunti yako.",
+      "cta": "Nenda kwenye mipangilio"
+    },
+    "sections": {
+      "status": {
+        "title": "Hali",
+        "ok": "Hakuna shughuli ya kutiliwa shaka iliyogunduliwa"
+      },
+      "recommended": {
+        "title": "Hatua zinazopendekezwa",
+        "items": {
+          "twoFactor": "Washa uthibitishaji wa hatua mbili",
+          "thirdParty": "Kagua miunganisho ya wahusika wengine"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Chagua mpango wako"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Kila mwezi",
+        "annually": "Kila mwaka"
+      },
+      "meta": {
+        "monthly": "Hulipishwa kila mwezi",
+        "annually": "Hulipishwa kila mwaka"
+      },
+      "period": {
+        "month": "mwezi",
+        "year": "mwaka"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Msingi"
+      },
+      "standard": {
+        "title": "Kawaida"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Boresha"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Nyumbani",

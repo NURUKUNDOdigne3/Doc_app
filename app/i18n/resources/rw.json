@@ -369,6 +369,59 @@
       "upload": "Ohereza"
     }
   },
+  "security": {
+    "screen": {
+      "title": "Incamake y'umutekano",
+      "description": "Reba uko winjiye, amasessoni n'ibikoresho, kandi ukomeze umutekano wa konti yawe.",
+      "cta": "Jya ku igenamiterere"
+    },
+    "sections": {
+      "status": {
+        "title": "Imiterere",
+        "ok": "Nta bikorwa biteye amakenga byabonetse"
+      },
+      "recommended": {
+        "title": "Iby'ingenzi byasabwa",
+        "items": {
+          "twoFactor": "Koresha two-factor authentication",
+          "thirdParty": "Suzuma ibikorwa by'abandi (third-party)"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Hitamo gahunda yawe"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Ukwezi",
+        "annually": "Umwaka"
+      },
+      "meta": {
+        "monthly": "Byishyurwa buri kwezi",
+        "annually": "Byishyurwa buri mwaka"
+      },
+      "period": {
+        "month": "ukwezi",
+        "year": "umwaka"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Ibanze"
+      },
+      "standard": {
+        "title": "Isanzwe"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Kongera urwego"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Ahabanza",

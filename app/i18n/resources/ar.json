@@ -359,10 +359,63 @@
       "upload": "رفع"
     }
   },
+  "security": {
+    "screen": {
+      "title": "نظرة عامة على الأمان",
+      "description": "راجع عمليات تسجيل الدخول والأجهزة والجلسات، وعزّز أمان حسابك.",
+      "cta": "الانتقال إلى الإعدادات"
+    },
+    "sections": {
+      "status": {
+        "title": "الحالة",
+        "ok": "لم يتم اكتشاف أي نشاط مريب"
+      },
+      "recommended": {
+        "title": "إجراءات موصى بها",
+        "items": {
+          "twoFactor": "فعّل المصادقة الثنائية",
+          "thirdParty": "راجع تكاملات الجهات الخارجية"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "اختر خطتك"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "شهري",
+        "annually": "سنوي"
+      },
+      "meta": {
+        "monthly": "يتم الفوترة شهريًا",
+        "annually": "يتم الفوترة سنويًا"
+      },
+      "period": {
+        "month": "شهر",
+        "year": "سنة"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "أساسي"
+      },
+      "standard": {
+        "title": "قياسي"
+      },
+      "pro": {
+        "title": "احترافي"
+      }
+    },
+    "actions": {
+      "upgrade": "ترقية"
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "الرئيسية",
-      "shared": "المشتركة",
+      "shared": "المشترك",
       "scan": "مسح",
       "files": "ملفاتي",
       "account": "الحساب"
