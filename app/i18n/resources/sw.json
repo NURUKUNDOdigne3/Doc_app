@@ -99,6 +99,19 @@
       "apply": "Tumia lugha"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "Badilisha lugha",
+      "subtitle": "Chagua jinsi programu inavyotafsiriwa.",
+      "sections": {
+        "list": {
+          "title": "Lugha zinazopatikana",
+          "description": "Chagua lugha ya kutumia kwenye programu nzima.",
+          "primaryCta": "Tumia lugha"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "Imeshirikiwa"

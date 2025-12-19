@@ -99,6 +99,19 @@
       "apply": "Shyira ururimi mu bikorwa"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "Hindura ururimi",
+      "subtitle": "Hitamo uko porogaramu isobanurwa mu rurimi.",
+      "sections": {
+        "list": {
+          "title": "Indimi ziriho",
+          "description": "Hitamo ururimi rwo gukoresha muri porogaramu yose.",
+          "primaryCta": "Shyira ururimi mu bikorwa"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "Byasangijwe"

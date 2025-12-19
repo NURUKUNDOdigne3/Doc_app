@@ -89,6 +89,19 @@
       "apply": "تطبيق اللغة"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "تغيير اللغة",
+      "subtitle": "اختر كيف تتم ترجمة التطبيق.",
+      "sections": {
+        "list": {
+          "title": "اللغات المتاحة",
+          "description": "اختر لغة لتطبيقها على التطبيق بالكامل.",
+          "primaryCta": "تطبيق اللغة"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "المشتركة"

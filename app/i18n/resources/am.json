@@ -99,6 +99,19 @@
       "apply": "ቋንቋን ተግብር"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "ቋንቋን ቀይር",
+      "subtitle": "መተግበሪያው እንዴት እንደሚተረጎም ይምረጡ።",
+      "sections": {
+        "list": {
+          "title": "የሚገኙ ቋንቋዎች",
+          "description": "በመተግበሪያው ሁሉ ላይ ለማግኘት ቋንቋ ይምረጡ።",
+          "primaryCta": "ቋንቋን ተግብር"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "ተጋራ"

@@ -74,15 +74,21 @@ export default function SettingsMenuDetailScreen() {
   const config = SETTINGS_MENU_CONFIG[menuKey];
   const isLanguageMenu = config.key === "language";
 
+  const normalizeSettingsMenuKey = useCallback((key: string) => {
+    return key.startsWith("settingsMenu.")
+      ? key.slice("settingsMenu.".length)
+      : key;
+  }, []);
+
   const resolveCopy = useCallback(
     (copy: CopyText | undefined) => {
       if (!copy) return "";
       if (typeof copy === "string") {
         return copy;
       }
-      return t(copy.key, copy.values);
+      return t(normalizeSettingsMenuKey(copy.key), copy.values);
     },
-    [t]
+    [normalizeSettingsMenuKey, t]
   );
 
   const normalizeLanguage = (code: string): LocaleCode => {

@@ -99,6 +99,19 @@
       "apply": "应用语言"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "更改语言",
+      "subtitle": "选择应用显示的翻译语言。",
+      "sections": {
+        "list": {
+          "title": "可用语言",
+          "description": "选择一种语言应用到整个应用。",
+          "primaryCta": "应用语言"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "共享"

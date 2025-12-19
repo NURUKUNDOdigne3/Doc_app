@@ -99,6 +99,19 @@
       "apply": "Appliquer la langue"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "Changer de langue",
+      "subtitle": "Choisissez comment l'application est traduite.",
+      "sections": {
+        "list": {
+          "title": "Langues disponibles",
+          "description": "Sélectionnez une langue à appliquer dans toute l'application.",
+          "primaryCta": "Appliquer la langue"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "Partagés"

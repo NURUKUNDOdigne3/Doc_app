@@ -99,6 +99,19 @@
       "apply": "भाषा लागू करें"
     }
   },
+  "settingsMenu": {
+    "language": {
+      "title": "भाषा बदलें",
+      "subtitle": "चुनें कि ऐप का अनुवाद कैसे दिखे।",
+      "sections": {
+        "list": {
+          "title": "उपलब्ध भाषाएँ",
+          "description": "पूरे ऐप पर लागू करने के लिए एक भाषा चुनें।",
+          "primaryCta": "भाषा लागू करें"
+        }
+      }
+    }
+  },
   "shared": {
     "header": {
       "title": "साझा"
