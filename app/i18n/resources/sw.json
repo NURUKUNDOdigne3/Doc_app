@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "Programu ya Nyaraka",
+    "welcome": "Karibu tena, {{name}}!",
+    "syncing": "Inasawazisha faili na wingu",
+    "synced": "Faili zote zimesawazishwa"
+  },
+  "home": {
+    "title": "Nyumbani",
+    "lastActivity": "Shughuli ya mwisho: Ulipakia picha {{count}} zilizopita {{timeAgo}}",
+    "timeAgoMinutes": "dakika {{count}} zilizopita",
+    "storageTitle": "Hifadhi",
+    "storageUsage": "{{used}} GB kati ya {{total}} GB zimetumika",
+    "upgrade": "Boresha hifadhi",
+    "breakdown": {
+      "photos": "Picha",
+      "documents": "Nyaraka",
+      "videos": "Video"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Pakia faili",
+        "description": "Ongeza nyaraka na faili"
+      },
+      "uploadPhotos": {
+        "title": "Pakia picha",
+        "description": "Hifadhi kumbukumbu zako"
+      },
+      "uploadFolder": {
+        "title": "Pakia folda",
+        "description": "Pakia faili nyingi kwa mara moja"
+      },
+      "cloudBackup": {
+        "title": "Hifadhi ya wingu",
+        "description": "Usawazishaji wa kiotomatiki umewezeshwa"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Kumbukumbu",
+        "description": "Vipengee 242 · Mwaka huu"
+      },
+      "screenshots": {
+        "title": "Picha za skrini",
+        "description": "Vipengee 48"
+      },
+      "documents": {
+        "title": "Nyaraka",
+        "description": "Vipengee 156"
+      },
+      "large": {
+        "title": "Faili kubwa",
+        "description": "Vipengee 12 · Zaidi ya 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Zimefutwa",
+        "description": "Vipengee 5 · Vitafutwa ndani ya siku 30"
+      },
+      "recent": {
+        "title": "Zimeongezwa karibuni",
+        "description": "Vipengee 18 · Siku 7 zilizopita"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "Badilisha Lugha",
+      "subtitle": "Chagua lugha yako.",
+      "available": "Lugha zinazopatikana",
+      "apply": "Tumia lugha"
+    }
+  }
+}

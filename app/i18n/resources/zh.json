@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "文档应用",
+    "welcome": "欢迎回来，{{name}}！",
+    "syncing": "正在将文件同步到云端",
+    "synced": "所有文件已同步"
+  },
+  "home": {
+    "title": "首页",
+    "lastActivity": "最近活动：{{timeAgo}}上传了{{count}}张照片",
+    "timeAgoMinutes": "{{count}}分钟前",
+    "storageTitle": "存储",
+    "storageUsage": "已用 {{used}} GB / 共 {{total}} GB",
+    "upgrade": "升级存储",
+    "breakdown": {
+      "photos": "照片",
+      "documents": "文档",
+      "videos": "视频"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "上传文件",
+        "description": "添加文档和文件"
+      },
+      "uploadPhotos": {
+        "title": "上传照片",
+        "description": "保存你的回忆"
+      },
+      "uploadFolder": {
+        "title": "上传文件夹",
+        "description": "批量上传文件"
+      },
+      "cloudBackup": {
+        "title": "云备份",
+        "description": "自动同步已开启"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "回忆",
+        "description": "242 个项目 · 本年度"
+      },
+      "screenshots": {
+        "title": "截图",
+        "description": "48 个项目"
+      },
+      "documents": {
+        "title": "文档",
+        "description": "156 个项目"
+      },
+      "large": {
+        "title": "大型文件",
+        "description": "12 个项目 · 大于 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "已删除",
+        "description": "5 个项目 · 30 天后删除"
+      },
+      "recent": {
+        "title": "最近添加",
+        "description": "18 个项目 · 过去 7 天"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "更改语言",
+      "subtitle": "选择你的语言。",
+      "available": "可用语言",
+      "apply": "应用语言"
+    }
+  }
+}

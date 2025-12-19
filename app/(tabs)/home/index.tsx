@@ -1,56 +1,124 @@
 import { MaterialIcons } from "@expo/vector-icons";
-import { Href } from "expo-router";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { ScrollView, StyleSheet, View } from "react-native";
 
-import { CardHeader } from "../../components/CardHeader";
 import { Header } from "../../components/Header";
-import { OfflinePromoCard } from "../../components/OfflinePromoCard";
-import { RecentItemsStrip } from "../../components/RecentItemsStrip";
-import { SearchBar } from "../../components/SearchBar";
-import { StorageUsageCard } from "../../components/StorageUsageCard";
-import { TeamFoldersStrip } from "../../components/TeamFoldersStrip";
+import { HomeActionList } from "../../components/home/HomeActionList";
+import { HomeCollectionList } from "../../components/home/HomeCollectionList";
+import { HomeStatusList } from "../../components/home/HomeStatusList";
+import { HomeStorageCard } from "../../components/home/HomeStorageCard";
+import { HomeWelcomeCard } from "../../components/home/HomeWelcomeCard";
 import { colors, spacing } from "../../constants/theme";
 
-const RECENT_ITEMS = [
-  {
-    id: "1",
-    title: "Gilley Aguilar",
-    subtitle: "Deupload > Camera Upload",
-    thumbnail: require("../../../assets/images/pictures/pic1.jpg"),
-  },
-  {
-    id: "2",
-    title: "Patrick Federi",
-    subtitle: "Deupload > Company",
-    thumbnail: require("../../../assets/images/pictures/pic2.jpg"),
-  },
-  {
-    id: "3",
-    title: "Marek Piwnicki",
-    subtitle: "Deupload Photos",
-    thumbnail: require("../../../assets/images/pictures/pic3.jpg"),
-  },
-];
-
-const TEAM_FOLDERS = [
-  { id: "team-1", name: "Documents" },
-  { id: "team-2", name: "Design" },
-  { id: "team-3", name: "Legals" },
-  { id: "team-4", name: "Marketing" },
-];
-
-const OFFLINE_PROMO = {
-  title: "Offline",
-  description: "Make your most important files available without internet",
-  href: "/offline" as Href,
-  illustration: require("../../../assets/images/illustrations/offline.png"),
-};
-
 export default function HomeScreen() {
+  const { t } = useTranslation(["home", "common"]);
+
+  const totalStorageGb = 15;
+  const usedStorageGb = 3.2;
+
+  const lastActivity = useMemo(() => {
+    const timeAgo = t("home:timeAgoMinutes", { count: 5 });
+    return t("home:lastActivity", { count: 2, timeAgo });
+  }, [t]);
+
+  const storageBreakdown = useMemo(
+    () => [
+      { id: "photos", label: t("home:breakdown.photos"), amountGb: 1.5 },
+      { id: "documents", label: t("home:breakdown.documents"), amountGb: 0.8 },
+      { id: "videos", label: t("home:breakdown.videos"), amountGb: 0.9 },
+    ],
+    [t]
+  );
+
+  const quickActions = useMemo(
+    () => [
+      {
+        id: "upload-files",
+        title: t("home:quickActions.uploadFiles.title"),
+        description: t("home:quickActions.uploadFiles.description"),
+        icon: "file-upload" as const,
+      },
+      {
+        id: "upload-photos",
+        title: t("home:quickActions.uploadPhotos.title"),
+        description: t("home:quickActions.uploadPhotos.description"),
+        icon: "photo-library" as const,
+      },
+      {
+        id: "upload-folder",
+        title: t("home:quickActions.uploadFolder.title"),
+        description: t("home:quickActions.uploadFolder.description"),
+        icon: "create-new-folder" as const,
+      },
+      {
+        id: "cloud-backup",
+        title: t("home:quickActions.cloudBackup.title"),
+        description: t("home:quickActions.cloudBackup.description"),
+        icon: "cloud-done" as const,
+      },
+    ],
+    [t]
+  );
+
+  const smartCollections = useMemo(
+    () => [
+      {
+        id: "memories",
+        title: t("home:collections.memories.title"),
+        description: t("home:collections.memories.description"),
+        gradient: ["#FF8A65", "#FF4081"] as [string, string],
+        icon: <MaterialIcons name="collections" size={34} color="#fff" />,
+      },
+      {
+        id: "screenshots",
+        title: t("home:collections.screenshots.title"),
+        description: t("home:collections.screenshots.description"),
+        gradient: ["#7E57C2", "#5C6BC0"] as [string, string],
+        icon: <MaterialIcons name="screenshot" size={34} color="#fff" />,
+      },
+      {
+        id: "documents",
+        title: t("home:collections.documents.title"),
+        description: t("home:collections.documents.description"),
+        gradient: ["#29B6F6", "#0288D1"] as [string, string],
+        icon: <MaterialIcons name="picture-as-pdf" size={34} color="#fff" />,
+      },
+      {
+        id: "large",
+        title: t("home:collections.large.title"),
+        description: t("home:collections.large.description"),
+        gradient: ["#FFB74D", "#FB8C00"] as [string, string],
+        icon: <MaterialIcons name="inventory" size={34} color="#fff" />,
+      },
+    ],
+    [t]
+  );
+
+  const statusItems = useMemo(
+    () => [
+      {
+        id: "deleted",
+        title: t("home:statuses.deleted.title"),
+        description: t("home:statuses.deleted.description"),
+        icon: "delete-outline" as const,
+        accentColor: "#FF5A79",
+      },
+      {
+        id: "recently-added",
+        title: t("home:statuses.recent.title"),
+        description: t("home:statuses.recent.description"),
+        icon: "schedule" as const,
+        accentColor: "#2ECC71",
+      },
+    ],
+    [t]
+  );
+
   return (
     <View style={styles.screen}>
       <Header
-        title="Home"
+        title={t("home:title")}
         actions={[
           {
             id: "notifications",
@@ -71,51 +139,30 @@ export default function HomeScreen() {
         ]}
       />
       <ScrollView contentContainerStyle={styles.content}>
-        <View style={styles.headers}>
-          <SearchBar containerStyle={styles.searchBar} />
-
-          <StorageUsageCard
+        <View style={styles.newDashboard}>
+          <HomeWelcomeCard
             userName="Digne"
-            totalGb={15}
-            usedGb={4.5}
-            filesCount={5126}
+            lastActivity={lastActivity}
+            statusLabel={t("common:synced")}
+            statusIcon="autorenew"
           />
-        </View>
-        <View style={styles.sectionCard}>
-          <CardHeader
-            icon={
-              <MaterialIcons name="history" size={24} color={colors.text} />
-            }
-            title="Recent"
-            linkHref="/activity"
-          />
-          <RecentItemsStrip data={RECENT_ITEMS} />
-        </View>
 
-        <View style={styles.sectionCard}>
-          <CardHeader
-            icon={<MaterialIcons name="groups" size={24} color={colors.text} />}
-            title="Team folders"
-            linkHref="/folders"
+          <HomeStorageCard
+            totalGb={totalStorageGb}
+            usedGb={usedStorageGb}
+            breakdown={storageBreakdown}
+            title={t("home:storageTitle")}
+            usageLabel={t("home:storageUsage", {
+              used: usedStorageGb.toFixed(1),
+              total: totalStorageGb,
+            })}
+            upgradeLabel={`↑ ${t("home:upgrade")}`}
           />
-          <TeamFoldersStrip data={TEAM_FOLDERS} />
-        </View>
 
-        <View style={styles.sectionCard}>
-          <CardHeader
-            icon={
-              <MaterialIcons name="wifi-off" size={24} color={colors.text} />
-            }
-            title="Offline"
-            linkHref="/folders"
-          />
-          <OfflinePromoCard
-            description={OFFLINE_PROMO.description}
-            illustration={OFFLINE_PROMO.illustration}
-          />
+          <HomeActionList items={quickActions} />
+          <HomeCollectionList items={smartCollections} />
+          <HomeStatusList items={statusItems} />
         </View>
-
-        {/* <Text style={styles.placeholder}>Home Screen content</Text> */}
       </ScrollView>
     </View>
   );
@@ -127,7 +174,16 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   content: {
-    paddingVertical: spacing.md,
+    paddingVertical: spacing.lg,
+    paddingHorizontal: spacing.md,
+    gap: spacing.lg,
+  },
+  newDashboard: {
+    gap: spacing.lg,
+  },
+  legacyHeader: {
+    marginTop: spacing.xl,
+    paddingHorizontal: spacing.sm,
   },
   searchBar: {
     marginBottom: spacing.lg,
@@ -136,14 +192,11 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontSize: 16,
   },
-  headers: {
-    paddingHorizontal: spacing.sm,
-  },
   sectionCard: {
-    marginBottom: 10,
-    paddingBottom: 10,
+    marginBottom: spacing.lg,
+    paddingBottom: spacing.lg,
     borderBottomWidth: 2,
-    borderColor: "#F9F9FA",
-    paddingHorizontal: spacing.xs,
+    borderColor: "#F0F1F5",
+    paddingHorizontal: spacing.sm,
   },
 });

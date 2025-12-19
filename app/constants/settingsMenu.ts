@@ -1,18 +1,20 @@
 import { MaterialIcons } from "@expo/vector-icons";
 
+import { LANGUAGES, LocaleCode } from "../i18n/languages";
+
 export type SettingsMenuKey =
   | "settings"
   | "storage"
   | "billing"
   | "notification"
   | "refer"
-  | "application"
+  | "language"
   | "privacy"
   | "security";
 
 type AccentTone = "primary" | "success" | "warning" | "muted";
 
-type SectionRow =
+export type SectionRow =
   | {
       kind: "detail";
       label: string;
@@ -44,9 +46,15 @@ type SectionRow =
       label: string;
       icon: keyof typeof MaterialIcons.glyphMap;
       tone?: AccentTone;
+    }
+  | {
+      kind: "language-option";
+      code: LocaleCode;
+      label: string;
+      nativeName: string;
     };
 
-type Section = {
+export type Section = {
   id: string;
   title: string;
   description?: string;
@@ -118,6 +126,27 @@ export const SETTINGS_MENU_CONFIG: Record<SettingsMenuKey, SettingsMenuConfig> =
               icon: "notifications",
             },
           ],
+        },
+      ],
+    },
+    language: {
+      key: "language",
+      title: "Change Language",
+      subtitle: "Choose your language.",
+      icon: "language",
+      heroAccent: "#f1f5ff",
+      sections: [
+        {
+          id: "language-list",
+          title: "Available languages",
+          description: "Select a language to apply across the app.",
+          rows: LANGUAGES.map((language) => ({
+            kind: "language-option",
+            code: language.code,
+            label: language.label,
+            nativeName: language.nativeName,
+          })),
+          primaryCta: { label: "Apply language" },
         },
       ],
     },
@@ -313,50 +342,7 @@ export const SETTINGS_MENU_CONFIG: Record<SettingsMenuKey, SettingsMenuConfig> =
         },
       ],
     },
-    application: {
-      key: "application",
-      title: "Application",
-      subtitle: "Control how the Doc app behaves on this device.",
-      icon: "apps",
-      heroAccent: "#f1f5ff",
-      sections: [
-        {
-          id: "version",
-          title: "Version & updates",
-          rows: [
-            { kind: "detail", label: "Current version", value: "3.7.2" },
-            { kind: "detail", label: "Last updated", value: "Nov 29, 2025" },
-            {
-              kind: "action",
-              label: "Check for updates",
-              icon: "system-update-alt",
-            },
-          ],
-        },
-        {
-          id: "defaults",
-          title: "Defaults",
-          description: "Choose how files open and download standards.",
-          rows: [
-            { kind: "detail", label: "Open files in", value: "Native viewer" },
-            {
-              kind: "toggle",
-              id: "smart-sync",
-              label: "Smart sync",
-              description: "Only download files when opened on this device.",
-              defaultValue: true,
-            },
-            {
-              kind: "toggle",
-              id: "auto-update",
-              label: "Auto update app",
-              description: "Install updates when connected to Wi-Fi.",
-              defaultValue: true,
-            },
-          ],
-        },
-      ],
-    },
+
     privacy: {
       key: "privacy",
       title: "Privacy",
@@ -455,5 +441,3 @@ export const SETTINGS_MENU_TITLES: Record<SettingsMenuKey, string> =
     acc[typedKey] = SETTINGS_MENU_CONFIG[typedKey].title;
     return acc;
   }, {} as Record<SettingsMenuKey, string>);
-
-export type { Section, SectionRow, SettingsMenuConfig };

@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "Application Doc",
+    "welcome": "Bon retour, {{name}} !",
+    "syncing": "Synchronisation des fichiers avec le cloud",
+    "synced": "Tous les fichiers sont synchronisés"
+  },
+  "home": {
+    "title": "Accueil",
+    "lastActivity": "Dernière activité : {{count}} photos téléversées {{timeAgo}}",
+    "timeAgoMinutes": "il y a {{count}} min",
+    "storageTitle": "Stockage",
+    "storageUsage": "{{used}} Go sur {{total}} Go utilisés",
+    "upgrade": "Augmenter le stockage",
+    "breakdown": {
+      "photos": "Photos",
+      "documents": "Documents",
+      "videos": "Vidéos"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Téléverser des fichiers",
+        "description": "Ajoutez des documents et des fichiers"
+      },
+      "uploadPhotos": {
+        "title": "Téléverser des photos",
+        "description": "Ajoutez vos souvenirs"
+      },
+      "uploadFolder": {
+        "title": "Téléverser un dossier",
+        "description": "Téléversement groupé de fichiers"
+      },
+      "cloudBackup": {
+        "title": "Sauvegarde cloud",
+        "description": "Synchronisation automatique activée"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Souvenirs",
+        "description": "242 éléments · Cette année"
+      },
+      "screenshots": {
+        "title": "Captures",
+        "description": "48 éléments"
+      },
+      "documents": {
+        "title": "Documents",
+        "description": "156 éléments"
+      },
+      "large": {
+        "title": "Fichiers volumineux",
+        "description": "12 éléments · Plus de 100 Mo"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Supprimés",
+        "description": "5 éléments · Suppression dans 30 jours"
+      },
+      "recent": {
+        "title": "Ajoutés récemment",
+        "description": "18 éléments · 7 derniers jours"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "Changer de langue",
+      "subtitle": "Choisissez votre langue.",
+      "available": "Langues disponibles",
+      "apply": "Appliquer la langue"
+    }
+  }
+}

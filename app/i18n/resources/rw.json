@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "Porogaramu y'inyandiko",
+    "welcome": "Murakaza neza, {{name}}!",
+    "syncing": "Turimo kohereza dosiye ku bubiko bwa cloud",
+    "synced": "Dosiye zose zoherejwe"
+  },
+  "home": {
+    "title": "Ahabanza",
+    "lastActivity": "Igikorwa giheruka: wohereje amafoto {{count}} hashize {{timeAgo}}",
+    "timeAgoMinutes": "iminota {{count}} ishize",
+    "storageTitle": "Ububiko",
+    "storageUsage": "{{used}} GB muri {{total}} GB byakoreshejwe",
+    "upgrade": "Ongera ububiko",
+    "breakdown": {
+      "photos": "Amafoto",
+      "documents": "Inyandiko",
+      "videos": "Amashusho"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Ohereza dosiye",
+        "description": "Ongeramo inyandiko n'amadosiye"
+      },
+      "uploadPhotos": {
+        "title": "Ohereza amafoto",
+        "description": "Bika ibyo wibuka"
+      },
+      "uploadFolder": {
+        "title": "Ohereza ububiko",
+        "description": "Ohereza dosiye nyinshi icyarimwe"
+      },
+      "cloudBackup": {
+        "title": "Ububiko bwa cloud",
+        "description": "Guhuza byikora byemejwe"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Ibyo wibuka",
+        "description": "Ibidutse 242 · Muri uyu mwaka"
+      },
+      "screenshots": {
+        "title": "Mugaragaza",
+        "description": "Ibishushanyo 48"
+      },
+      "documents": {
+        "title": "Inyandiko",
+        "description": "Inyandiko 156"
+      },
+      "large": {
+        "title": "Dosiye nini",
+        "description": "Ibidutse 12 · Birengeje 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Byasibwe",
+        "description": "Ibintu 5 · Birazasibwa mu minsi 30"
+      },
+      "recent": {
+        "title": "Byongewe vuba",
+        "description": "Ibintu 18 · Iminsi 7 ishize"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "Hindura Ururimi",
+      "subtitle": "Hitamo ururimi ushaka gukoresha.",
+      "available": "Indimi ziriho",
+      "apply": "Shyira ururimi mu bikorwa"
+    }
+  }
+}

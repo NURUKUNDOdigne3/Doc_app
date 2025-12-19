@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "تطبيق المستندات",
+    "welcome": "مرحباً بعودتك، {{name}}!",
+    "syncing": "جارٍ مزامنة الملفات مع السحابة",
+    "synced": "تمت مزامنة جميع الملفات"
+  },
+  "home": {
+    "title": "الرئيسية",
+    "lastActivity": "آخر نشاط: تم رفع {{count}} صور منذ {{timeAgo}}",
+    "timeAgoMinutes": "منذ {{count}} دقيقة",
+    "storageTitle": "التخزين",
+    "storageUsage": "استخدام {{used}} من أصل {{total}} جيجابايت",
+    "upgrade": "ترقية التخزين",
+    "breakdown": {
+      "photos": "صور",
+      "documents": "مستندات",
+      "videos": "فيديوهات"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "رفع الملفات",
+        "description": "أضف المستندات والملفات"
+      },
+      "uploadPhotos": {
+        "title": "رفع الصور",
+        "description": "أضف ذكرياتك"
+      },
+      "uploadFolder": {
+        "title": "رفع مجلد",
+        "description": "رفع ملفات بالجملة"
+      },
+      "cloudBackup": {
+        "title": "نسخ احتياطي سحابي",
+        "description": "تم تفعيل المزامنة التلقائية"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "الذكريات",
+        "description": "242 عنصرًا · هذا العام"
+      },
+      "screenshots": {
+        "title": "لقطات الشاشة",
+        "description": "48 عنصرًا"
+      },
+      "documents": {
+        "title": "المستندات",
+        "description": "156 عنصرًا"
+      },
+      "large": {
+        "title": "ملفات كبيرة",
+        "description": "12 عنصرًا · أكبر من 100 ميجا"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "محذوف",
+        "description": "5 عناصر · ستحذف خلال 30 يومًا"
+      },
+      "recent": {
+        "title": "أضيفت حديثًا",
+        "description": "18 عنصرًا · آخر 7 أيام"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "تغيير اللغة",
+      "subtitle": "اختر لغتك.",
+      "available": "اللغات المتاحة",
+      "apply": "تطبيق اللغة"
+    }
+  }
+}

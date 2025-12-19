@@ -4,6 +4,8 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { Pressable, StatusBar } from "react-native";
 import { colors } from "./constants/theme";
 
+import "./i18n";
+
 export default function RootLayout() {
   return (
     <>

@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "መለያ መተግበሪያ",
+    "welcome": "እንኳን ደህና መጡ፣ {{name}}!",
+    "syncing": "ፋይሎች ጋር በክላውድ ማመሳሰል በመካከል ነው",
+    "synced": "ሁሉም ፋይሎች ተመሳሰሉ"
+  },
+  "home": {
+    "title": "መነሻ",
+    "lastActivity": "የመጨረሻ እንቅስቃሴ፡ {{count}} ፎቶዎች ተጭነዋል {{timeAgo}}",
+    "timeAgoMinutes": "{{count}} ደቂቃ በፊት",
+    "storageTitle": "ማከማቻ",
+    "storageUsage": "{{used}} ጊቢ ከ {{total}} ጊቢ ተጠቅመዋል",
+    "upgrade": "ማከማቻን አሻሽል",
+    "breakdown": {
+      "photos": "ፎቶዎች",
+      "documents": "ሰነዶች",
+      "videos": "ቪዲዮዎች"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "ፋይሎችን ጫን",
+        "description": "ሰነዶችንና ፋይሎችን ጨምር"
+      },
+      "uploadPhotos": {
+        "title": "ፎቶዎችን ጫን",
+        "description": "የምትወዱትን ማስታወሻ አክል"
+      },
+      "uploadFolder": {
+        "title": "ፎልደር ጫን",
+        "description": "ብዛት ግብዣ ፋይሎች"
+      },
+      "cloudBackup": {
+        "title": "ክላውድ ቅጂ",
+        "description": "ራሱ-ራሱ ማመሳሰል ነቅቷል"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "ማስታወሻዎች",
+        "description": "242 ነገሮች · በዚህ አመት"
+      },
+      "screenshots": {
+        "title": "ስክሪን ሹቶች",
+        "description": "48 ነገሮች"
+      },
+      "documents": {
+        "title": "ሰነዶች",
+        "description": "156 ነገሮች"
+      },
+      "large": {
+        "title": "ትልቅ ፋይሎች",
+        "description": "12 ነገሮች · ከ100 ሜባ በላይ"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "ተሰርዛል",
+        "description": "5 ነገሮች · በ30 ቀን ውስጥ ይደርሳሉ"
+      },
+      "recent": {
+        "title": "በቅርብ ጊዜ ተጨምሯል",
+        "description": "18 ነገሮች · የ7 ቀናት ውስጥ"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "ቋንቋን ቀይር",
+      "subtitle": "የሚፈለጉትን ቋንቋ ይምረጡ.",
+      "available": "የሚገኙ ቋንቋዎች",
+      "apply": "ቋንቋን ተግብር"
+    }
+  }
+}

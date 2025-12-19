@@ -1,6 +1,7 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   ScrollView,
   StyleSheet,
@@ -18,6 +19,8 @@ import {
   SettingsMenuKey,
 } from "../constants/settingsMenu";
 import { colors, spacing, typography } from "../constants/theme";
+import { changeLanguage, LocaleCode } from "../i18n";
+import { LANGUAGES } from "../i18n/languages";
 
 function isSettingsKey(
   value: string | string[] | undefined
@@ -28,6 +31,11 @@ function isSettingsKey(
 type ToggleState = Record<string, boolean>;
 
 type ToggleUpdater = (id: string, value: boolean) => void;
+
+type LanguageRowContext = {
+  selectedLanguage: LocaleCode;
+  onSelectLanguage: (code: LocaleCode) => void;
+};
 
 function accumulateToggleDefaults(state: ToggleState, section: Section) {
   section.rows.forEach((row) => {
@@ -41,6 +49,7 @@ function accumulateToggleDefaults(state: ToggleState, section: Section) {
 export default function SettingsMenuDetailScreen() {
   const params = useLocalSearchParams<{ menu?: string }>();
   const navigation = useNavigation();
+  const { i18n } = useTranslation();
   const menuKey = params.menu;
 
   if (!isSettingsKey(menuKey)) {
@@ -62,6 +71,21 @@ export default function SettingsMenuDetailScreen() {
   }
 
   const config = SETTINGS_MENU_CONFIG[menuKey];
+  const isLanguageMenu = config.key === "language";
+
+  const normalizeLanguage = (code: string): LocaleCode => {
+    const base = code.split("-")[0].toLowerCase();
+    const match = LANGUAGES.find((lang) => lang.code === base);
+    return (match?.code ?? LANGUAGES[0].code) as LocaleCode;
+  };
+
+  const currentLanguage = normalizeLanguage(i18n.language ?? "en");
+  const [pendingLanguage, setPendingLanguage] =
+    useState<LocaleCode>(currentLanguage);
+
+  useEffect(() => {
+    setPendingLanguage(normalizeLanguage(i18n.language ?? "en"));
+  }, [i18n.language]);
 
   useEffect(() => {
     navigation.setOptions({
@@ -82,6 +106,16 @@ export default function SettingsMenuDetailScreen() {
   }, [config.sections]);
 
   const [toggles, setToggles] = useState<ToggleState>(initialToggleState);
+
+  const handleSelectLanguage = (code: LocaleCode) => {
+    setPendingLanguage(code);
+  };
+
+  const handleApplyLanguage = async () => {
+    if (!isLanguageMenu) return;
+    if (pendingLanguage === currentLanguage) return;
+    await changeLanguage(pendingLanguage);
+  };
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
@@ -128,8 +162,17 @@ export default function SettingsMenuDetailScreen() {
                     index !== section.rows.length - 1 && styles.rowDivider,
                   ]}
                 >
-                  {renderRow(row, toggles, (id, value) =>
-                    setToggles((prev) => ({ ...prev, [id]: value }))
+                  {renderRow(
+                    row,
+                    toggles,
+                    (id, value) =>
+                      setToggles((prev) => ({ ...prev, [id]: value })),
+                    isLanguageMenu
+                      ? {
+                          selectedLanguage: pendingLanguage,
+                          onSelectLanguage: handleSelectLanguage,
+                        }
+                      : undefined
                   )}
                 </View>
               ))}
@@ -139,8 +182,22 @@ export default function SettingsMenuDetailScreen() {
               <View style={styles.sectionFooter}>
                 {section.primaryCta ? (
                   <TouchableOpacity
-                    style={[styles.ctaButton, styles.ctaPrimary]}
+                    style={[
+                      styles.ctaButton,
+                      styles.ctaPrimary,
+                      isLanguageMenu && pendingLanguage === currentLanguage
+                        ? styles.ctaPrimaryDisabled
+                        : null,
+                    ]}
                     activeOpacity={0.85}
+                    disabled={
+                      isLanguageMenu && pendingLanguage === currentLanguage
+                    }
+                    onPress={() => {
+                      if (isLanguageMenu) {
+                        handleApplyLanguage();
+                      }
+                    }}
                   >
                     <Text style={[styles.ctaLabel, styles.ctaLabelPrimary]}>
                       {section.primaryCta.label}
@@ -169,7 +226,8 @@ export default function SettingsMenuDetailScreen() {
 function renderRow(
   row: SectionRow,
   toggles: ToggleState,
-  onToggleChange: ToggleUpdater
+  onToggleChange: ToggleUpdater,
+  languageContext?: LanguageRowContext
 ) {
   switch (row.kind) {
     case "detail":
@@ -250,6 +308,34 @@ function renderRow(
           />
         </TouchableOpacity>
       );
+    case "language-option": {
+      if (!languageContext) {
+        return null;
+      }
+
+      const isSelected = languageContext.selectedLanguage === row.code;
+
+      return (
+        <TouchableOpacity
+          style={[styles.languageRow, isSelected && styles.languageRowSelected]}
+          activeOpacity={0.85}
+          onPress={() => languageContext.onSelectLanguage(row.code)}
+        >
+          <View style={styles.languageCopy}>
+            <Text style={styles.languageLabel}>{row.label}</Text>
+            <Text style={styles.languageNative}>{row.nativeName}</Text>
+          </View>
+          <View
+            style={[
+              styles.languageRadioOuter,
+              isSelected && styles.languageRadioOuterActive,
+            ]}
+          >
+            {isSelected ? <View style={styles.languageRadioInner} /> : null}
+          </View>
+        </TouchableOpacity>
+      );
+    }
     default:
       return null;
   }
@@ -413,6 +499,9 @@ const styles = StyleSheet.create({
   ctaPrimary: {
     backgroundColor: colors.primary,
   },
+  ctaPrimaryDisabled: {
+    opacity: 0.5,
+  },
   ctaSecondary: {
     borderWidth: 1,
     borderColor: "#d6d8e1",
@@ -426,6 +515,48 @@ const styles = StyleSheet.create({
   },
   ctaLabelSecondary: {
     color: colors.text,
+  },
+  languageRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: spacing.md,
+  },
+  languageRowSelected: {
+    backgroundColor: "rgba(101, 31, 255, 0.08)",
+    borderRadius: 16,
+    paddingHorizontal: spacing.md,
+  },
+  languageCopy: {
+    flex: 1,
+    gap: 4,
+  },
+  languageLabel: {
+    fontSize: typography.body,
+    fontWeight: "600",
+    color: colors.text,
+  },
+  languageNative: {
+    fontSize: typography.body,
+    color: colors.textMuted,
+  },
+  languageRadioOuter: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: colors.textMuted,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  languageRadioOuterActive: {
+    borderColor: colors.primary,
+  },
+  languageRadioInner: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: colors.primary,
   },
   emptyState: {
     flex: 1,

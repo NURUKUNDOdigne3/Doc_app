@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "डॉक ऐप",
+    "welcome": "वापसी पर स्वागत है, {{name}}!",
+    "syncing": "क्लाउड पर फ़ाइलें सिंक की जा रही हैं",
+    "synced": "सभी फ़ाइलें सिंक हो गईं"
+  },
+  "home": {
+    "title": "मुखपृष्ठ",
+    "lastActivity": "अंतिम गतिविधि: {{count}} फ़ोटो {{timeAgo}} पहले अपलोड कीं",
+    "timeAgoMinutes": "{{count}} मिनट पहले",
+    "storageTitle": "स्टोरेज",
+    "storageUsage": "{{total}} जीबी में से {{used}} जीबी उपयोग हुआ",
+    "upgrade": "स्टोरेज बढ़ाएँ",
+    "breakdown": {
+      "photos": "फ़ोटो",
+      "documents": "दस्तावेज़",
+      "videos": "वीडियो"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "फ़ाइलें अपलोड करें",
+        "description": "दस्तावेज़ और फ़ाइलें जोड़ें"
+      },
+      "uploadPhotos": {
+        "title": "फ़ोटो अपलोड करें",
+        "description": "अपनी यादें जोड़ें"
+      },
+      "uploadFolder": {
+        "title": "फ़ोल्डर अपलोड करें",
+        "description": "एक साथ कई फ़ाइलें अपलोड करें"
+      },
+      "cloudBackup": {
+        "title": "क्लाउड बैकअप",
+        "description": "ऑटो-सिंक सक्षम है"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "यादें",
+        "description": "242 सामग्री · इस वर्ष"
+      },
+      "screenshots": {
+        "title": "स्क्रीनशॉट",
+        "description": "48 सामग्री"
+      },
+      "documents": {
+        "title": "दस्तावेज़",
+        "description": "156 सामग्री"
+      },
+      "large": {
+        "title": "बड़ी फ़ाइलें",
+        "description": "12 सामग्री · 100 एमबी से अधिक"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "हटाए गए",
+        "description": "5 सामग्री · 30 दिनों में हटाए जाएँगे"
+      },
+      "recent": {
+        "title": "हाल ही में जोड़े गए",
+        "description": "18 सामग्री · पिछले 7 दिन"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "भाषा बदलें",
+      "subtitle": "अपनी भाषा चुनें।",
+      "available": "उपलब्ध भाषाएँ",
+      "apply": "भाषा लागू करें"
+    }
+  }
+}

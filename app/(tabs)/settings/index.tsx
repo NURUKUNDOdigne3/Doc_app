@@ -37,7 +37,7 @@ export default function SettingsScreen() {
     "billing",
     "notification",
     "refer",
-    "application",
+    "language",
     "privacy",
     "security",
   ];

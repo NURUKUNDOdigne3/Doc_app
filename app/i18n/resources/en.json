@@ -1,0 +1,75 @@
+{
+  "common": {
+    "appName": "Doc App",
+    "welcome": "Welcome back, {{name}}!",
+    "syncing": "Syncing files to the cloud",
+    "synced": "All files synced"
+  },
+  "home": {
+    "title": "Home",
+    "lastActivity": "Last activity: Uploaded {{count}} photos {{timeAgo}}",
+    "timeAgoMinutes": "{{count}} mins ago",
+    "storageTitle": "Storage",
+    "storageUsage": "{{used}} GB of {{total}} GB used",
+    "upgrade": "Upgrade Storage",
+    "breakdown": {
+      "photos": "Photos",
+      "documents": "Documents",
+      "videos": "Videos"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Upload Files",
+        "description": "Add documents and files"
+      },
+      "uploadPhotos": {
+        "title": "Upload Photos",
+        "description": "Add your memories"
+      },
+      "uploadFolder": {
+        "title": "Upload Folder",
+        "description": "Bulk upload files"
+      },
+      "cloudBackup": {
+        "title": "Cloud Backup",
+        "description": "Auto-sync enabled"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Memories",
+        "description": "242 items · This Year"
+      },
+      "screenshots": {
+        "title": "Screenshots",
+        "description": "48 items"
+      },
+      "documents": {
+        "title": "Documents",
+        "description": "156 items"
+      },
+      "large": {
+        "title": "Large Files",
+        "description": "12 items · Over 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Deleted",
+        "description": "5 items · Delete in 30 days"
+      },
+      "recent": {
+        "title": "Recently Added",
+        "description": "18 items · Last 7 days"
+      }
+    }
+  },
+  "settings": {
+    "language": {
+      "title": "Change Language",
+      "subtitle": "Choose your language.",
+      "available": "Available languages",
+      "apply": "Apply language"
+    }
+  }
+}
