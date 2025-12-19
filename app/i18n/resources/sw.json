@@ -1,0 +1,447 @@
+{
+  "common": {
+    "appName": "Programu ya Nyaraka",
+    "welcome": "Karibu tena, {{name}}!",
+    "syncing": "Inasawazisha faili na wingu",
+    "synced": "Faili zote zimesawazishwa",
+    "actions": {
+      "seeAll": "Ona yote"
+    }
+  },
+  "home": {
+    "title": "Nyumbani",
+    "lastActivity": "Shughuli ya mwisho: Ulipakia picha {{count}} zilizopita {{timeAgo}}",
+    "timeAgoMinutes": "dakika {{count}} zilizopita",
+    "storageTitle": "Hifadhi",
+    "storageUsage": "{{used}} GB kati ya {{total}} GB zimetumika",
+    "upgrade": "Boresha hifadhi",
+    "breakdown": {
+      "photos": "Picha",
+      "documents": "Nyaraka",
+      "videos": "Video"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Pakia faili",
+        "description": "Ongeza nyaraka na faili"
+      },
+      "uploadPhotos": {
+        "title": "Pakia picha",
+        "description": "Hifadhi kumbukumbu zako"
+      },
+      "uploadFolder": {
+        "title": "Pakia folda",
+        "description": "Pakia faili nyingi kwa mara moja"
+      },
+      "cloudBackup": {
+        "title": "Hifadhi ya wingu",
+        "description": "Usawazishaji wa kiotomatiki umewezeshwa"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Kumbukumbu",
+        "description": "Vipengee 242 · Mwaka huu"
+      },
+      "screenshots": {
+        "title": "Picha za skrini",
+        "description": "Vipengee 48"
+      },
+      "documents": {
+        "title": "Nyaraka",
+        "description": "Vipengee 156"
+      },
+      "large": {
+        "title": "Faili kubwa",
+        "description": "Vipengee 12 · Zaidi ya 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Zimefutwa",
+        "description": "Vipengee 5 · Vitafutwa ndani ya siku 30"
+      },
+      "recent": {
+        "title": "Zimeongezwa karibuni",
+        "description": "Vipengee 18 · Siku 7 zilizopita"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "Akaunti",
+      "planLabel": "Bure",
+      "planUsage": "{{used}} GB kati ya {{total}} GB",
+      "upgradeCta": "Boresha",
+      "teamTitle": "Wanachama wa timu",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Alika",
+      "devicesTitle": "Vifaa",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Dhibiti",
+      "menuTitle": "Menyu",
+      "logout": "Toka"
+    },
+    "menu": {
+      "settings": "Mipangilio",
+      "storage": "Hifadhi",
+      "billing": "Malipo",
+      "notification": "Arifa",
+      "refer": "Alika rafiki",
+      "language": "Lugha",
+      "privacy": "Faragha",
+      "security": "Usalama"
+    },
+    "language": {
+      "title": "Badilisha Lugha",
+      "subtitle": "Chagua lugha yako.",
+      "available": "Lugha zinazopatikana",
+      "apply": "Tumia lugha"
+    }
+  },
+  "settingsMenu": {
+    "language": {
+      "title": "Badilisha lugha",
+      "subtitle": "Chagua jinsi programu inavyotafsiriwa.",
+      "sections": {
+        "list": {
+          "title": "Lugha zinazopatikana",
+          "description": "Chagua lugha ya kutumia kwenye programu nzima.",
+          "primaryCta": "Tumia lugha"
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Imeshirikiwa"
+    },
+    "search": {
+      "placeholder": "Tafuta katika vitu vilivyoshirikiwa"
+    },
+    "collab": {
+      "title": "Fanyeni kazi pamoja",
+      "subtitle": "Angalia ni nani aliyekushirikisha faili hivi karibuni na dhibiti upatikanaji wao mahali pamoja.",
+      "cta": "Dhibiti upatikanaji"
+    },
+    "actions": {
+      "viewAll": "Tazama vyote"
+    },
+    "time": {
+      "twoHours": "Saa 2 zilizopita",
+      "yesterday": "Jana",
+      "twoDays": "Siku 2 zilizopita",
+      "threeDays": "Siku 3 zilizopita",
+      "fiveDays": "Siku 5 zilizopita",
+      "lastWeek": "Wiki iliyopita",
+      "today": "Leo"
+    },
+    "meta": {
+      "sharedBy": "Imeshirikiwa na {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "Inasubiri ukaguzi wako",
+        "requestEdit": "Ombi la kuhariri"
+      },
+      "meta": {
+        "awaitingReview": "Inasubiri ukaguzi",
+        "requestedToday": "Imeombwa leo"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Imeshirikiwa hivi karibuni",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Imeshirikiwa na {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Imeshirikiwa na {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Imeshirikiwa na {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Folda zilizoshirikiwa",
+        "items": {
+          "campaignAssets": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          },
+          "leadership": {
+            "detail": "Imeshirikiwa na {{team}} • Imeboreshwa {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Inasubiri idhini",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Imeshirikiwa na {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Imeshirikiwa na {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "Faili zangu"
+    },
+    "toolbar": {
+      "sort": "Ilibadilishwa mwisho",
+      "selectAll": "Chagua zote"
+    },
+    "items": {
+      "documents": {
+        "name": "Nyaraka",
+        "detail": "Folda • Imeboreshwa saa 1 iliyopita"
+      },
+      "design": {
+        "name": "Ubunifu",
+        "detail": "Folda iliyoshirikiwa • Imeboreshwa jana"
+      },
+      "development": {
+        "name": "Maendeleo",
+        "detail": "Folda • Imeboreshwa 12 Jun 2025"
+      },
+      "legals": {
+        "name": "Masuala ya kisheria",
+        "detail": "Folda • Imeboreshwa 10 Jun 2025"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 Jun 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 Jun 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "Rasilimali za chapa",
+        "detail": "Folda • Imeboreshwa wiki iliyopita"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 Jun 2025, 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "Inahitajika ruhusa ya kamera",
+      "button": "Ruhusu kamera"
+    },
+    "alerts": {
+      "errorTitle": "Hitilafu imetokea",
+      "captureFailure": "Hatukuweza kupiga picha hiyo. Tafadhali jaribu tena.",
+      "galleryFailure": "Hatukuweza kufungua maktaba yako ya picha. Jaribu tena."
+    },
+    "flash": {
+      "off": "Mwangaza",
+      "on": "Mwangaza ume Washwa",
+      "auto": "Otomatiki"
+    },
+    "preview": {
+      "retake": "Piga upya",
+      "confirm": "Thibitisha"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "Utambuzi wa kingo",
+        "description": "Hukata hati kiotomatiki"
+      },
+      "autoEnhance": {
+        "label": "Boresha kiotomatiki",
+        "description": "Huongeza usomekaji baada ya kupiga"
+      }
+    },
+    "actions": {
+      "gallery": "Maktaba"
+    }
+  },
+  "preview": {
+    "title": "Hakiki",
+    "close": "Funga hakiki",
+    "actions": {
+      "comment": "Toa maoni",
+      "download": "Pakua",
+      "delete": "Futa",
+      "link": "Pata kiungo",
+      "share": "Shiriki",
+      "openFolder": "Fungua folda",
+      "manageAccess": "Dhibiti ufikiaji"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Karibu tena",
+      "subtitle": "Tafadhali andika barua pepe yako ili uingie",
+      "emailPlaceholder": "Andika barua pepe",
+      "next": "Endelea",
+      "socialGoogle": "Endelea na Google",
+      "socialApple": "Endelea na Apple",
+      "noAccount": "Huna akaunti?",
+      "register": "Fungua akaunti."
+    },
+    "signup": {
+      "title": "Tengeneza akaunti mpya",
+      "subtitle": "Jaza taarifa ili kuunda akaunti",
+      "fullName": "Jina kamili",
+      "fullNamePlaceholder": "Andika jina lako kamili",
+      "email": "Barua pepe",
+      "emailPlaceholder": "Andika barua pepe",
+      "password": "Nenosiri",
+      "passwordPlaceholder": "Tengeneza nenosiri",
+      "confirmPassword": "Thibitisha nenosiri",
+      "confirmPasswordPlaceholder": "Rudia nenosiri",
+      "submit": "Jisajili",
+      "haveAccount": "Tayari una akaunti?",
+      "signIn": "Ingia"
+    },
+    "password": {
+      "title": "Je, wewe ni Digne?",
+      "subtitle": "Thibitisha kwa nenosiri lako",
+      "passwordPlaceholder": "Andika nenosiri",
+      "login": "Ingia",
+      "forgot": "Umesahau nenosiri?",
+      "reset": "Weka upya nenosiri"
+    },
+    "passwordReset": {
+      "title": "Umesahau nenosiri?",
+      "subtitle": "Pata kiungo cha kuweka upya kupitia barua pepe",
+      "emailPlaceholder": "Andika barua pepe",
+      "next": "Endelea",
+      "remember": "Unakumbuka nenosiri?",
+      "login": "Ingia"
+    },
+    "otp": {
+      "title": "Karibu Digne!",
+      "subtitle": "Weka msimbo wa tarakimu 6 uliotumwa kwenye barua pepe yako",
+      "placeholder": "000000",
+      "verify": "Thibitisha",
+      "noCode": "Hujapata msimbo wa OTP?",
+      "sendAgain": "Tuma tena"
+    },
+    "forgetPassword": {
+      "title": "Weka upya nenosiri",
+      "subtitle": "Weka barua pepe inayohusishwa na akaunti yako na tutatuma OTP ya kuweka upya nenosiri.",
+      "email": "Barua pepe",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Tuma OTP",
+      "backToSignIn": "Rudi kuingia"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Folda",
+      "subtitle": "Imesasishwa {{time}}"
+    },
+    "empty": {
+      "title": "Folda haijapatikana",
+      "description": "Folda unayotafuta huenda ilihamishwa au kufutwa.",
+      "cta": "Rudi kwenye folda"
+    },
+    "hero": {
+      "meta": "Vipengee {{count}} • {{size}} • Mmiliki {{owner}}",
+      "invite": "Alika"
+    },
+    "search": {
+      "placeholder": "Tafuta ndani ya folda hii"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Zilizobandikwa",
+        "meta": "Vipengee {{count}}"
+      },
+      "allItems": {
+        "title": "Vipengee vyote",
+        "meta": "Jumla {{count}}"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Vipendwa",
+      "activity": "Shughuli",
+      "security": "Usalama",
+      "forgetPassword": "Weka upya nenosiri",
+      "planDetails": "Bei",
+      "documentDetails": "Maelezo ya hati",
+      "upload": "Pakia"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "Muhtasari wa usalama",
+      "description": "Kagua kuingia kwenye kifaa, vipindi na uimarisha akaunti yako.",
+      "cta": "Nenda kwenye mipangilio"
+    },
+    "sections": {
+      "status": {
+        "title": "Hali",
+        "ok": "Hakuna shughuli ya kutiliwa shaka iliyogunduliwa"
+      },
+      "recommended": {
+        "title": "Hatua zinazopendekezwa",
+        "items": {
+          "twoFactor": "Washa uthibitishaji wa hatua mbili",
+          "thirdParty": "Kagua miunganisho ya wahusika wengine"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Chagua mpango wako"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Kila mwezi",
+        "annually": "Kila mwaka"
+      },
+      "meta": {
+        "monthly": "Hulipishwa kila mwezi",
+        "annually": "Hulipishwa kila mwaka"
+      },
+      "period": {
+        "month": "mwezi",
+        "year": "mwaka"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Msingi"
+      },
+      "standard": {
+        "title": "Kawaida"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Boresha"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Nyumbani",
+      "shared": "Imeshirikiwa",
+      "scan": "Skani",
+      "files": "Faili zangu",
+      "account": "Akaunti"
+    }
+  }
+}

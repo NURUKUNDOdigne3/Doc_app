@@ -1,5 +1,6 @@
 import { Href, Link, useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Image,
   KeyboardAvoidingView,
@@ -15,6 +16,7 @@ import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 import { colors, spacing } from "./constants/theme";
 
 export default function PasswordResetScreen() {
+  const { t } = useTranslation("auth");
   const router = useRouter();
   const [email, setEmail] = useState("");
 
@@ -31,7 +33,7 @@ export default function PasswordResetScreen() {
           <View style={styles.heroWrapper}>
             <View style={styles.brandRow}>
               <AntDesign name="cloud" size={28} color={colors.primary} />
-              <Text style={styles.brandName}>Bika</Text>
+              <Text style={styles.brandName}>{t("brand")}</Text>
             </View>
             <Image
               source={require("../assets/images/illustrations/lgoin.png")}
@@ -41,12 +43,12 @@ export default function PasswordResetScreen() {
           </View>
 
           <View style={styles.loginText}>
-            <Text style={styles.title}>Forgotten Password?</Text>
-            <Text style={styles.subtitle}>Get reset link with your email</Text>
+            <Text style={styles.title}>{t("passwordReset.title")}</Text>
+            <Text style={styles.subtitle}>{t("passwordReset.subtitle")}</Text>
           </View>
           <View style={styles.emailContainer}>
             <TextInput
-              placeholder="Type your e-mail"
+              placeholder={t("passwordReset.emailPlaceholder")}
               placeholderTextColor="#5c5f6e"
               textContentType="emailAddress"
               onChangeText={setEmail}
@@ -59,19 +61,19 @@ export default function PasswordResetScreen() {
               style={styles.nextButton}
             >
               <Text style={{ color: "white", fontSize: 16, fontWeight: 500 }}>
-                Next <FontAwesome6 name="chevron-right" />
+                {t("passwordReset.next")} <FontAwesome6 name="chevron-right" />
               </Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Remember your password?{" "}
+              {t("passwordReset.remember")}{" "}
               <Link
                 style={{ color: colors.primary, fontWeight: 700 }}
                 href={loginRoute}
               >
-                Login
+                {t("passwordReset.login")}
               </Link>
             </Text>
           </View>
@@ -84,7 +86,7 @@ export default function PasswordResetScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   container: {
     flex: 1,

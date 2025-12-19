@@ -1,4 +1,5 @@
 import { MaterialIcons } from "@expo/vector-icons";
+import { useTranslation } from "react-i18next";
 import {
   Image,
   ImageSourcePropType,
@@ -31,10 +32,10 @@ export type FilePreviewModalProps = {
 };
 
 const FILE_ACTIONS = [
-  { id: "comment", icon: "chat-bubble-outline", label: "Comment" },
-  { id: "download", icon: "file-download", label: "Download" },
-  { id: "delete", icon: "delete-outline", label: "Delete" },
-  { id: "link", icon: "link", label: "Get link" },
+  { id: "comment", icon: "chat-bubble-outline", labelKey: "actions.comment" },
+  { id: "download", icon: "file-download", labelKey: "actions.download" },
+  { id: "delete", icon: "delete-outline", labelKey: "actions.delete" },
+  { id: "link", icon: "link", labelKey: "actions.link" },
 ];
 
 export function FilePreviewModal({
@@ -43,6 +44,8 @@ export function FilePreviewModal({
   onClose,
   onOpenFolder,
 }: FilePreviewModalProps) {
+  const { t } = useTranslation("preview");
+
   if (!item) {
     return null;
   }
@@ -77,12 +80,12 @@ export function FilePreviewModal({
             onPress={onClose}
             style={styles.topButton}
             accessibilityRole="button"
-            accessibilityLabel="Close preview"
+            accessibilityLabel={t("close")}
             hitSlop={8}
           >
             <MaterialIcons name="close" size={26} color={colors.text} />
           </TouchableOpacity>
-          <Text style={styles.topTitle}>Preview</Text>
+          <Text style={styles.topTitle}>{t("title")}</Text>
           <View style={styles.topButtonPlaceholder} />
         </View>
 
@@ -109,6 +112,8 @@ export function FilePreviewModal({
                   key={action.id}
                   style={styles.quickAction}
                   activeOpacity={0.85}
+                  accessibilityRole="button"
+                  accessibilityLabel={t(action.labelKey)}
                 >
                   <MaterialIcons
                     name={action.icon as never}
@@ -120,7 +125,7 @@ export function FilePreviewModal({
             </View>
             <TouchableOpacity style={styles.shareButton} activeOpacity={0.9}>
               <MaterialIcons name="share" size={20} color="white" />
-              <Text style={styles.shareLabel}>Share</Text>
+              <Text style={styles.shareLabel}>{t("actions.share")}</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -138,11 +143,13 @@ export function FilePreviewModal({
                 size={20}
                 color={colors.primary}
               />
-              <Text style={styles.openLabel}>Open folder</Text>
+              <Text style={styles.openLabel}>{t("actions.openFolder")}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.manageButton} activeOpacity={0.85}>
               <MaterialIcons name="people" size={20} color={colors.text} />
-              <Text style={styles.manageLabel}>Manage access</Text>
+              <Text style={styles.manageLabel}>
+                {t("actions.manageAccess")}
+              </Text>
             </TouchableOpacity>
           </View>
         )}

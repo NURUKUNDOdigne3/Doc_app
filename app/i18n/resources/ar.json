@@ -1,0 +1,437 @@
+{
+  "common": {
+    "appName": "تطبيق المستندات",
+    "welcome": "مرحباً بعودتك، {{name}}!",
+    "syncing": "جارٍ مزامنة الملفات مع السحابة",
+    "synced": "تمت مزامنة جميع الملفات",
+    "actions": {
+      "seeAll": "عرض الكل"
+    }
+  },
+  "home": {
+    "title": "الرئيسية",
+    "lastActivity": "آخر نشاط: تم رفع {{count}} صور منذ {{timeAgo}}",
+    "timeAgoMinutes": "منذ {{count}} دقيقة",
+    "storageTitle": "التخزين",
+    "storageUsage": "استخدام {{used}} من أصل {{total}} جيجابايت",
+    "upgrade": "ترقية التخزين",
+    "breakdown": {
+      "photos": "صور",
+      "documents": "مستندات",
+      "videos": "فيديوهات"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "رفع الملفات",
+        "description": "أضف المستندات والملفات"
+      },
+      "uploadPhotos": {
+        "title": "رفع الصور",
+        "description": "أضف ذكرياتك"
+      },
+      "uploadFolder": {
+        "title": "رفع مجلد",
+        "description": "رفع ملفات بالجملة"
+      },
+      "cloudBackup": {
+        "title": "نسخ احتياطي سحابي",
+        "description": "تم تفعيل المزامنة التلقائية"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "الذكريات",
+        "description": "242 عنصرًا · هذا العام"
+      },
+      "screenshots": {
+        "title": "لقطات الشاشة",
+        "description": "48 عنصرًا"
+      },
+      "documents": {
+        "title": "المستندات",
+        "description": "156 عنصرًا"
+      },
+      "large": {
+        "title": "ملفات كبيرة",
+        "description": "12 عنصرًا · أكبر من 100 ميجا"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "محذوف",
+        "description": "5 عناصر · ستحذف خلال 30 يومًا"
+      },
+      "recent": {
+        "title": "أضيفت حديثًا",
+        "description": "18 عنصرًا · آخر 7 أيام"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "الحساب",
+      "planLabel": "مجاني",
+      "planUsage": "{{used}} جيجابايت من أصل {{total}}",
+      "upgradeCta": "ترقية",
+      "teamTitle": "أعضاء الفريق",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "دعوة",
+      "devicesTitle": "الأجهزة",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "إدارة",
+      "menuTitle": "القائمة",
+      "logout": "تسجيل الخروج"
+    },
+    "language": {
+      "title": "تغيير اللغة",
+      "subtitle": "اختر لغتك.",
+      "available": "اللغات المتاحة",
+      "apply": "تطبيق اللغة"
+    }
+  },
+  "settingsMenu": {
+    "language": {
+      "title": "تغيير اللغة",
+      "subtitle": "اختر كيف تتم ترجمة التطبيق.",
+      "sections": {
+        "list": {
+          "title": "اللغات المتاحة",
+          "description": "اختر لغة لتطبيقها على التطبيق بالكامل.",
+          "primaryCta": "تطبيق اللغة"
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "المشتركة"
+    },
+    "search": {
+      "placeholder": "ابحث في العناصر المشتركة"
+    },
+    "collab": {
+      "title": "اعملوا معاً",
+      "subtitle": "اطّلع على من شاركك الملفات مؤخراً وقم بإدارة صلاحياتهم في مكان واحد.",
+      "cta": "إدارة الصلاحيات"
+    },
+    "actions": {
+      "viewAll": "عرض الكل"
+    },
+    "time": {
+      "twoHours": "منذ ساعتين",
+      "yesterday": "أمس",
+      "twoDays": "منذ يومين",
+      "threeDays": "منذ 3 أيام",
+      "fiveDays": "منذ 5 أيام",
+      "lastWeek": "الأسبوع الماضي",
+      "today": "اليوم"
+    },
+    "meta": {
+      "sharedBy": "تمت المشاركة بواسطة {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "بانتظار مراجعتك",
+        "requestEdit": "طلب تعديل"
+      },
+      "meta": {
+        "awaitingReview": "بانتظار المراجعة",
+        "requestedToday": "طُلب اليوم"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "مشترك حديثاً",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "تمت المشاركة بواسطة {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "تمت المشاركة بواسطة {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "تمت المشاركة بواسطة {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "المجلدات المشتركة",
+        "items": {
+          "campaignAssets": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          },
+          "productSpecs": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          },
+          "leadership": {
+            "detail": "شاركها {{team}} • تم التحديث {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "موافقات معلّقة",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · تمت المشاركة بواسطة {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · تمت المشاركة بواسطة {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "ملفاتي"
+    },
+    "toolbar": {
+      "sort": "آخر تعديل",
+      "selectAll": "تحديد الكل"
+    },
+    "items": {
+      "documents": {
+        "name": "المستندات",
+        "detail": "مجلد • تم التحديث قبل ساعة"
+      },
+      "design": {
+        "name": "التصميم",
+        "detail": "مجلد مشترك • تم التحديث أمس"
+      },
+      "development": {
+        "name": "التطوير",
+        "detail": "مجلد • تم التحديث في 12 يونيو 2025"
+      },
+      "legals": {
+        "name": "قانوني",
+        "detail": "مجلد • تم التحديث في 10 يونيو 2025"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 يونيو 2025، 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 يونيو 2025، 11:22"
+      },
+      "brandAssets": {
+        "name": "أصول العلامة التجارية",
+        "detail": "مجلد • تم التحديث الأسبوع الماضي"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 يونيو 2025، 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "مطلوب إذن الكاميرا",
+      "button": "السماح بالوصول"
+    },
+    "alerts": {
+      "errorTitle": "حدث خطأ",
+      "captureFailure": "تعذّر التقاط الصورة. الرجاء المحاولة مجددًا.",
+      "galleryFailure": "تعذّر فتح المعرض. الرجاء المحاولة مرة أخرى."
+    },
+    "flash": {
+      "off": "الفلاش",
+      "on": "الفلاش قيد التشغيل",
+      "auto": "تلقائي"
+    },
+    "preview": {
+      "retake": "أعد الالتقاط",
+      "confirm": "تأكيد"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "كشف الحواف",
+        "description": "يقص المستندات تلقائيًا"
+      },
+      "autoEnhance": {
+        "label": "تحسين تلقائي",
+        "description": "يُحسّن وضوح الصورة بعد الالتقاط"
+      }
+    },
+    "actions": {
+      "gallery": "المعرض"
+    }
+  },
+  "preview": {
+    "title": "معاينة",
+    "close": "إغلاق المعاينة",
+    "actions": {
+      "comment": "تعليق",
+      "download": "تنزيل",
+      "delete": "حذف",
+      "link": "نسخ الرابط",
+      "share": "مشاركة",
+      "openFolder": "فتح المجلد",
+      "manageAccess": "إدارة الصلاحيات"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "مرحبًا بعودتك",
+      "subtitle": "يرجى إدخال بريدك الإلكتروني لتسجيل الدخول",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "next": "التالي",
+      "socialGoogle": "المتابعة باستخدام Google",
+      "socialApple": "المتابعة باستخدام Apple",
+      "noAccount": "ليس لديك حساب؟",
+      "register": "إنشاء حساب."
+    },
+    "signup": {
+      "title": "إنشاء حساب جديد",
+      "subtitle": "يرجى تعبئة البيانات لإنشاء حساب",
+      "fullName": "الاسم الكامل",
+      "fullNamePlaceholder": "اكتب اسمك الكامل",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "اكتب بريدك الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "أنشئ كلمة مرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+      "submit": "إنشاء حساب",
+      "haveAccount": "لديك حساب بالفعل؟",
+      "signIn": "تسجيل الدخول"
+    },
+    "password": {
+      "title": "هل أنت Digne؟",
+      "subtitle": "أكد هويتك بكلمة المرور",
+      "passwordPlaceholder": "أدخل كلمة المرور",
+      "login": "تسجيل الدخول",
+      "forgot": "هل نسيت كلمة المرور؟",
+      "reset": "إعادة تعيين كلمة المرور"
+    },
+    "passwordReset": {
+      "title": "هل نسيت كلمة المرور؟",
+      "subtitle": "احصل على رابط إعادة التعيين عبر بريدك الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "next": "التالي",
+      "remember": "تتذكر كلمة المرور؟",
+      "login": "تسجيل الدخول"
+    },
+    "otp": {
+      "title": "مرحبًا Digne!",
+      "subtitle": "أدخل رمز وصول مكون من 6 أرقام تم إرساله إلى بريدك الإلكتروني",
+      "placeholder": "000000",
+      "verify": "تحقق",
+      "noCode": "لم يصلك رمز OTP؟",
+      "sendAgain": "إرسال مرة أخرى"
+    },
+    "forgetPassword": {
+      "title": "إعادة تعيين كلمة المرور",
+      "subtitle": "أدخل البريد الإلكتروني المرتبط بحسابك وسنرسل رمز OTP لإعادة تعيين كلمة المرور.",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "إرسال OTP",
+      "backToSignIn": "العودة إلى تسجيل الدخول"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "مجلد",
+      "subtitle": "تم التحديث {{time}}"
+    },
+    "empty": {
+      "title": "المجلد غير موجود",
+      "description": "قد يكون المجلد الذي تبحث عنه قد تم نقله أو حذفه.",
+      "cta": "العودة إلى المجلدات"
+    },
+    "hero": {
+      "meta": "{{count}} عنصر • {{size}} • المالك {{owner}}",
+      "invite": "دعوة"
+    },
+    "search": {
+      "placeholder": "ابحث داخل هذا المجلد"
+    },
+    "sections": {
+      "pinned": {
+        "title": "مثبت",
+        "meta": "{{count}} عنصر"
+      },
+      "allItems": {
+        "title": "كل العناصر",
+        "meta": "{{count}} إجمالي"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "المفضلة",
+      "activity": "النشاط",
+      "security": "الأمان",
+      "forgetPassword": "إعادة تعيين كلمة المرور",
+      "planDetails": "الأسعار",
+      "documentDetails": "تفاصيل المستند",
+      "upload": "رفع"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "نظرة عامة على الأمان",
+      "description": "راجع عمليات تسجيل الدخول والأجهزة والجلسات، وعزّز أمان حسابك.",
+      "cta": "الانتقال إلى الإعدادات"
+    },
+    "sections": {
+      "status": {
+        "title": "الحالة",
+        "ok": "لم يتم اكتشاف أي نشاط مريب"
+      },
+      "recommended": {
+        "title": "إجراءات موصى بها",
+        "items": {
+          "twoFactor": "فعّل المصادقة الثنائية",
+          "thirdParty": "راجع تكاملات الجهات الخارجية"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "اختر خطتك"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "شهري",
+        "annually": "سنوي"
+      },
+      "meta": {
+        "monthly": "يتم الفوترة شهريًا",
+        "annually": "يتم الفوترة سنويًا"
+      },
+      "period": {
+        "month": "شهر",
+        "year": "سنة"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "أساسي"
+      },
+      "standard": {
+        "title": "قياسي"
+      },
+      "pro": {
+        "title": "احترافي"
+      }
+    },
+    "actions": {
+      "upgrade": "ترقية"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "الرئيسية",
+      "shared": "المشترك",
+      "scan": "مسح",
+      "files": "ملفاتي",
+      "account": "الحساب"
+    }
+  }
+}

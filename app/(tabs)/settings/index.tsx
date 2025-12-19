@@ -1,5 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { Link, useRouter } from "expo-router";
+import { useTranslation } from "react-i18next";
 import {
   Image,
   ScrollView,
@@ -19,6 +20,7 @@ import { colors, spacing, typography } from "../../constants/theme";
 
 export default function SettingsScreen() {
   const router = useRouter();
+  const { t } = useTranslation("settings");
   const usedGb = 4.5;
   const totalGb = 15;
   const usageRatio = usedGb / totalGb;
@@ -30,6 +32,8 @@ export default function SettingsScreen() {
   ];
 
   const devices = ["smartphone", "laptop", "tablet"];
+  const teamLimit = 10;
+  const deviceLimit = 3;
 
   const menuOrder: SettingsMenuKey[] = [
     "settings",
@@ -37,21 +41,34 @@ export default function SettingsScreen() {
     "billing",
     "notification",
     "refer",
-    "application",
+    "language",
     "privacy",
     "security",
   ];
 
   const menuItems = menuOrder.map((key) => ({
     id: key,
-    label: SETTINGS_MENU_CONFIG[key].title,
+    label: t(`menu.${key}`),
     icon: SETTINGS_MENU_CONFIG[key].icon,
   }));
+
+  const planUsageCopy = t("screen.planUsage", {
+    used: usedGb,
+    total: totalGb,
+  });
+  const teamMeta = t("screen.teamMeta", {
+    current: teamMembers.length,
+    limit: teamLimit,
+  });
+  const devicesMeta = t("screen.devicesMeta", {
+    current: devices.length,
+    limit: deviceLimit,
+  });
 
   return (
     <View style={styles.screen}>
       <Header
-        title="Account"
+        title={t("screen.title")}
         actions={[
           {
             id: "settings",
@@ -80,10 +97,8 @@ export default function SettingsScreen() {
           </View>
 
           <View style={styles.planRow}>
-            <Text style={styles.planLabel}>Free</Text>
-            <Text style={styles.planUsage}>
-              {usedGb} GB of {totalGb} GB
-            </Text>
+            <Text style={styles.planLabel}>{t("screen.planLabel")}</Text>
+            <Text style={styles.planUsage}>{planUsageCopy}</Text>
           </View>
           <View style={styles.progressTrack}>
             <View
@@ -96,20 +111,22 @@ export default function SettingsScreen() {
             activeOpacity={0.9}
             onPress={() => router.push("/plan-details")}
           >
-            <Text style={styles.upgradeLabel}>Upgrade</Text>
+            <Text style={styles.upgradeLabel}>{t("screen.upgradeCta")}</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.quickGrid}>
           <View style={[styles.quickCard, styles.quickCardInvite]}>
             <AvatarStack images={teamMembers} size={36} overlap={14} />
-            <Text style={styles.quickTitle}>Team members</Text>
-            <Text style={styles.quickMeta}>3/10</Text>
+            <Text style={styles.quickTitle}>{t("screen.teamTitle")}</Text>
+            <Text style={styles.quickMeta}>{teamMeta}</Text>
             <TouchableOpacity
               style={styles.quickPrimaryCta}
               activeOpacity={0.85}
             >
-              <Text style={styles.quickPrimaryCtaLabel}>Invite</Text>
+              <Text style={styles.quickPrimaryCtaLabel}>
+                {t("screen.teamCta")}
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -125,19 +142,21 @@ export default function SettingsScreen() {
                 </View>
               ))}
             </View>
-            <Text style={styles.quickTitle}>Devices</Text>
-            <Text style={styles.quickMeta}>3/3</Text>
+            <Text style={styles.quickTitle}>{t("screen.devicesTitle")}</Text>
+            <Text style={styles.quickMeta}>{devicesMeta}</Text>
             <TouchableOpacity
               style={styles.quickSecondaryCta}
               activeOpacity={0.85}
             >
-              <Text style={styles.quickSecondaryCtaLabel}>Manage</Text>
+              <Text style={styles.quickSecondaryCtaLabel}>
+                {t("screen.devicesCta")}
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
 
         <View style={styles.menuSection}>
-          <Text style={styles.menuTitle}>Menu</Text>
+          <Text style={styles.menuTitle}>{t("screen.menuTitle")}</Text>
           <View style={styles.menuGrid}>
             {menuItems.map((item) => (
               <TouchableOpacity
@@ -166,7 +185,7 @@ export default function SettingsScreen() {
 
         <TouchableOpacity style={styles.logoutButton} activeOpacity={0.8}>
           <Link href="/login" style={styles.logoutLabel}>
-            Logout
+            {t("screen.logout")}
           </Link>
         </TouchableOpacity>
       </ScrollView>

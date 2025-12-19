@@ -1,5 +1,6 @@
 import { Href, Link, useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   KeyboardAvoidingView,
   Platform,
@@ -14,6 +15,7 @@ import { TextField } from "./components/TextField";
 import { colors, spacing } from "./constants/theme";
 
 export default function SignupScreen() {
+  const { t } = useTranslation("auth");
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [fullName, setFullName] = useState("");
@@ -32,60 +34,58 @@ export default function SignupScreen() {
           <View style={styles.heroWrapper}>
             <View style={styles.brandRow}>
               <AntDesign name="cloud" size={28} color={colors.primary} />
-              <Text style={styles.brandName}>Bika</Text>
+              <Text style={styles.brandName}>{t("brand")}</Text>
             </View>
           </View>
 
           <View style={styles.headerText}>
-            <Text style={styles.title}>Create new account</Text>
-            <Text style={styles.subtitle}>
-              Please fill registration to create account
-            </Text>
+            <Text style={styles.title}>{t("signup.title")}</Text>
+            <Text style={styles.subtitle}>{t("signup.subtitle")}</Text>
           </View>
 
           <View style={styles.emailContainer}>
             <TextField
-              label="Full name"
+              label={t("signup.fullName")}
               value={fullName}
               onChangeText={setFullName}
-              placeholder="Type your full name"
+              placeholder={t("signup.fullNamePlaceholder")}
               autoCapitalize="words"
             />
             <TextField
-              label="Email"
+              label={t("signup.email")}
               keyboardType="email-address"
               autoCapitalize="none"
               autoComplete="email"
               value={email}
               onChangeText={setEmail}
-              placeholder="Type your email"
+              placeholder={t("signup.emailPlaceholder")}
             />
             <TextField
-              label="Password"
+              label={t("signup.password")}
               secureTextEntry
               value={password}
               onChangeText={setPassword}
-              placeholder="Create a password"
+              placeholder={t("signup.passwordPlaceholder")}
             />
             <TextField
-              label="Confirm Password"
+              label={t("signup.confirmPassword")}
               secureTextEntry
               value={password}
               onChangeText={setPassword}
-              placeholder="Repeat your password"
+              placeholder={t("signup.confirmPasswordPlaceholder")}
             />
             <View>
               <PrimaryButton
-                label="Sign up"
+                label={t("signup.submit")}
                 onPress={() => router.replace(otpRoute as Href)}
               />
               <View style={styles.footer}>
-                <Text style={styles.footerText}>Already have an account?</Text>
+                <Text style={styles.footerText}>{t("signup.haveAccount")}</Text>
                 <Link
                   href={signInRoute as Href}
                   style={{ color: colors.primary, fontWeight: 700 }}
                 >
-                  Sign in
+                  {t("signup.signIn")}
                 </Link>
               </View>
             </View>
@@ -99,7 +99,7 @@ export default function SignupScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   container: {
     flex: 1,

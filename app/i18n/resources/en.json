@@ -1,0 +1,706 @@
+{
+  "common": {
+    "appName": "Doc App",
+    "welcome": "Welcome back, {{name}}!",
+    "syncing": "Syncing files to the cloud",
+    "synced": "All files synced",
+    "actions": {
+      "seeAll": "See all"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "lastActivity": "Last activity: Uploaded {{count}} photos {{timeAgo}}",
+    "timeAgoMinutes": "{{count}} mins ago",
+    "storageTitle": "Storage",
+    "storageUsage": "{{used}} GB of {{total}} GB used",
+    "upgrade": "Upgrade Storage",
+    "breakdown": {
+      "photos": "Photos",
+      "documents": "Documents",
+      "videos": "Videos"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Upload Files",
+        "description": "Add documents and files"
+      },
+      "uploadPhotos": {
+        "title": "Upload Photos",
+        "description": "Add your memories"
+      },
+      "uploadFolder": {
+        "title": "Upload Folder",
+        "description": "Bulk upload files"
+      },
+      "cloudBackup": {
+        "title": "Cloud Backup",
+        "description": "Auto-sync enabled"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Memories",
+        "description": "242 items · This Year"
+      },
+      "screenshots": {
+        "title": "Screenshots",
+        "description": "48 items"
+      },
+      "documents": {
+        "title": "Documents",
+        "description": "156 items"
+      },
+      "large": {
+        "title": "Large Files",
+        "description": "12 items · Over 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Deleted",
+        "description": "5 items · Delete in 30 days"
+      },
+      "recent": {
+        "title": "Recently Added",
+        "description": "18 items · Last 7 days"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "Account",
+      "planLabel": "Free",
+      "planUsage": "{{used}} GB of {{total}} GB",
+      "upgradeCta": "Upgrade",
+      "teamTitle": "Team members",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Invite",
+      "devicesTitle": "Devices",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Manage",
+      "menuTitle": "Menu",
+      "logout": "Logout"
+    },
+    "menu": {
+      "settings": "Settings",
+      "storage": "Storage",
+      "billing": "Billing",
+      "notification": "Notifications",
+      "refer": "Refer a friend",
+      "language": "Language",
+      "privacy": "Privacy",
+      "security": "Security"
+    },
+    "language": {
+      "title": "Change Language",
+      "subtitle": "Choose your language.",
+      "available": "Available languages",
+      "apply": "Apply language"
+    }
+  },
+  "settingsMenu": {
+    "error": {
+      "title": "Menu unavailable",
+      "description": "The requested settings page could not be found."
+    },
+    "settings": {
+      "title": "General settings",
+      "subtitle": "Personalize how your workspace behaves and looks.",
+      "sections": {
+        "profile": {
+          "title": "Profile",
+          "description": "Update your personal details and workspace identity.",
+          "rows": {
+            "displayName": {
+              "label": "Display name"
+            },
+            "email": {
+              "label": "Email"
+            },
+            "darkMode": {
+              "label": "Dark appearance",
+              "description": "Match the system theme across the app."
+            },
+            "compactMode": {
+              "label": "Compact layout",
+              "description": "Reduce spacing for dense information views."
+            }
+          }
+        },
+        "shortcuts": {
+          "title": "Shortcuts",
+          "description": "Quickly access your most-used tools.",
+          "rows": {
+            "customizeCards": {
+              "label": "Customize home cards"
+            },
+            "keyboardShortcuts": {
+              "label": "Keyboard shortcuts"
+            },
+            "notificationPreferences": {
+              "label": "Notification preferences"
+            }
+          }
+        }
+      }
+    },
+    "language": {
+      "title": "Change language",
+      "subtitle": "Choose how the app is translated.",
+      "sections": {
+        "list": {
+          "title": "Available languages",
+          "description": "Select a language to apply across the app.",
+          "primaryCta": "Apply language"
+        }
+      }
+    },
+    "storage": {
+      "title": "Storage",
+      "subtitle": "Monitor usage and keep your workspace tidy.",
+      "sections": {
+        "usage": {
+          "title": "Usage overview",
+          "rows": {
+            "storage": {
+              "label": "Storage",
+              "unit": "GB"
+            },
+            "plan": {
+              "label": "Current plan",
+              "value": "Free • 15 GB"
+            },
+            "pinnedFolders": {
+              "label": "Pinned folders",
+              "value": "6 folders"
+            }
+          },
+          "primaryCta": "Upgrade plan"
+        },
+        "cleanup": {
+          "title": "Smart cleanup",
+          "description": "Identify large and unused files to reclaim space.",
+          "rows": {
+            "reviewLargeFiles": {
+              "label": "Review large files"
+            },
+            "emptyRecycleBin": {
+              "label": "Empty recycle bin"
+            }
+          }
+        }
+      }
+    },
+    "billing": {
+      "title": "Billing",
+      "subtitle": "Review plan details and payment history.",
+      "sections": {
+        "plan": {
+          "title": "Plan",
+          "rows": {
+            "currentPlan": {
+              "label": "Current plan",
+              "value": "Standard • paid 28 Nov"
+            },
+            "billingCycle": {
+              "label": "Billing cycle",
+              "value": "Monthly"
+            }
+          },
+          "primaryCta": "Change plan"
+        },
+        "payment": {
+          "title": "Payment methods",
+          "description": "Manage how you pay for your subscription.",
+          "rows": {
+            "primaryCard": {
+              "label": "Primary card",
+              "value": "Mastercard •••• 9284"
+            },
+            "addMethod": {
+              "label": "Add backup method"
+            }
+          }
+        },
+        "invoices": {
+          "title": "Invoices",
+          "rows": {
+            "lastInvoice": {
+              "label": "Last invoice",
+              "value": "Nov 2025 • Paid"
+            },
+            "viewAll": {
+              "label": "View all invoices"
+            }
+          }
+        }
+      }
+    },
+    "notification": {
+      "title": "Notifications",
+      "subtitle": "Stay in the loop without the noise.",
+      "sections": {
+        "channels": {
+          "title": "Channels",
+          "description": "Choose how we reach out when something important happens.",
+          "rows": {
+            "emailSummaries": {
+              "label": "Email summaries",
+              "description": "Weekly overview of shared items and storage."
+            },
+            "pushNotifications": {
+              "label": "Push notifications",
+              "description": "Instant updates for mentions, shares and approvals."
+            },
+            "smsAlerts": {
+              "label": "SMS alerts",
+              "description": "Security notifications like new logins."
+            }
+          }
+        },
+        "focus": {
+          "title": "Focus",
+          "description": "Customize quiet hours when notifications are paused.",
+          "rows": {
+            "quietHours": {
+              "label": "Quiet hours",
+              "value": "Daily • 10pm – 7am"
+            },
+            "editSchedule": {
+              "label": "Edit schedule"
+            }
+          }
+        }
+      }
+    },
+    "refer": {
+      "title": "Refer a friend",
+      "subtitle": "Share the workspace love and earn bonus storage.",
+      "sections": {
+        "referralCode": {
+          "title": "Your invite link",
+          "rows": {
+            "code": {
+              "label": "Referral code"
+            },
+            "reward": {
+              "label": "Reward",
+              "description": "Earn 2GB bonus storage for every friend who upgrades within 30 days."
+            }
+          },
+          "primaryCta": "Copy link",
+          "secondaryCta": "Share via email"
+        },
+        "status": {
+          "title": "Progress",
+          "rows": {
+            "invitesSent": {
+              "label": "Invites sent"
+            },
+            "rewardsEarned": {
+              "label": "Rewards earned"
+            }
+          }
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacy",
+      "subtitle": "Control data sharing and backup preferences.",
+      "sections": {
+        "data": {
+          "title": "Data visibility",
+          "rows": {
+            "activityInsights": {
+              "label": "Activity insights",
+              "description": "Allow teammates to see when you view shared files."
+            },
+            "productAnalytics": {
+              "label": "Product analytics",
+              "description": "Share anonymous usage data to improve the experience."
+            }
+          }
+        },
+        "backups": {
+          "title": "Backups",
+          "description": "Secure copies of your data for recovery.",
+          "rows": {
+            "autoBackup": {
+              "label": "Automatic cloud backup",
+              "value": "Weekly"
+            },
+            "manageSchedule": {
+              "label": "Manage backup schedule"
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "title": "Security",
+      "subtitle": "Keep your account locked down.",
+      "sections": {
+        "auth": {
+          "title": "Authentication",
+          "rows": {
+            "twoFactor": {
+              "label": "Two-factor authentication",
+              "description": "Require a 6-digit code on sign in."
+            },
+            "biometric": {
+              "label": "Biometric unlock",
+              "description": "Use Face ID or Touch ID on this device."
+            }
+          }
+        },
+        "sessions": {
+          "title": "Sessions",
+          "rows": {
+            "activeDevices": {
+              "label": "Active devices"
+            },
+            "reviewActivity": {
+              "label": "Review sign-in activity"
+            },
+            "signOutOthers": {
+              "label": "Sign out other devices"
+            }
+          }
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Shared"
+    },
+    "search": {
+      "placeholder": "Search shared items"
+    },
+    "collab": {
+      "title": "Work together",
+      "subtitle": "See who recently shared files with you and manage their access in one place.",
+      "cta": "Manage access"
+    },
+    "actions": {
+      "viewAll": "See all"
+    },
+    "time": {
+      "twoHours": "2h ago",
+      "yesterday": "Yesterday",
+      "twoDays": "2 days ago",
+      "threeDays": "3 days ago",
+      "fiveDays": "5 days ago",
+      "lastWeek": "Last week",
+      "today": "Today"
+    },
+    "meta": {
+      "sharedBy": "Shared by {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "Awaiting your review",
+        "requestEdit": "Request to edit"
+      },
+      "meta": {
+        "awaitingReview": "Awaiting review",
+        "requestedToday": "Requested today"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Recently shared",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Shared by {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Shared by {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Shared by {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Shared folders",
+        "items": {
+          "campaignAssets": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          },
+          "leadership": {
+            "detail": "Shared by {{team}} • Updated {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Pending approvals",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Shared by {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Shared by {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "My files"
+    },
+    "toolbar": {
+      "sort": "Last modified",
+      "selectAll": "Select all"
+    },
+    "items": {
+      "documents": {
+        "name": "Documents",
+        "detail": "Folder • Updated 1 hour ago"
+      },
+      "design": {
+        "name": "Design",
+        "detail": "Shared folder • Updated yesterday"
+      },
+      "development": {
+        "name": "Development",
+        "detail": "Folder • Updated 12 Jun 2025"
+      },
+      "legals": {
+        "name": "Legals",
+        "detail": "Folder • Updated 10 Jun 2025"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 Jun 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 Jun 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "Brand Assets",
+        "detail": "Folder • Updated last week"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 Jun 2025, 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "Camera permission required",
+      "button": "Grant permission"
+    },
+    "alerts": {
+      "errorTitle": "Something went wrong",
+      "captureFailure": "We couldn't capture that photo. Please try again.",
+      "galleryFailure": "We couldn't open your gallery. Please try again."
+    },
+    "flash": {
+      "off": "Flash",
+      "on": "Flash on",
+      "auto": "Auto"
+    },
+    "preview": {
+      "retake": "Retake",
+      "confirm": "Confirm"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "Edge detection",
+        "description": "Automatically crop documents"
+      },
+      "autoEnhance": {
+        "label": "Auto enhance",
+        "description": "Improve readability after capture"
+      }
+    },
+    "actions": {
+      "gallery": "Gallery"
+    }
+  },
+  "preview": {
+    "title": "Preview",
+    "close": "Close preview",
+    "actions": {
+      "comment": "Comment",
+      "download": "Download",
+      "delete": "Delete",
+      "link": "Get link",
+      "share": "Share",
+      "openFolder": "Open folder",
+      "manageAccess": "Manage access"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Please type your email to log in",
+      "emailPlaceholder": "Type your e-mail",
+      "next": "Next",
+      "socialGoogle": "Continue with Google",
+      "socialApple": "Continue with Apple",
+      "noAccount": "Don't have an account?",
+      "register": "Register account."
+    },
+    "signup": {
+      "title": "Create new account",
+      "subtitle": "Please fill registration to create account",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Type your full name",
+      "email": "Email",
+      "emailPlaceholder": "Type your email",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Repeat your password",
+      "submit": "Sign up",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "password": {
+      "title": "Are you Digne?",
+      "subtitle": "Confirm yourself by your password",
+      "passwordPlaceholder": "Type your password",
+      "login": "Login",
+      "forgot": "Forgotten your password?",
+      "reset": "Reset Password"
+    },
+    "passwordReset": {
+      "title": "Forgotten Password?",
+      "subtitle": "Get reset link with your email",
+      "emailPlaceholder": "Type your e-mail",
+      "next": "Next",
+      "remember": "Remember your password?",
+      "login": "Login"
+    },
+    "otp": {
+      "title": "Welcome Digne!",
+      "subtitle": "Enter a 6-digit access code sent to your email",
+      "placeholder": "000000",
+      "verify": "Verify",
+      "noCode": "Didn't get your OTP code?",
+      "sendAgain": "Send again"
+    },
+    "forgetPassword": {
+      "title": "Reset password",
+      "subtitle": "Enter the email associated with your account and we'll send an OTP to reset your password.",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Send OTP",
+      "backToSignIn": "Back to sign in"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Folder",
+      "subtitle": "Updated {{time}}"
+    },
+    "empty": {
+      "title": "Folder not found",
+      "description": "The folder you are looking for might have been moved or deleted.",
+      "cta": "Return to folders"
+    },
+    "hero": {
+      "meta": "{{count}} items • {{size}} • Owner {{owner}}",
+      "invite": "Invite"
+    },
+    "search": {
+      "placeholder": "Search within this folder"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Pinned",
+        "meta": "{{count}} items"
+      },
+      "allItems": {
+        "title": "All items",
+        "meta": "{{count}} total"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Favourites",
+      "activity": "Activity",
+      "security": "Security",
+      "forgetPassword": "Reset Password",
+      "planDetails": "Pricing",
+      "documentDetails": "Document Details",
+      "upload": "Upload"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "Security overview",
+      "description": "Review device sign-ins, sessions, and harden your account.",
+      "cta": "Go to settings"
+    },
+    "sections": {
+      "status": {
+        "title": "Status",
+        "ok": "No suspicious activity detected"
+      },
+      "recommended": {
+        "title": "Recommended actions",
+        "items": {
+          "twoFactor": "Enable two-factor authentication",
+          "thirdParty": "Review third-party integrations"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Choose your plan"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Monthly",
+        "annually": "Annually"
+      },
+      "meta": {
+        "monthly": "Billed monthly",
+        "annually": "Billed annually"
+      },
+      "period": {
+        "month": "month",
+        "year": "year"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Basic"
+      },
+      "standard": {
+        "title": "Standard"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Upgrade"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Home",
+      "shared": "Shared",
+      "scan": "Scan",
+      "files": "My Files",
+      "account": "Account"
+    }
+  }
+}

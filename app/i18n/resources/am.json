@@ -1,0 +1,447 @@
+{
+  "common": {
+    "appName": "መለያ መተግበሪያ",
+    "welcome": "እንኳን ደህና መጡ፣ {{name}}!",
+    "syncing": "ፋይሎች ጋር በክላውድ ማመሳሰል በመካከል ነው",
+    "synced": "ሁሉም ፋይሎች ተመሳሰሉ",
+    "actions": {
+      "seeAll": "ሁሉንም አሳይ"
+    }
+  },
+  "home": {
+    "title": "መነሻ",
+    "lastActivity": "የመጨረሻ እንቅስቃሴ፡ {{count}} ፎቶዎች ተጭነዋል {{timeAgo}}",
+    "timeAgoMinutes": "{{count}} ደቂቃ በፊት",
+    "storageTitle": "ማከማቻ",
+    "storageUsage": "{{used}} ጊቢ ከ {{total}} ጊቢ ተጠቅመዋል",
+    "upgrade": "ማከማቻን አሻሽል",
+    "breakdown": {
+      "photos": "ፎቶዎች",
+      "documents": "ሰነዶች",
+      "videos": "ቪዲዮዎች"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "ፋይሎችን ጫን",
+        "description": "ሰነዶችንና ፋይሎችን ጨምር"
+      },
+      "uploadPhotos": {
+        "title": "ፎቶዎችን ጫን",
+        "description": "የምትወዱትን ማስታወሻ አክል"
+      },
+      "uploadFolder": {
+        "title": "ፎልደር ጫን",
+        "description": "ብዛት ግብዣ ፋይሎች"
+      },
+      "cloudBackup": {
+        "title": "ክላውድ ቅጂ",
+        "description": "ራሱ-ራሱ ማመሳሰል ነቅቷል"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "ማስታወሻዎች",
+        "description": "242 ነገሮች · በዚህ አመት"
+      },
+      "screenshots": {
+        "title": "ስክሪን ሹቶች",
+        "description": "48 ነገሮች"
+      },
+      "documents": {
+        "title": "ሰነዶች",
+        "description": "156 ነገሮች"
+      },
+      "large": {
+        "title": "ትልቅ ፋይሎች",
+        "description": "12 ነገሮች · ከ100 ሜባ በላይ"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "ተሰርዛል",
+        "description": "5 ነገሮች · በ30 ቀን ውስጥ ይደርሳሉ"
+      },
+      "recent": {
+        "title": "በቅርብ ጊዜ ተጨምሯል",
+        "description": "18 ነገሮች · የ7 ቀናት ውስጥ"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "መለያ",
+      "planLabel": "ነጻ",
+      "planUsage": "{{used}} ጊቢ ከ {{total}} ጊቢ",
+      "upgradeCta": "አሻሽል",
+      "teamTitle": "የቡድን አባላት",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "ጋብዝ",
+      "devicesTitle": "መሣሪያዎች",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "አስተዳድር",
+      "menuTitle": "ምናሌ",
+      "logout": "ውጣ"
+    },
+    "menu": {
+      "settings": "ቅንብሮች",
+      "storage": "ማከማቻ",
+      "billing": "ክፍያ",
+      "notification": "ማሳወቂያዎች",
+      "refer": "ጓደኛ ጋብዝ",
+      "language": "ቋንቋ",
+      "privacy": "ግላዊነት",
+      "security": "ደህንነት"
+    },
+    "language": {
+      "title": "ቋንቋን ቀይር",
+      "subtitle": "የሚፈለጉትን ቋንቋ ይምረጡ.",
+      "available": "የሚገኙ ቋንቋዎች",
+      "apply": "ቋንቋን ተግብር"
+    }
+  },
+  "settingsMenu": {
+    "language": {
+      "title": "ቋንቋን ቀይር",
+      "subtitle": "መተግበሪያው እንዴት እንደሚተረጎም ይምረጡ።",
+      "sections": {
+        "list": {
+          "title": "የሚገኙ ቋንቋዎች",
+          "description": "በመተግበሪያው ሁሉ ላይ ለማግኘት ቋንቋ ይምረጡ።",
+          "primaryCta": "ቋንቋን ተግብር"
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "ተጋራ"
+    },
+    "search": {
+      "placeholder": "ተጋሩ ንጥሎችን ፈልግ"
+    },
+    "collab": {
+      "title": "በአንድነት ስራ አድርጉ",
+      "subtitle": "በቅርቡ ፋይሎችን ማን እንደካፈሉ ይመልከቱ እና መዳረሻቸውን በአንድ ቦታ ያስተዳድሩ",
+      "cta": "መዳረሻን አስተዳድር"
+    },
+    "actions": {
+      "viewAll": "ሁሉንም ተመልከት"
+    },
+    "time": {
+      "twoHours": "ከ2 ሰዓት በፊት",
+      "yesterday": "ትናንት",
+      "twoDays": "ከ2 ቀን በፊት",
+      "threeDays": "ከ3 ቀን በፊት",
+      "fiveDays": "ከ5 ቀን በፊት",
+      "lastWeek": "ባለፈው ሳምንት",
+      "today": "ዛሬ"
+    },
+    "meta": {
+      "sharedBy": "በ{{name}} ተጋርቷል"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "የእርስዎን ግምገማ በመጠባበቅ ላይ",
+        "requestEdit": "ማስተካከያ ጥያቄ"
+      },
+      "meta": {
+        "awaitingReview": "በመጠባበቅ ላይ",
+        "requestedToday": "ዛሬ ተጠይቋል"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "በቅርቡ ተጋርቷል",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "በ{{name}} ተጋርቷል · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "በ{{name}} ተጋርቷል · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "በ{{name}} ተጋርቷል · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "ተጋራ ፎልደሮች",
+        "items": {
+          "campaignAssets": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          },
+          "brandGuidelines": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          },
+          "productSpecs": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          },
+          "leadership": {
+            "detail": "በ{{team}} ተጋርቷል • {{time}} ታድሷል"
+          }
+        }
+      },
+      "pending": {
+        "title": "በመጠባበቅ ላይ ያሉ እውቅናዎች",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · በ{{name}} ተጋርቷል"
+          },
+          "designSprint": {
+            "detail": "{{status}} · በ{{name}} ተጋርቷል"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "ፋይሎቼ"
+    },
+    "toolbar": {
+      "sort": "መጨረሻ የተቀየረው",
+      "selectAll": "ሁሉንም ምረጥ"
+    },
+    "items": {
+      "documents": {
+        "name": "ሰነዶች",
+        "detail": "ፎልደር • 1 ሰዓት በፊት ታድሷል"
+      },
+      "design": {
+        "name": "ዲዛይን",
+        "detail": "የተጋራ ፎልደር • ትናንት ታድሷል"
+      },
+      "development": {
+        "name": "ልማት",
+        "detail": "ፎልደር • 12 ሰኔ 2025 ታድሷል"
+      },
+      "legals": {
+        "name": "ህጋዊ",
+        "detail": "ፎልደር • 10 ሰኔ 2025 ታድሷል"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 ሰኔ 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 ሰኔ 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "የብራንድ ንብረቶች",
+        "detail": "ፎልደር • ባለፈው ሳምንት ዘመነ"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 ሰኔ 2025, 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "የካሜራ ፍቃድ ያስፈልጋል",
+      "button": "ካሜራን አግባ"
+    },
+    "alerts": {
+      "errorTitle": "ችግኝ ተከስቷል",
+      "captureFailure": "ፎቶውን ማንሳት አልተቻለም። እባክዎ እንደገና ይሞክሩ።",
+      "galleryFailure": "ጋለሪውን መክፈት አልተቻለም። እባክዎ እንደገና ይሞክሩ።"
+    },
+    "flash": {
+      "off": "ፍላሽ",
+      "on": "ፍላሽ ነው",
+      "auto": "በራሱ"
+    },
+    "preview": {
+      "retake": "እንደገና ይውሰዱ",
+      "confirm": "ያረጋግጡ"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "የጠርዝ ማወቂያ",
+        "description": "ሰነዶችን በራሱ ይቆርጣል"
+      },
+      "autoEnhance": {
+        "label": "ራሱ የሚያሻሽል",
+        "description": "ፎቶውን ካስወጣችሁ በኋላ ንባቡን ያሻሽላል"
+      }
+    },
+    "actions": {
+      "gallery": "ጋለሪ"
+    }
+  },
+  "preview": {
+    "title": "ቅድመ እይታ",
+    "close": "ቅድመ እይታን ዝጋ",
+    "actions": {
+      "comment": "አስተያየት",
+      "download": "አውርድ",
+      "delete": "ሰርዝ",
+      "link": "ሊንክ አግኝ",
+      "share": "አጋራ",
+      "openFolder": "ፎልደር ክፈት",
+      "manageAccess": "መዳረሻን አስተዳድር"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "እንኳን ደህና መጡ",
+      "subtitle": "ለመግባት ኢሜልዎን ያስገቡ",
+      "emailPlaceholder": "ኢሜል ያስገቡ",
+      "next": "ቀጣይ",
+      "socialGoogle": "በ Google ቀጥል",
+      "socialApple": "በ Apple ቀጥል",
+      "noAccount": "መለያ የለዎትም?",
+      "register": "መለያ ይመዝገቡ።"
+    },
+    "signup": {
+      "title": "አዲስ መለያ ፍጠር",
+      "subtitle": "መለያ ለመፍጠር መረጃ ያስገቡ",
+      "fullName": "ሙሉ ስም",
+      "fullNamePlaceholder": "ሙሉ ስምዎን ያስገቡ",
+      "email": "ኢሜል",
+      "emailPlaceholder": "ኢሜልዎን ያስገቡ",
+      "password": "የይለፍ ቃል",
+      "passwordPlaceholder": "የይለፍ ቃል ፍጠር",
+      "confirmPassword": "የይለፍ ቃል አረጋግጥ",
+      "confirmPasswordPlaceholder": "የይለፍ ቃል ደግመው ያስገቡ",
+      "submit": "ተመዝገብ",
+      "haveAccount": "መለያ አለዎት?",
+      "signIn": "ግባ"
+    },
+    "password": {
+      "title": "እርስዎ Digne ነዎት?",
+      "subtitle": "በይለፍ ቃልዎ ያረጋግጡ",
+      "passwordPlaceholder": "የይለፍ ቃል ያስገቡ",
+      "login": "ግባ",
+      "forgot": "የይለፍ ቃል ረሱ?",
+      "reset": "የይለፍ ቃል ዳግም አስጀምር"
+    },
+    "passwordReset": {
+      "title": "የይለፍ ቃል ረሱ?",
+      "subtitle": "በኢሜል የዳግም አስጀምር ሊንክ ያግኙ",
+      "emailPlaceholder": "ኢሜል ያስገቡ",
+      "next": "ቀጣይ",
+      "remember": "የይለፍ ቃልዎን ትዝ አለዎት?",
+      "login": "ግባ"
+    },
+    "otp": {
+      "title": "እንኳን ደህና መጡ Digne!",
+      "subtitle": "በኢሜልዎ የተላከ 6 አሃዝ ኮድ ያስገቡ",
+      "placeholder": "000000",
+      "verify": "አረጋግጥ",
+      "noCode": "OTP ኮድ አልደረሰዎትም?",
+      "sendAgain": "እንደገና ላክ"
+    },
+    "forgetPassword": {
+      "title": "የይለፍ ቃል ዳግም አስጀምር",
+      "subtitle": "ከመለያዎ ጋር የተገናኘ ኢሜል ያስገቡ፣ የይለፍ ቃል ለመቀየር OTP እንልካለን።",
+      "email": "ኢሜል",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "OTP ላክ",
+      "backToSignIn": "ወደ መግባት ተመለስ"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "ፎልደር",
+      "subtitle": "ተዘምኗል {{time}}"
+    },
+    "empty": {
+      "title": "ፎልደር አልተገኘም",
+      "description": "የሚፈልጉት ፎልደር ሊተካ ወይም ሊሰርዝ ይችላል።",
+      "cta": "ወደ ፎልደሮች ተመለስ"
+    },
+    "hero": {
+      "meta": "{{count}} ንጥሎች • {{size}} • ባለቤት {{owner}}",
+      "invite": "ጋብዝ"
+    },
+    "search": {
+      "placeholder": "በዚህ ፎልደር ውስጥ ፈልግ"
+    },
+    "sections": {
+      "pinned": {
+        "title": "የተቆለፉ",
+        "meta": "{{count}} ንጥሎች"
+      },
+      "allItems": {
+        "title": "ሁሉም ንጥሎች",
+        "meta": "ጠቅላላ {{count}}"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "ተወዳጆች",
+      "activity": "እንቅስቃሴ",
+      "security": "ደህንነት",
+      "forgetPassword": "የይለፍ ቃል ዳግም አስጀምር",
+      "planDetails": "ዋጋ",
+      "documentDetails": "የሰነድ ዝርዝር",
+      "upload": "ጫን"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "የደህንነት አጠቃላይ እይታ",
+      "description": "የመግባት መረጃዎችን፣ ሴሽኖችን እና መሣሪያዎችን ይመልከቱ እና መለያዎን ያስጠናክሩ።",
+      "cta": "ወደ ቅንብሮች ሂድ"
+    },
+    "sections": {
+      "status": {
+        "title": "ሁኔታ",
+        "ok": "ምንም የሚያጠራጥር እንቅስቃሴ አልተገኘም"
+      },
+      "recommended": {
+        "title": "የሚመከሩ እርምጃዎች",
+        "items": {
+          "twoFactor": "የሁለት-እርከን ማረጋገጫን አንቃ",
+          "thirdParty": "የሶስተኛ ወገን ትግበራዎችን ይመልከቱ"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "እቅድዎን ይምረጡ"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "ወርሃዊ",
+        "annually": "ዓመታዊ"
+      },
+      "meta": {
+        "monthly": "በወር ይከፈላል",
+        "annually": "በዓመት ይከፈላል"
+      },
+      "period": {
+        "month": "ወር",
+        "year": "ዓመት"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "መሠረታዊ"
+      },
+      "standard": {
+        "title": "መደበኛ"
+      },
+      "pro": {
+        "title": "ፕሮ"
+      }
+    },
+    "actions": {
+      "upgrade": "አሻሽል"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "መነሻ",
+      "shared": "ተጋራ",
+      "scan": "ስካን",
+      "files": "ፋይሎቼ",
+      "account": "መለያ"
+    }
+  }
+}

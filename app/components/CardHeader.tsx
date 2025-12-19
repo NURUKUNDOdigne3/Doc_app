@@ -1,5 +1,6 @@
 import { Link } from "expo-router";
 import { ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 import { StyleSheet, Text, View, ViewStyle } from "react-native";
 
 import { colors, spacing, typography } from "../constants/theme";
@@ -16,9 +17,12 @@ export function CardHeader({
   icon,
   title,
   linkHref,
-  linkLabel = "See all",
+  linkLabel,
   containerStyle,
 }: CardHeaderProps) {
+  const { t } = useTranslation("common");
+  const resolvedLinkLabel = linkLabel ?? t("actions.seeAll");
+
   return (
     <View style={[styles.container, containerStyle]}>
       <View style={styles.titleRow}>
@@ -26,7 +30,7 @@ export function CardHeader({
         <Text style={styles.title}>{title}</Text>
       </View>
       <Link href={linkHref as never} style={styles.link}>
-        {linkLabel}
+        {resolvedLinkLabel}
       </Link>
     </View>
   );

@@ -1,0 +1,447 @@
+{
+  "common": {
+    "appName": "Application Doc",
+    "welcome": "Bon retour, {{name}} !",
+    "syncing": "Synchronisation des fichiers avec le cloud",
+    "synced": "Tous les fichiers sont synchronisés",
+    "actions": {
+      "seeAll": "Voir tout"
+    }
+  },
+  "home": {
+    "title": "Accueil",
+    "lastActivity": "Dernière activité : {{count}} photos téléversées {{timeAgo}}",
+    "timeAgoMinutes": "il y a {{count}} min",
+    "storageTitle": "Stockage",
+    "storageUsage": "{{used}} Go sur {{total}} Go utilisés",
+    "upgrade": "Augmenter le stockage",
+    "breakdown": {
+      "photos": "Photos",
+      "documents": "Documents",
+      "videos": "Vidéos"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "Téléverser des fichiers",
+        "description": "Ajoutez des documents et des fichiers"
+      },
+      "uploadPhotos": {
+        "title": "Téléverser des photos",
+        "description": "Ajoutez vos souvenirs"
+      },
+      "uploadFolder": {
+        "title": "Téléverser un dossier",
+        "description": "Téléversement groupé de fichiers"
+      },
+      "cloudBackup": {
+        "title": "Sauvegarde cloud",
+        "description": "Synchronisation automatique activée"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "Souvenirs",
+        "description": "242 éléments · Cette année"
+      },
+      "screenshots": {
+        "title": "Captures",
+        "description": "48 éléments"
+      },
+      "documents": {
+        "title": "Documents",
+        "description": "156 éléments"
+      },
+      "large": {
+        "title": "Fichiers volumineux",
+        "description": "12 éléments · Plus de 100 Mo"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "Supprimés",
+        "description": "5 éléments · Suppression dans 30 jours"
+      },
+      "recent": {
+        "title": "Ajoutés récemment",
+        "description": "18 éléments · 7 derniers jours"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "Compte",
+      "planLabel": "Gratuit",
+      "planUsage": "{{used}} Go sur {{total}} Go",
+      "upgradeCta": "Mettre à niveau",
+      "teamTitle": "Membres de l'équipe",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "Inviter",
+      "devicesTitle": "Appareils",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "Gérer",
+      "menuTitle": "Menu",
+      "logout": "Déconnexion"
+    },
+    "menu": {
+      "settings": "Paramètres",
+      "storage": "Stockage",
+      "billing": "Facturation",
+      "notification": "Notifications",
+      "refer": "Parrainer un ami",
+      "language": "Langue",
+      "privacy": "Confidentialité",
+      "security": "Sécurité"
+    },
+    "language": {
+      "title": "Changer de langue",
+      "subtitle": "Choisissez votre langue.",
+      "available": "Langues disponibles",
+      "apply": "Appliquer la langue"
+    }
+  },
+  "settingsMenu": {
+    "language": {
+      "title": "Changer de langue",
+      "subtitle": "Choisissez comment l'application est traduite.",
+      "sections": {
+        "list": {
+          "title": "Langues disponibles",
+          "description": "Sélectionnez une langue à appliquer dans toute l'application.",
+          "primaryCta": "Appliquer la langue"
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "Partagés"
+    },
+    "search": {
+      "placeholder": "Rechercher dans les éléments partagés"
+    },
+    "collab": {
+      "title": "Collaborez",
+      "subtitle": "Voyez qui a récemment partagé des fichiers avec vous et gérez leurs accès au même endroit.",
+      "cta": "Gérer les accès"
+    },
+    "actions": {
+      "viewAll": "Voir tout"
+    },
+    "time": {
+      "twoHours": "Il y a 2 h",
+      "yesterday": "Hier",
+      "twoDays": "Il y a 2 jours",
+      "threeDays": "Il y a 3 jours",
+      "fiveDays": "Il y a 5 jours",
+      "lastWeek": "La semaine dernière",
+      "today": "Aujourd'hui"
+    },
+    "meta": {
+      "sharedBy": "Partagé par {{name}}"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "En attente de votre validation",
+        "requestEdit": "Demande de modification"
+      },
+      "meta": {
+        "awaitingReview": "En attente",
+        "requestedToday": "Demandé aujourd'hui"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "Partagés récemment",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "Partagé par {{name}} · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "Partagé par {{name}} · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "Partagé par {{name}} · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "Dossiers partagés",
+        "items": {
+          "campaignAssets": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          },
+          "productSpecs": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          },
+          "leadership": {
+            "detail": "Partagé par {{team}} • Mis à jour {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "Approbations en attente",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · Partagé par {{name}}"
+          },
+          "designSprint": {
+            "detail": "{{status}} · Partagé par {{name}}"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "Mes fichiers"
+    },
+    "toolbar": {
+      "sort": "Dernière modification",
+      "selectAll": "Tout sélectionner"
+    },
+    "items": {
+      "documents": {
+        "name": "Documents",
+        "detail": "Dossier • Mis à jour il y a 1 heure"
+      },
+      "design": {
+        "name": "Design",
+        "detail": "Dossier partagé • Mis à jour hier"
+      },
+      "development": {
+        "name": "Développement",
+        "detail": "Dossier • Mis à jour le 12 juin 2025"
+      },
+      "legals": {
+        "name": "Juridique",
+        "detail": "Dossier • Mis à jour le 10 juin 2025"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1,8 Mo • 08 juin 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2,4 Mo • 06 juin 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "Ressources de marque",
+        "detail": "Dossier • Mis à jour la semaine dernière"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1,2 Mo • 03 juin 2025, 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "Autorisation d'appareil photo requise",
+      "button": "Autoriser l'accès"
+    },
+    "alerts": {
+      "errorTitle": "Une erreur est survenue",
+      "captureFailure": "Impossible de prendre la photo. Réessayez.",
+      "galleryFailure": "Impossible d'ouvrir la galerie. Réessayez."
+    },
+    "flash": {
+      "off": "Flash",
+      "on": "Flash activé",
+      "auto": "Auto"
+    },
+    "preview": {
+      "retake": "Reprendre",
+      "confirm": "Confirmer"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "Détection des bords",
+        "description": "Recadre automatiquement les documents"
+      },
+      "autoEnhance": {
+        "label": "Amélioration automatique",
+        "description": "Améliore la lisibilité après la capture"
+      }
+    },
+    "actions": {
+      "gallery": "Galerie"
+    }
+  },
+  "preview": {
+    "title": "Aperçu",
+    "close": "Fermer l'aperçu",
+    "actions": {
+      "comment": "Commenter",
+      "download": "Télécharger",
+      "delete": "Supprimer",
+      "link": "Obtenir le lien",
+      "share": "Partager",
+      "openFolder": "Ouvrir le dossier",
+      "manageAccess": "Gérer les accès"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "Bon retour",
+      "subtitle": "Veuillez saisir votre e-mail pour vous connecter",
+      "emailPlaceholder": "Saisissez votre e-mail",
+      "next": "Suivant",
+      "socialGoogle": "Continuer avec Google",
+      "socialApple": "Continuer avec Apple",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "register": "Créer un compte."
+    },
+    "signup": {
+      "title": "Créer un nouveau compte",
+      "subtitle": "Veuillez remplir le formulaire pour créer un compte",
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "Saisissez votre nom complet",
+      "email": "E-mail",
+      "emailPlaceholder": "Saisissez votre e-mail",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Créez un mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Répétez votre mot de passe",
+      "submit": "S'inscrire",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter"
+    },
+    "password": {
+      "title": "Êtes-vous Digne ?",
+      "subtitle": "Confirmez-vous avec votre mot de passe",
+      "passwordPlaceholder": "Saisissez votre mot de passe",
+      "login": "Connexion",
+      "forgot": "Mot de passe oublié ?",
+      "reset": "Réinitialiser le mot de passe"
+    },
+    "passwordReset": {
+      "title": "Mot de passe oublié ?",
+      "subtitle": "Recevez un lien de réinitialisation par e-mail",
+      "emailPlaceholder": "Saisissez votre e-mail",
+      "next": "Suivant",
+      "remember": "Vous vous souvenez de votre mot de passe ?",
+      "login": "Connexion"
+    },
+    "otp": {
+      "title": "Bienvenue Digne !",
+      "subtitle": "Saisissez le code d'accès à 6 chiffres envoyé à votre e-mail",
+      "placeholder": "000000",
+      "verify": "Vérifier",
+      "noCode": "Vous n'avez pas reçu votre code OTP ?",
+      "sendAgain": "Renvoyer"
+    },
+    "forgetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Saisissez l'e-mail associé à votre compte et nous vous enverrons un OTP pour réinitialiser votre mot de passe.",
+      "email": "E-mail",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "Envoyer l'OTP",
+      "backToSignIn": "Retour à la connexion"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "Dossier",
+      "subtitle": "Mis à jour {{time}}"
+    },
+    "empty": {
+      "title": "Dossier introuvable",
+      "description": "Le dossier que vous recherchez a peut-être été déplacé ou supprimé.",
+      "cta": "Retour aux dossiers"
+    },
+    "hero": {
+      "meta": "{{count}} éléments • {{size}} • Propriétaire {{owner}}",
+      "invite": "Inviter"
+    },
+    "search": {
+      "placeholder": "Rechercher dans ce dossier"
+    },
+    "sections": {
+      "pinned": {
+        "title": "Épinglés",
+        "meta": "{{count}} éléments"
+      },
+      "allItems": {
+        "title": "Tous les éléments",
+        "meta": "{{count}} au total"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "Favoris",
+      "activity": "Activité",
+      "security": "Sécurité",
+      "forgetPassword": "Réinitialiser le mot de passe",
+      "planDetails": "Tarifs",
+      "documentDetails": "Détails du document",
+      "upload": "Téléverser"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "Aperçu de la sécurité",
+      "description": "Consultez les connexions, les sessions et sécurisez votre compte.",
+      "cta": "Aller aux paramètres"
+    },
+    "sections": {
+      "status": {
+        "title": "Statut",
+        "ok": "Aucune activité suspecte détectée"
+      },
+      "recommended": {
+        "title": "Actions recommandées",
+        "items": {
+          "twoFactor": "Activer l'authentification à deux facteurs",
+          "thirdParty": "Vérifier les intégrations tierces"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "Choisissez votre forfait"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "Mensuel",
+        "annually": "Annuel"
+      },
+      "meta": {
+        "monthly": "Facturé mensuellement",
+        "annually": "Facturé annuellement"
+      },
+      "period": {
+        "month": "mois",
+        "year": "an"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "Basique"
+      },
+      "standard": {
+        "title": "Standard"
+      },
+      "pro": {
+        "title": "Pro"
+      }
+    },
+    "actions": {
+      "upgrade": "Passer à la version supérieure"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "Accueil",
+      "shared": "Partagé",
+      "scan": "Scanner",
+      "files": "Mes fichiers",
+      "account": "Compte"
+    }
+  }
+}

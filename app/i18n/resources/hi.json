@@ -1,0 +1,447 @@
+{
+  "common": {
+    "appName": "डॉक ऐप",
+    "welcome": "वापसी पर स्वागत है, {{name}}!",
+    "syncing": "क्लाउड पर फ़ाइलें सिंक की जा रही हैं",
+    "synced": "सभी फ़ाइलें सिंक हो गईं",
+    "actions": {
+      "seeAll": "सभी देखें"
+    }
+  },
+  "home": {
+    "title": "मुखपृष्ठ",
+    "lastActivity": "अंतिम गतिविधि: {{count}} फ़ोटो {{timeAgo}} पहले अपलोड कीं",
+    "timeAgoMinutes": "{{count}} मिनट पहले",
+    "storageTitle": "स्टोरेज",
+    "storageUsage": "{{total}} जीबी में से {{used}} जीबी उपयोग हुआ",
+    "upgrade": "स्टोरेज बढ़ाएँ",
+    "breakdown": {
+      "photos": "फ़ोटो",
+      "documents": "दस्तावेज़",
+      "videos": "वीडियो"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "फ़ाइलें अपलोड करें",
+        "description": "दस्तावेज़ और फ़ाइलें जोड़ें"
+      },
+      "uploadPhotos": {
+        "title": "फ़ोटो अपलोड करें",
+        "description": "अपनी यादें जोड़ें"
+      },
+      "uploadFolder": {
+        "title": "फ़ोल्डर अपलोड करें",
+        "description": "एक साथ कई फ़ाइलें अपलोड करें"
+      },
+      "cloudBackup": {
+        "title": "क्लाउड बैकअप",
+        "description": "ऑटो-सिंक सक्षम है"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "यादें",
+        "description": "242 सामग्री · इस वर्ष"
+      },
+      "screenshots": {
+        "title": "स्क्रीनशॉट",
+        "description": "48 सामग्री"
+      },
+      "documents": {
+        "title": "दस्तावेज़",
+        "description": "156 सामग्री"
+      },
+      "large": {
+        "title": "बड़ी फ़ाइलें",
+        "description": "12 सामग्री · 100 एमबी से अधिक"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "हटाए गए",
+        "description": "5 सामग्री · 30 दिनों में हटाए जाएँगे"
+      },
+      "recent": {
+        "title": "हाल ही में जोड़े गए",
+        "description": "18 सामग्री · पिछले 7 दिन"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "खाता",
+      "planLabel": "निःशुल्क",
+      "planUsage": "{{total}} जीबी में से {{used}} जीबी",
+      "upgradeCta": "अपग्रेड",
+      "teamTitle": "टीम सदस्य",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "आमंत्रित करें",
+      "devicesTitle": "डिवाइस",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "प्रबंधित करें",
+      "menuTitle": "मेनू",
+      "logout": "लॉग आउट"
+    },
+    "menu": {
+      "settings": "सेटिंग्स",
+      "storage": "स्टोरेज",
+      "billing": "बिलिंग",
+      "notification": "सूचनाएँ",
+      "refer": "मित्र को आमंत्रित करें",
+      "language": "भाषा",
+      "privacy": "गोपनीयता",
+      "security": "सुरक्षा"
+    },
+    "language": {
+      "title": "भाषा बदलें",
+      "subtitle": "अपनी भाषा चुनें।",
+      "available": "उपलब्ध भाषाएँ",
+      "apply": "भाषा लागू करें"
+    }
+  },
+  "settingsMenu": {
+    "language": {
+      "title": "भाषा बदलें",
+      "subtitle": "चुनें कि ऐप का अनुवाद कैसे दिखे।",
+      "sections": {
+        "list": {
+          "title": "उपलब्ध भाषाएँ",
+          "description": "पूरे ऐप पर लागू करने के लिए एक भाषा चुनें।",
+          "primaryCta": "भाषा लागू करें"
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "साझा"
+    },
+    "search": {
+      "placeholder": "साझा की गई वस्तुओं में खोजें"
+    },
+    "collab": {
+      "title": "मिलकर काम करें",
+      "subtitle": "देखें किसने हाल ही में आपके साथ फ़ाइलें साझा की हैं और एक ही स्थान पर उनकी पहुँच प्रबंधित करें।",
+      "cta": "पहुँच प्रबंधित करें"
+    },
+    "actions": {
+      "viewAll": "सभी देखें"
+    },
+    "time": {
+      "twoHours": "2 घंटे पहले",
+      "yesterday": "कल",
+      "twoDays": "2 दिन पहले",
+      "threeDays": "3 दिन पहले",
+      "fiveDays": "5 दिन पहले",
+      "lastWeek": "पिछले सप्ताह",
+      "today": "आज"
+    },
+    "meta": {
+      "sharedBy": "{{name}} द्वारा साझा"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "आपकी समीक्षा की प्रतीक्षा में",
+        "requestEdit": "संपादन का अनुरोध"
+      },
+      "meta": {
+        "awaitingReview": "समीक्षा प्रतीक्षित",
+        "requestedToday": "आज अनुरोध किया गया"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "हाल ही में साझा",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "{{name}} द्वारा साझा · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "{{name}} द्वारा साझा · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "{{name}} द्वारा साझा · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "साझा फ़ोल्डर",
+        "items": {
+          "campaignAssets": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          },
+          "brandGuidelines": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          },
+          "productSpecs": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          },
+          "leadership": {
+            "detail": "{{team}} द्वारा साझा • {{time}} पर अपडेट"
+          }
+        }
+      },
+      "pending": {
+        "title": "लंबित अनुमोदन",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · {{name}} द्वारा साझा"
+          },
+          "designSprint": {
+            "detail": "{{status}} · {{name}} द्वारा साझा"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "मेरी फ़ाइलें"
+    },
+    "toolbar": {
+      "sort": "अंतिम संशोधन",
+      "selectAll": "सभी चुनें"
+    },
+    "items": {
+      "documents": {
+        "name": "दस्तावेज़",
+        "detail": "फ़ोल्डर • 1 घंटे पहले अपडेट किया गया"
+      },
+      "design": {
+        "name": "डिज़ाइन",
+        "detail": "साझा फ़ोल्डर • कल अपडेट किया गया"
+      },
+      "development": {
+        "name": "डेवलपमेंट",
+        "detail": "फ़ोल्डर • 12 जून 2025 को अपडेट"
+      },
+      "legals": {
+        "name": "लीगल",
+        "detail": "फ़ोल्डर • 10 जून 2025 को अपडेट"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 जून 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 जून 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "ब्रांड एसेट्स",
+        "detail": "फ़ोल्डर • पिछले सप्ताह अपडेट किया गया"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 जून 2025, 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "कैमरा अनुमिति आवश्यक है",
+      "button": "अनुमति दें"
+    },
+    "alerts": {
+      "errorTitle": "कुछ गलत हो गया",
+      "captureFailure": "हम फोटो कैप्चर नहीं कर पाए। कृपया दोबारा प्रयास करें।",
+      "galleryFailure": "हम आपकी गैलरी नहीं खोल पाए। कृपया फिर से प्रयास करें।"
+    },
+    "flash": {
+      "off": "फ़्लैश",
+      "on": "फ़्लैश चालू",
+      "auto": "स्वचालित"
+    },
+    "preview": {
+      "retake": "दोबारा लें",
+      "confirm": "पुष्टि करें"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "किनारा पहचान",
+        "description": "दस्तावेज़ों को स्वतः क्रॉप करें"
+      },
+      "autoEnhance": {
+        "label": "स्वचालित सुधार",
+        "description": "कैप्चर के बाद पढ़ने में आसानी बढ़ाएँ"
+      }
+    },
+    "actions": {
+      "gallery": "गैलरी"
+    }
+  },
+  "preview": {
+    "title": "पूर्वावलोकन",
+    "close": "पूर्वावलोकन बंद करें",
+    "actions": {
+      "comment": "टिप्पणी",
+      "download": "डाउनलोड",
+      "delete": "हटाएँ",
+      "link": "लिंक प्राप्त करें",
+      "share": "साझा करें",
+      "openFolder": "फ़ोल्डर खोलें",
+      "manageAccess": "एक्सेस प्रबंधित करें"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "होम",
+      "shared": "साझा",
+      "scan": "स्कैन",
+      "files": "मेरी फ़ाइलें",
+      "account": "खाता"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "वापसी पर स्वागत है",
+      "subtitle": "लॉगिन करने के लिए अपना ईमेल दर्ज करें",
+      "emailPlaceholder": "अपना ईमेल लिखें",
+      "next": "आगे",
+      "socialGoogle": "Google के साथ जारी रखें",
+      "socialApple": "Apple के साथ जारी रखें",
+      "noAccount": "खाता नहीं है? ",
+      "register": "खाता बनाएं।"
+    },
+    "signup": {
+      "title": "नया खाता बनाएं",
+      "subtitle": "खाता बनाने के लिए विवरण भरें",
+      "fullName": "पूरा नाम",
+      "fullNamePlaceholder": "अपना पूरा नाम लिखें",
+      "email": "ईमेल",
+      "emailPlaceholder": "अपना ईमेल लिखें",
+      "password": "पासवर्ड",
+      "passwordPlaceholder": "पासवर्ड बनाएं",
+      "confirmPassword": "पासवर्ड पुष्टि",
+      "confirmPasswordPlaceholder": "पासवर्ड दोहराएँ",
+      "submit": "साइन अप",
+      "haveAccount": "पहले से खाता है? ",
+      "signIn": "साइन इन"
+    },
+    "password": {
+      "title": "क्या आप Digne हैं? ",
+      "subtitle": "अपने पासवर्ड से पुष्टि करें",
+      "passwordPlaceholder": "अपना पासवर्ड लिखें",
+      "login": "लॉगिन",
+      "forgot": "पासवर्ड भूल गए? ",
+      "reset": "पासवर्ड रीसेट करें"
+    },
+    "passwordReset": {
+      "title": "पासवर्ड भूल गए? ",
+      "subtitle": "ईमेल से रीसेट लिंक प्राप्त करें",
+      "emailPlaceholder": "अपना ईमेल लिखें",
+      "next": "आगे",
+      "remember": "पासवर्ड याद है? ",
+      "login": "लॉगिन"
+    },
+    "otp": {
+      "title": "स्वागत है Digne! ",
+      "subtitle": "ईमेल पर भेजा गया 6-अंकों का कोड दर्ज करें",
+      "placeholder": "000000",
+      "verify": "सत्यापित करें",
+      "noCode": "OTP कोड नहीं मिला? ",
+      "sendAgain": "फिर से भेजें"
+    },
+    "forgetPassword": {
+      "title": "पासवर्ड रीसेट",
+      "subtitle": "अपने खाते से जुड़े ईमेल को दर्ज करें और हम पासवर्ड रीसेट के लिए OTP भेजेंगे।",
+      "email": "ईमेल",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "OTP भेजें",
+      "backToSignIn": "साइन इन पर वापस जाएँ"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "फ़ोल्डर",
+      "subtitle": "अपडेट किया गया {{time}}"
+    },
+    "empty": {
+      "title": "फ़ोल्डर नहीं मिला",
+      "description": "आप जिस फ़ोल्डर को ढूंढ रहे हैं वह स्थानांतरित या हटाया जा सकता है।",
+      "cta": "फ़ोल्डर्स पर वापस जाएँ"
+    },
+    "hero": {
+      "meta": "{{count}} आइटम • {{size}} • मालिक {{owner}}",
+      "invite": "आमंत्रित करें"
+    },
+    "search": {
+      "placeholder": "इस फ़ोल्डर में खोजें"
+    },
+    "sections": {
+      "pinned": {
+        "title": "पिन किए गए",
+        "meta": "{{count}} आइटम"
+      },
+      "allItems": {
+        "title": "सभी आइटम",
+        "meta": "{{count}} कुल"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "पसंदीदा",
+      "activity": "गतिविधि",
+      "security": "सुरक्षा",
+      "forgetPassword": "पासवर्ड रीसेट",
+      "planDetails": "मूल्य निर्धारण",
+      "documentDetails": "दस्तावेज़ विवरण",
+      "upload": "अपलोड"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "सुरक्षा अवलोकन",
+      "description": "डिवाइस साइन-इन, सेशंस देखें और अपने खाते को सुरक्षित करें।",
+      "cta": "सेटिंग्स पर जाएँ"
+    },
+    "sections": {
+      "status": {
+        "title": "स्थिति",
+        "ok": "कोई संदिग्ध गतिविधि नहीं मिली"
+      },
+      "recommended": {
+        "title": "अनुशंसित कार्रवाइयाँ",
+        "items": {
+          "twoFactor": "दो-कारक प्रमाणीकरण सक्षम करें",
+          "thirdParty": "थर्ड-पार्टी इंटीग्रेशन की समीक्षा करें"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "अपना प्लान चुनें"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "मासिक",
+        "annually": "वार्षिक"
+      },
+      "meta": {
+        "monthly": "मासिक बिलिंग",
+        "annually": "वार्षिक बिलिंग"
+      },
+      "period": {
+        "month": "महीना",
+        "year": "वर्ष"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "बेसिक"
+      },
+      "standard": {
+        "title": "स्टैंडर्ड"
+      },
+      "pro": {
+        "title": "प्रो"
+      }
+    },
+    "actions": {
+      "upgrade": "अपग्रेड"
+    }
+  }
+}

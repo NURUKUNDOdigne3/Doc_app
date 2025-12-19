@@ -1,16 +1,28 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
 import { Tabs, useRouter } from "expo-router";
+import { useTranslation } from "react-i18next";
 import { StyleSheet, View } from "react-native";
+
+import { colors } from "../constants/theme";
 
 export default function AppLayout() {
   const router = useRouter();
+  const { t } = useTranslation("navigation");
+
+  const tabTitles = {
+    home: t("tabs.home"),
+    shared: t("tabs.shared"),
+    scan: t("tabs.scan"),
+    files: t("tabs.files"),
+    account: t("tabs.account"),
+  };
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#30a4f4",
-        tabBarInactiveTintColor: "#9CA3AF",
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.textMuted,
         tabBarBackground: () => <View style={styles.tabBarBackground} />,
         tabBarStyle: styles.tabBar,
         tabBarLabelStyle: styles.tabBarLabel,
@@ -20,7 +32,7 @@ export default function AppLayout() {
       <Tabs.Screen
         name="home/index"
         options={{
-          title: "Home",
+          title: tabTitles.home,
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="home" size={size} color={color} />
           ),
@@ -35,7 +47,7 @@ export default function AppLayout() {
       <Tabs.Screen
         name="shared/index"
         options={{
-          title: "Shared",
+          title: tabTitles.shared,
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="group" size={size} color={color} />
           ),
@@ -52,7 +64,7 @@ export default function AppLayout() {
       <Tabs.Screen
         name="scan/index"
         options={{
-          title: "Scan",
+          title: tabTitles.scan,
           tabBarIcon: ({ focused }) => (
             <View
               style={[
@@ -81,7 +93,7 @@ export default function AppLayout() {
       <Tabs.Screen
         name="folders/index"
         options={{
-          title: "My Files",
+          title: tabTitles.files,
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="folder-open" size={size} color={color} />
           ),
@@ -97,7 +109,7 @@ export default function AppLayout() {
       <Tabs.Screen
         name="settings/index"
         options={{
-          title: "Account",
+          title: tabTitles.account,
           tabBarIcon: ({ size, color }) => (
             <MaterialIcons name="account-box" size={size} color={color} />
           ),
@@ -114,7 +126,7 @@ export default function AppLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: "#ffffff",
+    backgroundColor: colors.surface,
     borderTopWidth: 0,
     elevation: 0,
     height: 82,
@@ -132,7 +144,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   tabBarBackground: {
-    backgroundColor: "#ffffff",
+    backgroundColor: colors.surface,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     flex: 1,
@@ -146,11 +158,11 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: "#30a4f4",
+    backgroundColor: colors.primary,
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 20,
-    shadowColor: "#30a4f4",
+    shadowColor: colors.primary,
     shadowOffset: {
       width: 0,
       height: 4,
@@ -160,7 +172,7 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
   centralButtonInactive: {
-    backgroundColor: "#30a4f4",
+    backgroundColor: colors.primary,
     opacity: 1,
     shadowColor: "#000",
     shadowOpacity: 0.15,

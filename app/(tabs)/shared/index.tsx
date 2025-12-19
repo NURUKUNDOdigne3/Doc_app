@@ -1,5 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   FlatList,
   ScrollView,
@@ -20,88 +21,129 @@ import { RecentItemsStrip } from "../../components/RecentItemsStrip";
 import { SearchBar } from "../../components/SearchBar";
 import { colors, spacing, typography } from "../../constants/theme";
 
-const RECENT_SHARED_SOURCE: FilePreviewItem[] = [
+type TimeKey =
+  | "twoHours"
+  | "yesterday"
+  | "twoDays"
+  | "threeDays"
+  | "lastWeek"
+  | "fiveDays"
+  | "today";
+
+type RecentItemDescriptor = {
+  id: string;
+  translationId: string;
+  name: string;
+  type: FilePreviewItem["type"];
+  thumbnail: NonNullable<FilePreviewItem["thumbnail"]>;
+  sharedBy: string;
+  timeKey: TimeKey;
+};
+
+type SharedFolderDescriptor = {
+  id: string;
+  translationId: string;
+  name: string;
+  type: FilePreviewItem["type"];
+  sharedBy: string;
+  timeKey: TimeKey;
+};
+
+type PendingApprovalDescriptor = {
+  id: string;
+  translationId: string;
+  name: string;
+  type: FilePreviewItem["type"];
+  thumbnail?: FilePreviewItem["thumbnail"];
+  sharedBy: string;
+  statusKey: "awaitingReview" | "requestEdit";
+  metaKey: "awaitingReview" | "requestedToday";
+};
+
+const RECENT_SHARED_SOURCE: RecentItemDescriptor[] = [
   {
     id: "recent-1",
+    translationId: "marketingRoadmap",
     name: "Marketing Roadmap.pdf",
     type: "file",
-    detail: "Shared by Alex · 2h ago",
     thumbnail: require("../../../assets/images/pictures/pic1.jpg"),
     sharedBy: "Alex",
-    updatedAt: "2h ago",
+    timeKey: "twoHours",
   },
   {
     id: "recent-2",
+    translationId: "designUpdate",
     name: "Design Update.sketch",
     type: "file",
-    detail: "Shared by Lora · Yesterday",
     thumbnail: require("../../../assets/images/pictures/pic2.jpg"),
     sharedBy: "Lora",
-    updatedAt: "Yesterday",
+    timeKey: "yesterday",
   },
   {
     id: "recent-3",
+    translationId: "quarterReview",
     name: "Quarter Review.pptx",
     type: "file",
-    detail: "Shared by Team Ops · 2 days ago",
     thumbnail: require("../../../assets/images/pictures/pic3.jpg"),
     sharedBy: "Team Ops",
-    updatedAt: "2 days ago",
+    timeKey: "twoDays",
   },
 ];
 
-const SHARED_FOLDERS_SOURCE: FilePreviewItem[] = [
+const SHARED_FOLDERS_SOURCE: SharedFolderDescriptor[] = [
   {
     id: "folder-1",
+    translationId: "campaignAssets",
     name: "Campaign Assets",
     type: "folder",
-    detail: "Shared by Marketing • Updated 3 days ago",
     sharedBy: "Marketing",
-    updatedAt: "3 days ago",
+    timeKey: "threeDays",
   },
   {
     id: "folder-2",
+    translationId: "brandGuidelines",
     name: "Brand Guidelines",
     type: "folder",
-    detail: "Shared by Design • Updated last week",
     sharedBy: "Design",
-    updatedAt: "Last week",
+    timeKey: "lastWeek",
   },
   {
     id: "folder-3",
+    translationId: "productSpecs",
     name: "Product Specs",
     type: "folder",
-    detail: "Shared by PMO • Updated yesterday",
     sharedBy: "PMO",
-    updatedAt: "Yesterday",
+    timeKey: "yesterday",
   },
   {
     id: "folder-4",
+    translationId: "leadership",
     name: "Leadership",
     type: "folder",
-    detail: "Shared by Exec Team • Updated 5 days ago",
     sharedBy: "Exec Team",
-    updatedAt: "5 days ago",
+    timeKey: "fiveDays",
   },
 ];
 
-const PENDING_APPROVALS_SOURCE: FilePreviewItem[] = [
+const PENDING_APPROVALS_SOURCE: PendingApprovalDescriptor[] = [
   {
     id: "pending-1",
+    translationId: "legalAgreement",
     name: "Legal agreement.pdf",
-    detail: "Awaiting your review · Shared by Maya",
     type: "file",
     thumbnail: require("../../../assets/images/pictures/pic1.jpg"),
     sharedBy: "Maya",
-    updatedAt: "Awaiting review",
+    statusKey: "awaitingReview",
+    metaKey: "awaitingReview",
   },
   {
     id: "pending-2",
+    translationId: "designSprint",
     name: "Design sprint notes",
-    detail: "Request to edit · Shared by Darius",
     type: "folder",
     sharedBy: "Darius",
-    updatedAt: "Requested today",
+    statusKey: "requestEdit",
+    metaKey: "requestedToday",
   },
 ];
 
@@ -112,27 +154,96 @@ const COLLAB_AVATARS = [
 ];
 
 export default function SharedScreen() {
+  const { t } = useTranslation("shared");
   const [previewItem, setPreviewItem] = useState<FilePreviewItem | null>(null);
 
-  const recentStripData = useMemo(
-    () =>
-      RECENT_SHARED_SOURCE.map((item) => ({
-        id: item.id,
-        title: item.name,
-        subtitle: item.detail ?? "",
-        thumbnail: item.thumbnail!,
-        onPress: () => setPreviewItem(item),
-      })),
-    []
-  );
+  const recentItems = useMemo(() => {
+    return RECENT_SHARED_SOURCE.map((item) => {
+      const timeLabel = t(`time.${item.timeKey}`);
+      const detail = t(`sections.recent.items.${item.translationId}.detail`, {
+        name: item.sharedBy,
+        time: timeLabel,
+      });
 
-  const handlePreview = (item: FilePreviewItem) => setPreviewItem(item);
+      const preview: FilePreviewItem = {
+        id: item.id,
+        name: item.name,
+        type: item.type,
+        detail,
+        thumbnail: item.thumbnail,
+        sharedBy: t("meta.sharedBy", { name: item.sharedBy }),
+        updatedAt: timeLabel,
+      };
+
+      return {
+        ...item,
+        detail,
+        preview,
+      };
+    });
+  }, [t]);
+
+  const sharedFolders = useMemo(() => {
+    return SHARED_FOLDERS_SOURCE.map((item) => {
+      const timeLabel = t(`time.${item.timeKey}`);
+      const detail = t(
+        `sections.sharedFolders.items.${item.translationId}.detail`,
+        {
+          team: item.sharedBy,
+          time: timeLabel,
+        }
+      );
+
+      const preview: FilePreviewItem = {
+        id: item.id,
+        name: item.name,
+        type: item.type,
+        detail,
+        sharedBy: t("meta.sharedBy", { name: item.sharedBy }),
+        updatedAt: timeLabel,
+      };
+
+      return {
+        ...item,
+        detail,
+        preview,
+      };
+    });
+  }, [t]);
+
+  const pendingApprovals = useMemo(() => {
+    return PENDING_APPROVALS_SOURCE.map((item) => {
+      const statusDetail = t(`status.detail.${item.statusKey}`);
+      const metaStatus = t(`status.meta.${item.metaKey}`);
+      const detail = t(`sections.pending.items.${item.translationId}.detail`, {
+        status: statusDetail,
+        name: item.sharedBy,
+      });
+
+      const preview: FilePreviewItem = {
+        id: item.id,
+        name: item.name,
+        type: item.type,
+        detail,
+        thumbnail: item.thumbnail,
+        sharedBy: t("meta.sharedBy", { name: item.sharedBy }),
+        updatedAt: metaStatus,
+      };
+
+      return {
+        ...item,
+        detail,
+        preview,
+      };
+    });
+  }, [t]);
+
   const closePreview = () => setPreviewItem(null);
 
   return (
     <View style={styles.screen}>
       <Header
-        title="Shared"
+        title={t("header.title")}
         actions={[
           {
             id: "filters",
@@ -148,19 +259,19 @@ export default function SharedScreen() {
       />
       <ScrollView contentContainerStyle={styles.content}>
         <SearchBar
-          placeholder="Search shared items"
+          placeholder={t("search.placeholder")}
           containerStyle={styles.searchBar}
         />
 
         <View style={styles.collabCard}>
           <View style={styles.collabTextBlock}>
-            <Text style={styles.collabTitle}>Work together</Text>
-            <Text style={styles.collabSubtitle}>
-              See who recently shared files with you and manage their access in
-              one place.
-            </Text>
-            <TouchableOpacity style={styles.manageAccessButton}>
-              <Text style={styles.manageAccessLabel}>Manage access</Text>
+            <Text style={styles.collabTitle}>{t("collab.title")}</Text>
+            <Text style={styles.collabSubtitle}>{t("collab.subtitle")}</Text>
+            <TouchableOpacity
+              style={styles.manageAccessButton}
+              activeOpacity={0.85}
+            >
+              <Text style={styles.manageAccessLabel}>{t("collab.cta")}</Text>
             </TouchableOpacity>
           </View>
           <AvatarStack images={COLLAB_AVATARS} size={40} overlap={14} />
@@ -171,10 +282,19 @@ export default function SharedScreen() {
             icon={
               <MaterialIcons name="history" size={24} color={colors.text} />
             }
-            title="Recently shared"
+            title={t("sections.recent.title")}
             linkHref="/activity"
+            linkLabel={t("actions.viewAll")}
           />
-          <RecentItemsStrip data={recentStripData} />
+          <RecentItemsStrip
+            data={recentItems.map((item) => ({
+              id: item.id,
+              title: item.name,
+              subtitle: item.detail,
+              thumbnail: item.thumbnail,
+              onPress: () => setPreviewItem(item.preview),
+            }))}
+          />
         </View>
 
         <View style={styles.sectionCard}>
@@ -186,11 +306,12 @@ export default function SharedScreen() {
                 color={colors.text}
               />
             }
-            title="Shared folders"
+            title={t("sections.sharedFolders.title")}
             linkHref="/folders"
+            linkLabel={t("actions.viewAll")}
           />
           <FlatList
-            data={SHARED_FOLDERS_SOURCE}
+            data={sharedFolders}
             keyExtractor={(item) => item.id}
             numColumns={2}
             columnWrapperStyle={styles.gridRow}
@@ -200,8 +321,8 @@ export default function SharedScreen() {
               <FileGridItem
                 name={item.name}
                 type={item.type}
-                thumbnail={item.thumbnail}
-                onPress={() => handlePreview(item)}
+                thumbnail={item.preview.thumbnail}
+                onPress={() => setPreviewItem(item.preview)}
               />
             )}
           />
@@ -216,17 +337,18 @@ export default function SharedScreen() {
                 color={colors.text}
               />
             }
-            title="Pending approvals"
+            title={t("sections.pending.title")}
             linkHref="/activity"
+            linkLabel={t("actions.viewAll")}
           />
-          {PENDING_APPROVALS_SOURCE.map((item) => (
+          {pendingApprovals.map((item) => (
             <FileItem
               key={item.id}
               name={item.name}
-              detail={item.detail ?? ""}
+              detail={item.detail}
               type={item.type}
-              thumbnail={item.thumbnail}
-              onPress={() => handlePreview(item)}
+              thumbnail={item.preview.thumbnail}
+              onPress={() => setPreviewItem(item.preview)}
             />
           ))}
         </View>
@@ -243,7 +365,7 @@ export default function SharedScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   content: {
     paddingVertical: spacing.md,

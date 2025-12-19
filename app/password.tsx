@@ -1,5 +1,6 @@
 import { Href, Link, useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Image,
   KeyboardAvoidingView,
@@ -15,6 +16,7 @@ import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 import { colors, spacing } from "./constants/theme";
 
 export default function PasswordScreen() {
+  const { t } = useTranslation("auth");
   const router = useRouter();
   const [password, setPassword] = useState("");
 
@@ -31,7 +33,7 @@ export default function PasswordScreen() {
           <View style={styles.heroWrapper}>
             <View style={styles.brandRow}>
               <AntDesign name="cloud" size={28} color={colors.primary} />
-              <Text style={styles.brandName}>Bika</Text>
+              <Text style={styles.brandName}>{t("brand")}</Text>
             </View>
             <Image
               source={require("../assets/images/illustrations/lgoin.png")}
@@ -41,14 +43,12 @@ export default function PasswordScreen() {
           </View>
 
           <View style={styles.loginText}>
-            <Text style={styles.title}>Are You Digne?</Text>
-            <Text style={styles.subtitle}>
-              Confirm yourself by your password
-            </Text>
+            <Text style={styles.title}>{t("password.title")}</Text>
+            <Text style={styles.subtitle}>{t("password.subtitle")}</Text>
           </View>
           <View style={styles.passwordContainer}>
             <TextInput
-              placeholder="Type your password"
+              placeholder={t("password.passwordPlaceholder")}
               placeholderTextColor="#5c5f6e"
               onChangeText={setPassword}
               textContentType="password"
@@ -62,19 +62,20 @@ export default function PasswordScreen() {
               style={styles.nextButton}
             >
               <Text style={{ color: "white", fontSize: 16, fontWeight: 500 }}>
-                Login <FontAwesome6 name="chevron-right" />
+                {t("password.login")} <FontAwesome6 name="chevron-right" />
               </Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Forgotten your password?
+              {t("password.forgot")}
               <Link
                 style={{ color: colors.primary, fontWeight: 700 }}
                 href={passwordResetRoute}
               >
-                {"  "}Reset Password
+                {"  "}
+                {t("password.reset")}
               </Link>
             </Text>
           </View>
@@ -87,7 +88,7 @@ export default function PasswordScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   container: {
     flex: 1,

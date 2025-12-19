@@ -1,6 +1,7 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { useLocalSearchParams, useNavigation } from "expo-router";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   ScrollView,
   StyleSheet,
@@ -12,12 +13,15 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import {
+  CopyText,
   Section,
   SectionRow,
   SETTINGS_MENU_CONFIG,
   SettingsMenuKey,
 } from "../constants/settingsMenu";
 import { colors, spacing, typography } from "../constants/theme";
+import { changeLanguage, LocaleCode } from "../i18n";
+import { LANGUAGES } from "../i18n/languages";
 
 function isSettingsKey(
   value: string | string[] | undefined
@@ -28,6 +32,11 @@ function isSettingsKey(
 type ToggleState = Record<string, boolean>;
 
 type ToggleUpdater = (id: string, value: boolean) => void;
+
+type LanguageRowContext = {
+  selectedLanguage: LocaleCode;
+  onSelectLanguage: (code: LocaleCode) => void;
+};
 
 function accumulateToggleDefaults(state: ToggleState, section: Section) {
   section.rows.forEach((row) => {
@@ -41,6 +50,7 @@ function accumulateToggleDefaults(state: ToggleState, section: Section) {
 export default function SettingsMenuDetailScreen() {
   const params = useLocalSearchParams<{ menu?: string }>();
   const navigation = useNavigation();
+  const { i18n, t } = useTranslation("settingsMenu");
   const menuKey = params.menu;
 
   if (!isSettingsKey(menuKey)) {
@@ -52,9 +62,9 @@ export default function SettingsMenuDetailScreen() {
             size={36}
             color={colors.primary}
           />
-          <Text style={styles.emptyStateTitle}>Missing menu configuration</Text>
+          <Text style={styles.emptyStateTitle}>{t("error.title")}</Text>
           <Text style={styles.emptyStateDescription}>
-            The requested settings page could not be found.
+            {t("error.description")}
           </Text>
         </View>
       </SafeAreaView>
@@ -62,10 +72,42 @@ export default function SettingsMenuDetailScreen() {
   }
 
   const config = SETTINGS_MENU_CONFIG[menuKey];
+  const isLanguageMenu = config.key === "language";
+
+  const normalizeSettingsMenuKey = useCallback((key: string) => {
+    return key.startsWith("settingsMenu.")
+      ? key.slice("settingsMenu.".length)
+      : key;
+  }, []);
+
+  const resolveCopy = useCallback(
+    (copy: CopyText | undefined) => {
+      if (!copy) return "";
+      if (typeof copy === "string") {
+        return copy;
+      }
+      return t(normalizeSettingsMenuKey(copy.key), copy.values);
+    },
+    [normalizeSettingsMenuKey, t]
+  );
+
+  const normalizeLanguage = (code: string): LocaleCode => {
+    const base = code.split("-")[0].toLowerCase();
+    const match = LANGUAGES.find((lang) => lang.code === base);
+    return (match?.code ?? LANGUAGES[0].code) as LocaleCode;
+  };
+
+  const currentLanguage = normalizeLanguage(i18n.language ?? "en");
+  const [pendingLanguage, setPendingLanguage] =
+    useState<LocaleCode>(currentLanguage);
+
+  useEffect(() => {
+    setPendingLanguage(normalizeLanguage(i18n.language ?? "en"));
+  }, [i18n.language]);
 
   useEffect(() => {
     navigation.setOptions({
-      title: config.title,
+      title: resolveCopy(config.title),
       headerTitleStyle: {
         color: colors.text,
         fontWeight: "700",
@@ -75,13 +117,30 @@ export default function SettingsMenuDetailScreen() {
       headerShadowVisible: false,
       headerTitleAlign: "left",
     });
-  }, [config, navigation]);
+  }, [config, navigation, resolveCopy]);
 
   const initialToggleState = useMemo(() => {
     return config.sections.reduce(accumulateToggleDefaults, {} as ToggleState);
   }, [config.sections]);
 
   const [toggles, setToggles] = useState<ToggleState>(initialToggleState);
+
+  const handleSelectLanguage = async (code: LocaleCode) => {
+    setPendingLanguage(code);
+    if (!isLanguageMenu) return;
+    if (code === currentLanguage) return;
+    try {
+      await changeLanguage(code);
+    } catch (error) {
+      console.warn("settings: failed to change language", error);
+    }
+  };
+
+  const handleApplyLanguage = async () => {
+    if (!isLanguageMenu) return;
+    if (pendingLanguage === currentLanguage) return;
+    await changeLanguage(pendingLanguage);
+  };
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["bottom"]}>
@@ -111,10 +170,12 @@ export default function SettingsMenuDetailScreen() {
         {config.sections.map((section) => (
           <View key={section.id} style={styles.sectionCard}>
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>{section.title}</Text>
+              <Text style={styles.sectionTitle}>
+                {resolveCopy(section.title)}
+              </Text>
               {section.description ? (
                 <Text style={styles.sectionDescription}>
-                  {section.description}
+                  {resolveCopy(section.description)}
                 </Text>
               ) : null}
             </View>
@@ -128,8 +189,18 @@ export default function SettingsMenuDetailScreen() {
                     index !== section.rows.length - 1 && styles.rowDivider,
                   ]}
                 >
-                  {renderRow(row, toggles, (id, value) =>
-                    setToggles((prev) => ({ ...prev, [id]: value }))
+                  {renderRow(
+                    row,
+                    toggles,
+                    (id, value) =>
+                      setToggles((prev) => ({ ...prev, [id]: value })),
+                    resolveCopy,
+                    isLanguageMenu
+                      ? {
+                          selectedLanguage: pendingLanguage,
+                          onSelectLanguage: handleSelectLanguage,
+                        }
+                      : undefined
                   )}
                 </View>
               ))}
@@ -139,11 +210,25 @@ export default function SettingsMenuDetailScreen() {
               <View style={styles.sectionFooter}>
                 {section.primaryCta ? (
                   <TouchableOpacity
-                    style={[styles.ctaButton, styles.ctaPrimary]}
+                    style={[
+                      styles.ctaButton,
+                      styles.ctaPrimary,
+                      isLanguageMenu && pendingLanguage === currentLanguage
+                        ? styles.ctaPrimaryDisabled
+                        : null,
+                    ]}
                     activeOpacity={0.85}
+                    disabled={
+                      isLanguageMenu && pendingLanguage === currentLanguage
+                    }
+                    onPress={() => {
+                      if (isLanguageMenu) {
+                        handleApplyLanguage();
+                      }
+                    }}
                   >
                     <Text style={[styles.ctaLabel, styles.ctaLabelPrimary]}>
-                      {section.primaryCta.label}
+                      {resolveCopy(section.primaryCta.label)}
                     </Text>
                   </TouchableOpacity>
                 ) : null}
@@ -153,7 +238,7 @@ export default function SettingsMenuDetailScreen() {
                     activeOpacity={0.85}
                   >
                     <Text style={[styles.ctaLabel, styles.ctaLabelSecondary]}>
-                      {section.secondaryCta.label}
+                      {resolveCopy(section.secondaryCta.label)}
                     </Text>
                   </TouchableOpacity>
                 ) : null}
@@ -169,14 +254,16 @@ export default function SettingsMenuDetailScreen() {
 function renderRow(
   row: SectionRow,
   toggles: ToggleState,
-  onToggleChange: ToggleUpdater
+  onToggleChange: ToggleUpdater,
+  resolveCopy: (copy: CopyText | undefined) => string,
+  languageContext?: LanguageRowContext
 ) {
   switch (row.kind) {
     case "detail":
       return (
         <View style={styles.detailRow}>
           <View>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
             <Text
               style={[
                 styles.detailValue,
@@ -184,7 +271,7 @@ function renderRow(
                 row.accent === "success" && styles.detailValueSuccess,
               ]}
             >
-              {row.value}
+              {resolveCopy(row.value)}
             </Text>
           </View>
           {row.icon ? (
@@ -198,9 +285,11 @@ function renderRow(
       return (
         <View style={styles.toggleRow}>
           <View style={styles.toggleCopy}>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
             {row.description ? (
-              <Text style={styles.toggleDescription}>{row.description}</Text>
+              <Text style={styles.toggleDescription}>
+                {resolveCopy(row.description)}
+              </Text>
             ) : null}
           </View>
           <Switch
@@ -216,9 +305,9 @@ function renderRow(
       return (
         <View style={styles.progressRow}>
           <View style={styles.progressHeader}>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
             <Text style={styles.progressValue}>
-              {row.used} / {row.total} {row.unit}
+              {row.used} / {row.total} {resolveCopy(row.unit)}
             </Text>
           </View>
           <View style={styles.progressTrack}>
@@ -230,8 +319,8 @@ function renderRow(
     case "note":
       return (
         <View style={styles.noteRow}>
-          <Text style={styles.detailLabel}>{row.label}</Text>
-          <Text style={styles.noteBody}>{row.description}</Text>
+          <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
+          <Text style={styles.noteBody}>{resolveCopy(row.description)}</Text>
         </View>
       );
     case "action":
@@ -241,7 +330,7 @@ function renderRow(
             <View style={styles.actionIconCircle}>
               <MaterialIcons name={row.icon} size={20} color={colors.primary} />
             </View>
-            <Text style={styles.detailLabel}>{row.label}</Text>
+            <Text style={styles.detailLabel}>{resolveCopy(row.label)}</Text>
           </View>
           <MaterialIcons
             name="chevron-right"
@@ -250,6 +339,36 @@ function renderRow(
           />
         </TouchableOpacity>
       );
+    case "language-option": {
+      if (!languageContext) {
+        return null;
+      }
+
+      const isSelected = languageContext.selectedLanguage === row.code;
+
+      return (
+        <TouchableOpacity
+          style={[styles.languageRow, isSelected && styles.languageRowSelected]}
+          activeOpacity={0.85}
+          onPress={() => languageContext.onSelectLanguage(row.code)}
+        >
+          <View style={styles.languageCopy}>
+            <Text style={styles.languageLabel}>{resolveCopy(row.label)}</Text>
+            <Text style={styles.languageNative}>
+              {resolveCopy(row.nativeName)}
+            </Text>
+          </View>
+          <View
+            style={[
+              styles.languageRadioOuter,
+              isSelected && styles.languageRadioOuterActive,
+            ]}
+          >
+            {isSelected ? <View style={styles.languageRadioInner} /> : null}
+          </View>
+        </TouchableOpacity>
+      );
+    }
     default:
       return null;
   }
@@ -413,6 +532,9 @@ const styles = StyleSheet.create({
   ctaPrimary: {
     backgroundColor: colors.primary,
   },
+  ctaPrimaryDisabled: {
+    opacity: 0.5,
+  },
   ctaSecondary: {
     borderWidth: 1,
     borderColor: "#d6d8e1",
@@ -426,6 +548,48 @@ const styles = StyleSheet.create({
   },
   ctaLabelSecondary: {
     color: colors.text,
+  },
+  languageRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: spacing.md,
+  },
+  languageRowSelected: {
+    backgroundColor: "rgba(101, 31, 255, 0.08)",
+    borderRadius: 16,
+    paddingHorizontal: spacing.md,
+  },
+  languageCopy: {
+    flex: 1,
+    gap: 4,
+  },
+  languageLabel: {
+    fontSize: typography.body,
+    fontWeight: "600",
+    color: colors.text,
+  },
+  languageNative: {
+    fontSize: typography.body,
+    color: colors.textMuted,
+  },
+  languageRadioOuter: {
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: colors.textMuted,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  languageRadioOuterActive: {
+    borderColor: colors.primary,
+  },
+  languageRadioInner: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: colors.primary,
   },
   emptyState: {
     flex: 1,

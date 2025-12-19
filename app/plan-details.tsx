@@ -1,5 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   ScrollView,
   StyleSheet,
@@ -15,7 +16,7 @@ type BillingCycle = "monthly" | "annually";
 
 type Plan = {
   id: string;
-  title: string;
+  titleKey: string;
   storage: string;
   monthlyPrice: number;
   annualPrice: number;
@@ -23,20 +24,21 @@ type Plan = {
 };
 
 export default function PlanDetailsScreen() {
+  const { t } = useTranslation("planDetails");
   const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly");
 
   const plans = useMemo<Plan[]>(
     () => [
       {
         id: "basic",
-        title: "Basic",
+        titleKey: "plans.basic.title",
         storage: "50GB",
         monthlyPrice: 15000,
         annualPrice: 50000,
       },
       {
         id: "standard",
-        title: "Standard",
+        titleKey: "plans.standard.title",
         storage: "100GB",
         monthlyPrice: 20000,
         annualPrice: 100000,
@@ -44,7 +46,7 @@ export default function PlanDetailsScreen() {
       },
       {
         id: "pro",
-        title: "Pro",
+        titleKey: "plans.pro.title",
         storage: "1TB",
         monthlyPrice: 300000,
         annualPrice: 700000,
@@ -54,7 +56,9 @@ export default function PlanDetailsScreen() {
   );
 
   const billingMeta =
-    billingCycle === "monthly" ? "Billed monthly" : "Billed annually";
+    billingCycle === "monthly"
+      ? t("billing.meta.monthly")
+      : t("billing.meta.annually");
 
   return (
     <SafeAreaView style={styles.safeArea} edges={["left", "right"]}>
@@ -62,17 +66,17 @@ export default function PlanDetailsScreen() {
         contentContainerStyle={styles.content}
         showsVerticalScrollIndicator={false}
       >
-        <Text style={styles.title}>Choose your plan</Text>
+        <Text style={styles.title}>{t("screen.title")}</Text>
 
         <View style={styles.billingToggleWrapper}>
           <View style={styles.billingToggleBackground}>
             <ToggleButton
-              label="Monthly"
+              label={t("billing.cycles.monthly")}
               active={billingCycle === "monthly"}
               onPress={() => setBillingCycle("monthly")}
             />
             <ToggleButton
-              label="Annually"
+              label={t("billing.cycles.annually")}
               active={billingCycle === "annually"}
               onPress={() => setBillingCycle("annually")}
             />
@@ -83,7 +87,10 @@ export default function PlanDetailsScreen() {
           {plans.map((plan, index) => {
             const price =
               billingCycle === "monthly" ? plan.monthlyPrice : plan.annualPrice;
-            const periodLabel = billingCycle === "monthly" ? "month" : "year";
+            const periodLabel =
+              billingCycle === "monthly"
+                ? t("billing.period.month")
+                : t("billing.period.year");
             const isActive = plan.isRecommended;
             const isLast = index === plans.length - 1;
 
@@ -97,7 +104,7 @@ export default function PlanDetailsScreen() {
                 ]}
               >
                 <View style={styles.planHeader}>
-                  <Text style={styles.planName}>{plan.title}</Text>
+                  <Text style={styles.planName}>{t(plan.titleKey)}</Text>
                   <View
                     style={[
                       styles.planStorageBadge,
@@ -124,7 +131,7 @@ export default function PlanDetailsScreen() {
                       isActive && styles.planCtaLabelActive,
                     ]}
                   >
-                    Upgrade
+                    {t("actions.upgrade")}
                   </Text>
                 </TouchableOpacity>
 

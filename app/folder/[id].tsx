@@ -1,5 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { Href, useLocalSearchParams, useRouter } from "expo-router";
+import { useTranslation } from "react-i18next";
 import type { ImageSourcePropType } from "react-native";
 import {
   ScrollView,
@@ -137,6 +138,7 @@ const FOLDER_DIRECTORY: Record<
 export default function FolderDetailScreen() {
   const params = useLocalSearchParams<{ id?: string }>();
   const router = useRouter();
+  const { t } = useTranslation("folderDetail");
 
   const folder = params.id ? FOLDER_DIRECTORY[params.id] : undefined;
 
@@ -152,7 +154,7 @@ export default function FolderDetailScreen() {
     return (
       <View style={styles.screen}>
         <Header
-          title="Folder"
+          title={t("header.title")}
           actions={[
             {
               id: "close",
@@ -164,16 +166,14 @@ export default function FolderDetailScreen() {
           ]}
         />
         <View style={styles.emptyState}>
-          <Text style={styles.emptyTitle}>Folder not found</Text>
-          <Text style={styles.emptySubtitle}>
-            The folder you are looking for might have been moved or deleted.
-          </Text>
+          <Text style={styles.emptyTitle}>{t("empty.title")}</Text>
+          <Text style={styles.emptySubtitle}>{t("empty.description")}</Text>
           <TouchableOpacity
             style={styles.primaryButton}
             activeOpacity={0.85}
             onPress={() => router.replace("/(tabs)/folders" as Href)}
           >
-            <Text style={styles.primaryButtonLabel}>Return to folders</Text>
+            <Text style={styles.primaryButtonLabel}>{t("empty.cta")}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -184,7 +184,7 @@ export default function FolderDetailScreen() {
     <View style={styles.screen}>
       <Header
         title={folder.name}
-        subtitle={`Updated ${folder.updatedAt}`}
+        subtitle={t("header.subtitle", { time: folder.updatedAt })}
         actions={[
           {
             id: "more",
@@ -206,7 +206,11 @@ export default function FolderDetailScreen() {
           <View style={styles.heroText}>
             <Text style={styles.heroTitle}>{folder.name}</Text>
             <Text style={styles.heroMeta}>
-              {folder.filesCount} items · {folder.size} · Owner {folder.owner}
+              {t("hero.meta", {
+                count: folder.filesCount,
+                size: folder.size,
+                owner: folder.owner,
+              })}
             </Text>
             <Text style={styles.heroDescription}>{folder.description}</Text>
           </View>
@@ -217,7 +221,7 @@ export default function FolderDetailScreen() {
               activeOpacity={0.85}
             >
               <MaterialIcons name="add" size={20} color={colors.surface} />
-              <Text style={styles.heroShareLabel}>Invite</Text>
+              <Text style={styles.heroShareLabel}>{t("hero.invite")}</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -257,16 +261,18 @@ export default function FolderDetailScreen() {
         </View>
 
         <SearchBar
-          placeholder="Search within this folder"
+          placeholder={t("search.placeholder")}
           containerStyle={styles.folderSearch}
         />
 
         {folder.pinned?.length ? (
           <View style={styles.sectionCard}>
             <View style={styles.sectionHeader}>
-              <Text style={styles.sectionTitle}>Pinned</Text>
+              <Text style={styles.sectionTitle}>
+                {t("sections.pinned.title")}
+              </Text>
               <Text style={styles.sectionMeta}>
-                {folder.pinned.length} items
+                {t("sections.pinned.meta", { count: folder.pinned.length })}
               </Text>
             </View>
             <View style={styles.pinnedGrid}>
@@ -287,8 +293,12 @@ export default function FolderDetailScreen() {
         ) : null}
 
         <View style={styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>All items</Text>
-          <Text style={styles.sectionMeta}>{folder.filesCount} total</Text>
+          <Text style={styles.sectionTitle}>
+            {t("sections.allItems.title")}
+          </Text>
+          <Text style={styles.sectionMeta}>
+            {t("sections.allItems.meta", { count: folder.filesCount })}
+          </Text>
         </View>
 
         <View style={styles.listContainer}>

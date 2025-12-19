@@ -1,5 +1,6 @@
 import { Href, Link, useRouter } from "expo-router";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Image,
   KeyboardAvoidingView,
@@ -15,6 +16,7 @@ import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 import { colors, spacing } from "./constants/theme";
 
 export default function LoginScreen() {
+  const { t } = useTranslation("auth");
   const router = useRouter();
   const [email, setEmail] = useState("");
 
@@ -31,7 +33,7 @@ export default function LoginScreen() {
           <View style={styles.heroWrapper}>
             <View style={styles.brandRow}>
               <AntDesign name="cloud" size={28} color={colors.primary} />
-              <Text style={styles.brandName}>Bika</Text>
+              <Text style={styles.brandName}>{t("brand")}</Text>
             </View>
             <Image
               source={require("../assets/images/illustrations/lgoin.png")}
@@ -41,14 +43,12 @@ export default function LoginScreen() {
           </View>
 
           <View style={styles.loginText}>
-            <Text style={styles.title}>Welcome Back</Text>
-            <Text style={styles.subtitle}>
-              Please type your email to log in
-            </Text>
+            <Text style={styles.title}>{t("login.title")}</Text>
+            <Text style={styles.subtitle}>{t("login.subtitle")}</Text>
           </View>
           <View style={styles.emailContainer}>
             <TextInput
-              placeholder="Type your e-mail"
+              placeholder={t("login.emailPlaceholder")}
               placeholderTextColor="#5c5f6e"
               textContentType="emailAddress"
               onChangeText={setEmail}
@@ -61,7 +61,7 @@ export default function LoginScreen() {
               style={styles.nextButton}
             >
               <Text style={{ color: "white", fontSize: 16, fontWeight: 500 }}>
-                Next <FontAwesome6 name="chevron-right" />
+                {t("login.next")} <FontAwesome6 name="chevron-right" />
               </Text>
             </TouchableOpacity>
           </View>
@@ -69,24 +69,24 @@ export default function LoginScreen() {
           <View style={styles.socialContainer}>
             <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
               <FontAwesome6 name="google" size={20} color="#000" />
-              <Text style={styles.socialLabel}>Continue with Google</Text>
+              <Text style={styles.socialLabel}>{t("login.socialGoogle")}</Text>
               <View />
             </TouchableOpacity>
             <TouchableOpacity activeOpacity={0.8} style={styles.socialButton}>
               <FontAwesome6 name="apple" size={22} color="#000" />
-              <Text style={styles.socialLabel}>Continue with Apple</Text>
+              <Text style={styles.socialLabel}>{t("login.socialApple")}</Text>
               <View />
             </TouchableOpacity>
           </View>
 
           <View style={styles.footer}>
             <Text style={styles.footerText}>
-              Don't have an account?{" "}
+              {t("login.noAccount")}{" "}
               <Link
                 style={{ color: colors.primary, fontWeight: 700 }}
                 href={signupRoute}
               >
-                Register account.
+                {t("login.register")}
               </Link>
             </Text>
           </View>
@@ -99,7 +99,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   container: {
     flex: 1,

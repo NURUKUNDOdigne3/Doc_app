@@ -1,0 +1,447 @@
+{
+  "common": {
+    "appName": "文档应用",
+    "welcome": "欢迎回来，{{name}}！",
+    "syncing": "正在将文件同步到云端",
+    "synced": "所有文件已同步",
+    "actions": {
+      "seeAll": "查看全部"
+    }
+  },
+  "home": {
+    "title": "首页",
+    "lastActivity": "最近活动：{{timeAgo}}上传了{{count}}张照片",
+    "timeAgoMinutes": "{{count}}分钟前",
+    "storageTitle": "存储",
+    "storageUsage": "已用 {{used}} GB / 共 {{total}} GB",
+    "upgrade": "升级存储",
+    "breakdown": {
+      "photos": "照片",
+      "documents": "文档",
+      "videos": "视频"
+    },
+    "quickActions": {
+      "uploadFiles": {
+        "title": "上传文件",
+        "description": "添加文档和文件"
+      },
+      "uploadPhotos": {
+        "title": "上传照片",
+        "description": "保存你的回忆"
+      },
+      "uploadFolder": {
+        "title": "上传文件夹",
+        "description": "批量上传文件"
+      },
+      "cloudBackup": {
+        "title": "云备份",
+        "description": "自动同步已开启"
+      }
+    },
+    "collections": {
+      "memories": {
+        "title": "回忆",
+        "description": "242 个项目 · 本年度"
+      },
+      "screenshots": {
+        "title": "截图",
+        "description": "48 个项目"
+      },
+      "documents": {
+        "title": "文档",
+        "description": "156 个项目"
+      },
+      "large": {
+        "title": "大型文件",
+        "description": "12 个项目 · 大于 100 MB"
+      }
+    },
+    "statuses": {
+      "deleted": {
+        "title": "已删除",
+        "description": "5 个项目 · 30 天后删除"
+      },
+      "recent": {
+        "title": "最近添加",
+        "description": "18 个项目 · 过去 7 天"
+      }
+    }
+  },
+  "settings": {
+    "screen": {
+      "title": "账户",
+      "planLabel": "免费版",
+      "planUsage": "已用 {{used}} GB / 共 {{total}} GB",
+      "upgradeCta": "升级",
+      "teamTitle": "团队成员",
+      "teamMeta": "{{current}}/{{limit}}",
+      "teamCta": "邀请",
+      "devicesTitle": "设备",
+      "devicesMeta": "{{current}}/{{limit}}",
+      "devicesCta": "管理",
+      "menuTitle": "菜单",
+      "logout": "退出登录"
+    },
+    "menu": {
+      "settings": "设置",
+      "storage": "存储",
+      "billing": "账单",
+      "notification": "通知",
+      "refer": "邀请好友",
+      "language": "语言",
+      "privacy": "隐私",
+      "security": "安全"
+    },
+    "language": {
+      "title": "更改语言",
+      "subtitle": "选择你的语言。",
+      "available": "可用语言",
+      "apply": "应用语言"
+    }
+  },
+  "settingsMenu": {
+    "language": {
+      "title": "更改语言",
+      "subtitle": "选择应用显示的翻译语言。",
+      "sections": {
+        "list": {
+          "title": "可用语言",
+          "description": "选择一种语言应用到整个应用。",
+          "primaryCta": "应用语言"
+        }
+      }
+    }
+  },
+  "shared": {
+    "header": {
+      "title": "共享"
+    },
+    "search": {
+      "placeholder": "搜索共享项目"
+    },
+    "collab": {
+      "title": "协同合作",
+      "subtitle": "查看最近与您共享文件的人，并在一个地方管理他们的访问权限。",
+      "cta": "管理访问"
+    },
+    "actions": {
+      "viewAll": "查看全部"
+    },
+    "time": {
+      "twoHours": "2 小时前",
+      "yesterday": "昨天",
+      "twoDays": "2 天前",
+      "threeDays": "3 天前",
+      "fiveDays": "5 天前",
+      "lastWeek": "上周",
+      "today": "今天"
+    },
+    "meta": {
+      "sharedBy": "由 {{name}} 共享"
+    },
+    "status": {
+      "detail": {
+        "awaitingReview": "等待您的审核",
+        "requestEdit": "请求编辑"
+      },
+      "meta": {
+        "awaitingReview": "等待审核",
+        "requestedToday": "今日请求"
+      }
+    },
+    "sections": {
+      "recent": {
+        "title": "最近共享",
+        "items": {
+          "marketingRoadmap": {
+            "detail": "由 {{name}} 共享 · {{time}}"
+          },
+          "designUpdate": {
+            "detail": "由 {{name}} 共享 · {{time}}"
+          },
+          "quarterReview": {
+            "detail": "由 {{name}} 共享 · {{time}}"
+          }
+        }
+      },
+      "sharedFolders": {
+        "title": "共享文件夹",
+        "items": {
+          "campaignAssets": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          },
+          "brandGuidelines": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          },
+          "productSpecs": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          },
+          "leadership": {
+            "detail": "由 {{team}} 共享 • 更新于 {{time}}"
+          }
+        }
+      },
+      "pending": {
+        "title": "待审批",
+        "items": {
+          "legalAgreement": {
+            "detail": "{{status}} · 由 {{name}} 共享"
+          },
+          "designSprint": {
+            "detail": "{{status}} · 由 {{name}} 共享"
+          }
+        }
+      }
+    }
+  },
+  "folders": {
+    "header": {
+      "title": "我的文件"
+    },
+    "toolbar": {
+      "sort": "最后修改",
+      "selectAll": "全选"
+    },
+    "items": {
+      "documents": {
+        "name": "文档",
+        "detail": "文件夹 • 1 小时前更新"
+      },
+      "design": {
+        "name": "设计",
+        "detail": "共享文件夹 • 昨日更新"
+      },
+      "development": {
+        "name": "开发",
+        "detail": "文件夹 • 2025 年 6 月 12 日更新"
+      },
+      "legals": {
+        "name": "法务",
+        "detail": "文件夹 • 2025 年 6 月 10 日更新"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 2025 年 6 月 8 日 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 2025 年 6 月 6 日 11:22"
+      },
+      "brandAssets": {
+        "name": "品牌资产",
+        "detail": "文件夹 • 上周更新"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 2025 年 6 月 3 日 14:32"
+      }
+    }
+  },
+  "scan": {
+    "permission": {
+      "message": "需要相机权限",
+      "button": "允许访问"
+    },
+    "alerts": {
+      "errorTitle": "出现问题",
+      "captureFailure": "无法拍摄此照片，请重试。",
+      "galleryFailure": "无法打开相册，请稍后再试。"
+    },
+    "flash": {
+      "off": "闪光灯",
+      "on": "闪光灯已开",
+      "auto": "自动"
+    },
+    "preview": {
+      "retake": "重新拍摄",
+      "confirm": "确认"
+    },
+    "controls": {
+      "edgeDetection": {
+        "label": "边缘检测",
+        "description": "自动裁剪文档"
+      },
+      "autoEnhance": {
+        "label": "自动增强",
+        "description": "拍摄后提升可读性"
+      }
+    },
+    "actions": {
+      "gallery": "相册"
+    }
+  },
+  "preview": {
+    "title": "预览",
+    "close": "关闭预览",
+    "actions": {
+      "comment": "评论",
+      "download": "下载",
+      "delete": "删除",
+      "link": "获取链接",
+      "share": "分享",
+      "openFolder": "打开文件夹",
+      "manageAccess": "管理访问"
+    }
+  },
+  "auth": {
+    "brand": "Bika",
+    "login": {
+      "title": "欢迎回来",
+      "subtitle": "请输入邮箱以登录",
+      "emailPlaceholder": "输入邮箱",
+      "next": "下一步",
+      "socialGoogle": "使用 Google 继续",
+      "socialApple": "使用 Apple 继续",
+      "noAccount": "还没有账号？",
+      "register": "注册账号。"
+    },
+    "signup": {
+      "title": "创建新账号",
+      "subtitle": "请填写信息以创建账号",
+      "fullName": "姓名",
+      "fullNamePlaceholder": "输入你的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "输入你的邮箱",
+      "password": "密码",
+      "passwordPlaceholder": "创建密码",
+      "confirmPassword": "确认密码",
+      "confirmPasswordPlaceholder": "再次输入密码",
+      "submit": "注册",
+      "haveAccount": "已有账号？",
+      "signIn": "登录"
+    },
+    "password": {
+      "title": "你是 Digne 吗？",
+      "subtitle": "请输入密码确认身份",
+      "passwordPlaceholder": "输入密码",
+      "login": "登录",
+      "forgot": "忘记密码？",
+      "reset": "重置密码"
+    },
+    "passwordReset": {
+      "title": "忘记密码？",
+      "subtitle": "通过邮箱获取重置链接",
+      "emailPlaceholder": "输入邮箱",
+      "next": "下一步",
+      "remember": "记得密码？",
+      "login": "登录"
+    },
+    "otp": {
+      "title": "欢迎 Digne！",
+      "subtitle": "请输入发送到邮箱的 6 位验证码",
+      "placeholder": "000000",
+      "verify": "验证",
+      "noCode": "没有收到 OTP？",
+      "sendAgain": "重新发送"
+    },
+    "forgetPassword": {
+      "title": "重置密码",
+      "subtitle": "输入与你的账号关联的邮箱，我们将发送 OTP 用于重置密码。",
+      "email": "邮箱",
+      "emailPlaceholder": "you@example.com",
+      "sendOtp": "发送 OTP",
+      "backToSignIn": "返回登录"
+    }
+  },
+  "folderDetail": {
+    "header": {
+      "title": "文件夹",
+      "subtitle": "更新于 {{time}}"
+    },
+    "empty": {
+      "title": "未找到文件夹",
+      "description": "你要查找的文件夹可能已被移动或删除。",
+      "cta": "返回文件夹"
+    },
+    "hero": {
+      "meta": "{{count}} 项 • {{size}} • 所有者 {{owner}}",
+      "invite": "邀请"
+    },
+    "search": {
+      "placeholder": "在此文件夹中搜索"
+    },
+    "sections": {
+      "pinned": {
+        "title": "已置顶",
+        "meta": "{{count}} 项"
+      },
+      "allItems": {
+        "title": "全部项目",
+        "meta": "共 {{count}} 项"
+      }
+    }
+  },
+  "stack": {
+    "titles": {
+      "favourites": "收藏",
+      "activity": "活动",
+      "security": "安全",
+      "forgetPassword": "重置密码",
+      "planDetails": "价格",
+      "documentDetails": "文档详情",
+      "upload": "上传"
+    }
+  },
+  "security": {
+    "screen": {
+      "title": "安全概览",
+      "description": "查看设备登录与会话，并加强你的账户安全。",
+      "cta": "前往设置"
+    },
+    "sections": {
+      "status": {
+        "title": "状态",
+        "ok": "未检测到可疑活动"
+      },
+      "recommended": {
+        "title": "推荐操作",
+        "items": {
+          "twoFactor": "启用双重验证",
+          "thirdParty": "检查第三方集成"
+        }
+      }
+    }
+  },
+  "planDetails": {
+    "screen": {
+      "title": "选择你的方案"
+    },
+    "billing": {
+      "cycles": {
+        "monthly": "按月",
+        "annually": "按年"
+      },
+      "meta": {
+        "monthly": "按月计费",
+        "annually": "按年计费"
+      },
+      "period": {
+        "month": "月",
+        "year": "年"
+      }
+    },
+    "plans": {
+      "basic": {
+        "title": "基础"
+      },
+      "standard": {
+        "title": "标准"
+      },
+      "pro": {
+        "title": "专业"
+      }
+    },
+    "actions": {
+      "upgrade": "升级"
+    }
+  },
+  "navigation": {
+    "tabs": {
+      "home": "首页",
+      "shared": "共享",
+      "scan": "扫描",
+      "files": "我的文件",
+      "account": "账户"
+    }
+  }
+}
