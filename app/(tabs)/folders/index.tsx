@@ -1,6 +1,8 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { Checkbox } from "expo-checkbox";
 import { Href, useRouter } from "expo-router";
+import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   FlatList,
   ImageSourcePropType,
@@ -11,7 +13,6 @@ import {
 } from "react-native";
 
 import { Header } from "@/app/components/Header";
-import { useState } from "react";
 import { FileGridItem } from "../../components/FileGridItem";
 import type { FileItemType } from "../../components/FileItem";
 import { FileItem } from "../../components/FileItem";
@@ -19,73 +20,80 @@ import type { FilePreviewItem } from "../../components/FilePreviewModal";
 import { FilePreviewModal } from "../../components/FilePreviewModal";
 import { colors, spacing } from "../../constants/theme";
 
-type FileEntry = {
+type FileDescriptor = {
   id: string;
-  name: string;
-  detail: string;
+  translationId: string;
   type: FileItemType;
   thumbnail?: ImageSourcePropType;
 };
 
-const FILE_ITEMS: FileEntry[] = [
+type LocalizedFileItem = FileDescriptor & {
+  name: string;
+  detail: string;
+};
+
+const FILE_DESCRIPTORS: FileDescriptor[] = [
   {
     id: "1",
-    name: "Documents",
-    detail: "Folder · Updated 1 hour ago",
+    translationId: "documents",
     type: "folder",
   },
   {
     id: "2",
-    name: "Design",
-    detail: "Shared folder · Updated yesterday",
+    translationId: "design",
     type: "folder",
   },
   {
     id: "3",
-    name: "Development",
-    detail: "Folder · Updated 12 Jun. 2025",
+    translationId: "development",
     type: "folder",
   },
   {
     id: "4",
-    name: "Legals",
-    detail: "Folder · Updated 10 Jun. 2025",
+    translationId: "legals",
     type: "folder",
   },
   {
     id: "5",
-    name: "Construct contract.docx",
-    detail: "1.8 MB · 08 Jun. 2025, 16:04",
+    translationId: "constructContract",
     type: "file",
     thumbnail: require("../../../assets/images/pictures/pic1.jpg"),
   },
   {
     id: "6",
-    name: "Salary Sheet.xlsx",
-    detail: "2.4 MB · 06 Jun. 2025, 11:22",
+    translationId: "salarySheet",
     type: "file",
     thumbnail: require("../../../assets/images/pictures/pic2.jpg"),
   },
   {
     id: "7",
-    name: "Brand Assets",
-    detail: "Folder · Updated last week",
+    translationId: "brandAssets",
     type: "folder",
   },
   {
     id: "8",
-    name: "Project Brief.pdf",
-    detail: "1.2 MB · 03 Jun. 2025, 14:32",
+    translationId: "projectBrief",
     type: "file",
     thumbnail: require("../../../assets/images/pictures/pic3.jpg"),
   },
 ];
 
 export default function F() {
+  const { t } = useTranslation("folders");
   const [isChecked, setIsChecked] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "grid">("list");
   const [previewItem, setPreviewItem] = useState<FilePreviewItem | null>(null);
   const router = useRouter();
+
+  const items = useMemo<LocalizedFileItem[]>(
+    () =>
+      FILE_DESCRIPTORS.map((descriptor) => ({
+        ...descriptor,
+        name: t(`items.${descriptor.translationId}.name`),
+        detail: t(`items.${descriptor.translationId}.detail`),
+      })),
+    [t]
+  );
 
   const isGrid = viewMode === "grid";
 
@@ -100,7 +108,7 @@ export default function F() {
     router.push(`/folder/${id}` as Href);
   };
 
-  const handlePreview = (item: FileEntry) => {
+  const handlePreview = (item: LocalizedFileItem) => {
     setPreviewItem({
       id: item.id,
       name: item.name,
@@ -112,7 +120,7 @@ export default function F() {
 
   const closePreview = () => setPreviewItem(null);
 
-  const renderItem = ({ item }: { item: FileEntry }) => {
+  const renderItem = ({ item }: { item: LocalizedFileItem }) => {
     if (isGrid) {
       return (
         <FileGridItem
@@ -138,7 +146,7 @@ export default function F() {
   return (
     <View style={styles.screen}>
       <Header
-        title="Files"
+        title={t("header.title")}
         actions={[
           {
             id: "notifications",
@@ -172,12 +180,12 @@ export default function F() {
             size={18}
             color={colors.textMuted}
           />
-          <Text style={styles.sortLabel}>Last modified</Text>
+          <Text style={styles.sortLabel}>{t("toolbar.sort")}</Text>
         </View>
 
         <View style={styles.actionsRow}>
           <View style={styles.selectControl}>
-            <Text style={styles.selectLabel}>Select all</Text>
+            <Text style={styles.selectLabel}>{t("toolbar.selectAll")}</Text>
             <Checkbox
               value={isChecked}
               onValueChange={setIsChecked}
@@ -203,7 +211,7 @@ export default function F() {
       </View>
       <FlatList
         key={viewMode}
-        data={FILE_ITEMS}
+        data={items}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         numColumns={isGrid ? 2 : 1}
@@ -234,7 +242,7 @@ export default function F() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: colors.background,
   },
   content: {
     paddingVertical: spacing.md,

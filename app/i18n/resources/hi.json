@@ -178,6 +178,49 @@
       }
     }
   },
+  "folders": {
+    "header": {
+      "title": "मेरी फ़ाइलें"
+    },
+    "toolbar": {
+      "sort": "अंतिम संशोधन",
+      "selectAll": "सभी चुनें"
+    },
+    "items": {
+      "documents": {
+        "name": "दस्तावेज़",
+        "detail": "फ़ोल्डर • 1 घंटे पहले अपडेट किया गया"
+      },
+      "design": {
+        "name": "डिज़ाइन",
+        "detail": "साझा फ़ोल्डर • कल अपडेट किया गया"
+      },
+      "development": {
+        "name": "डेवलपमेंट",
+        "detail": "फ़ोल्डर • 12 जून 2025 को अपडेट"
+      },
+      "legals": {
+        "name": "लीगल",
+        "detail": "फ़ोल्डर • 10 जून 2025 को अपडेट"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 जून 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 जून 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "ब्रांड एसेट्स",
+        "detail": "फ़ोल्डर • पिछले सप्ताह अपडेट किया गया"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 जून 2025, 14:32"
+      }
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "होम",

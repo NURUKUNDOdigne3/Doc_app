@@ -178,6 +178,49 @@
       }
     }
   },
+  "folders": {
+    "header": {
+      "title": "ፋይሎቼ"
+    },
+    "toolbar": {
+      "sort": "መጨረሻ የተቀየረው",
+      "selectAll": "ሁሉንም ምረጥ"
+    },
+    "items": {
+      "documents": {
+        "name": "ሰነዶች",
+        "detail": "ፎልደር • 1 ሰዓት በፊት ታድሷል"
+      },
+      "design": {
+        "name": "ዲዛይን",
+        "detail": "የተጋራ ፎልደር • ትናንት ታድሷል"
+      },
+      "development": {
+        "name": "ልማት",
+        "detail": "ፎልደር • 12 ሰኔ 2025 ታድሷል"
+      },
+      "legals": {
+        "name": "ህጋዊ",
+        "detail": "ፎልደር • 10 ሰኔ 2025 ታድሷል"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 ሰኔ 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 ሰኔ 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "የብራንድ ንብረቶች",
+        "detail": "ፎልደር • ባለፈው ሳምንት ዘመነ"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 ሰኔ 2025, 14:32"
+      }
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "መነሻ",

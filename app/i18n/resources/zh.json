@@ -178,6 +178,49 @@
       }
     }
   },
+  "folders": {
+    "header": {
+      "title": "我的文件"
+    },
+    "toolbar": {
+      "sort": "最后修改",
+      "selectAll": "全选"
+    },
+    "items": {
+      "documents": {
+        "name": "文档",
+        "detail": "文件夹 • 1 小时前更新"
+      },
+      "design": {
+        "name": "设计",
+        "detail": "共享文件夹 • 昨日更新"
+      },
+      "development": {
+        "name": "开发",
+        "detail": "文件夹 • 2025 年 6 月 12 日更新"
+      },
+      "legals": {
+        "name": "法务",
+        "detail": "文件夹 • 2025 年 6 月 10 日更新"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 2025 年 6 月 8 日 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 2025 年 6 月 6 日 11:22"
+      },
+      "brandAssets": {
+        "name": "品牌资产",
+        "detail": "文件夹 • 上周更新"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 2025 年 6 月 3 日 14:32"
+      }
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "首页",

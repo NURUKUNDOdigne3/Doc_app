@@ -168,6 +168,49 @@
       }
     }
   },
+  "folders": {
+    "header": {
+      "title": "ملفاتي"
+    },
+    "toolbar": {
+      "sort": "آخر تعديل",
+      "selectAll": "تحديد الكل"
+    },
+    "items": {
+      "documents": {
+        "name": "المستندات",
+        "detail": "مجلد • تم التحديث قبل ساعة"
+      },
+      "design": {
+        "name": "التصميم",
+        "detail": "مجلد مشترك • تم التحديث أمس"
+      },
+      "development": {
+        "name": "التطوير",
+        "detail": "مجلد • تم التحديث في 12 يونيو 2025"
+      },
+      "legals": {
+        "name": "قانوني",
+        "detail": "مجلد • تم التحديث في 10 يونيو 2025"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1.8 MB • 08 يونيو 2025، 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2.4 MB • 06 يونيو 2025، 11:22"
+      },
+      "brandAssets": {
+        "name": "أصول العلامة التجارية",
+        "detail": "مجلد • تم التحديث الأسبوع الماضي"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1.2 MB • 03 يونيو 2025، 14:32"
+      }
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "الرئيسية",

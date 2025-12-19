@@ -15,9 +15,11 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { router } from "expo-router";
+import { useTranslation } from "react-i18next";
 import { colors, spacing, typography } from "../../constants/theme";
 
 export default function ScanScreen() {
+  const { t } = useTranslation("scan");
   const navigation = useNavigation();
   const cameraRef = useRef<CameraView>(null);
   const [permission, requestPermission] = useCameraPermissions();
@@ -53,7 +55,7 @@ export default function ScanScreen() {
       // @ts-ignore
       setCapturedImage(photo.uri);
     } catch (error) {
-      Alert.alert("Error", "Failed to capture image");
+      Alert.alert(t("alerts.errorTitle"), t("alerts.captureFailure"));
       console.error(error);
     } finally {
       setIsCapturing(false);
@@ -82,7 +84,7 @@ export default function ScanScreen() {
         setCapturedImage(result.assets[0].uri);
       }
     } catch (error) {
-      Alert.alert("Error", "Failed to pick image from gallery");
+      Alert.alert(t("alerts.errorTitle"), t("alerts.galleryFailure"));
       console.error(error);
     }
   };
@@ -93,21 +95,23 @@ export default function ScanScreen() {
   };
 
   const getFlashLabel = () => {
-    if (flashMode === "off") return "Flash";
-    if (flashMode === "on") return "On";
-    return "Auto";
+    if (flashMode === "off") return t("flash.off");
+    if (flashMode === "on") return t("flash.on");
+    return t("flash.auto");
   };
 
   if (!permission?.granted) {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.permissionContainer}>
-          <Text style={styles.permissionText}>Camera permission required</Text>
+          <Text style={styles.permissionText}>{t("permission.message")}</Text>
           <TouchableOpacity
             style={styles.permissionButton}
             onPress={requestPermission}
           >
-            <Text style={styles.permissionButtonText}>Grant Permission</Text>
+            <Text style={styles.permissionButtonText}>
+              {t("permission.button")}
+            </Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -130,7 +134,7 @@ export default function ScanScreen() {
               onPress={handleRetake}
             >
               <Text style={[styles.previewButtonText, styles.retakeButtonText]}>
-                Retake
+                {t("preview.retake")}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -140,7 +144,7 @@ export default function ScanScreen() {
               <Text
                 style={[styles.previewButtonText, styles.confirmButtonText]}
               >
-                Confirm
+                {t("preview.confirm")}
               </Text>
             </TouchableOpacity>
           </View>
@@ -190,9 +194,11 @@ export default function ScanScreen() {
           <View style={styles.controlsCard}>
             <View style={styles.toggleRow}>
               <View style={styles.toggleCopy}>
-                <Text style={styles.toggleLabel}>Edge detection</Text>
+                <Text style={styles.toggleLabel}>
+                  {t("controls.edgeDetection.label")}
+                </Text>
                 <Text style={styles.toggleHint}>
-                  Automatically crop documents
+                  {t("controls.edgeDetection.description")}
                 </Text>
               </View>
               <Switch
@@ -204,9 +210,11 @@ export default function ScanScreen() {
             </View>
             <View style={styles.toggleRow}>
               <View style={styles.toggleCopy}>
-                <Text style={styles.toggleLabel}>Auto enhance</Text>
+                <Text style={styles.toggleLabel}>
+                  {t("controls.autoEnhance.label")}
+                </Text>
                 <Text style={styles.toggleHint}>
-                  Improve readability after capture
+                  {t("controls.autoEnhance.description")}
                 </Text>
               </View>
               <Switch
@@ -225,7 +233,7 @@ export default function ScanScreen() {
               activeOpacity={0.85}
               onPress={handleGallery}
             >
-              <Text style={styles.actionLabel}>Gallery</Text>
+              <Text style={styles.actionLabel}>{t("actions.gallery")}</Text>
             </TouchableOpacity>
             <View style={styles.captureWrapper}>
               <TouchableOpacity

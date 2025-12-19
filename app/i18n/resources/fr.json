@@ -178,6 +178,49 @@
       }
     }
   },
+  "folders": {
+    "header": {
+      "title": "Mes fichiers"
+    },
+    "toolbar": {
+      "sort": "Dernière modification",
+      "selectAll": "Tout sélectionner"
+    },
+    "items": {
+      "documents": {
+        "name": "Documents",
+        "detail": "Dossier • Mis à jour il y a 1 heure"
+      },
+      "design": {
+        "name": "Design",
+        "detail": "Dossier partagé • Mis à jour hier"
+      },
+      "development": {
+        "name": "Développement",
+        "detail": "Dossier • Mis à jour le 12 juin 2025"
+      },
+      "legals": {
+        "name": "Juridique",
+        "detail": "Dossier • Mis à jour le 10 juin 2025"
+      },
+      "constructContract": {
+        "name": "Construct contract.docx",
+        "detail": "1,8 Mo • 08 juin 2025, 16:04"
+      },
+      "salarySheet": {
+        "name": "Salary Sheet.xlsx",
+        "detail": "2,4 Mo • 06 juin 2025, 11:22"
+      },
+      "brandAssets": {
+        "name": "Ressources de marque",
+        "detail": "Dossier • Mis à jour la semaine dernière"
+      },
+      "projectBrief": {
+        "name": "Project Brief.pdf",
+        "detail": "1,2 Mo • 03 juin 2025, 14:32"
+      }
+    }
+  },
   "navigation": {
     "tabs": {
       "home": "Accueil",

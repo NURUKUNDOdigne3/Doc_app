@@ -1,3 +1,4 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Localization from "expo-localization";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
@@ -28,6 +29,10 @@ const resources: ResourceMap = {
 };
 
 const supportedCodes = LANGUAGES.map((language) => language.code);
+const LANGUAGE_STORAGE_KEY = "@doc-app/language";
+
+const isSupportedLanguage = (code: string): code is LocaleCode =>
+  supportedCodes.includes(code as LocaleCode);
 
 const resolveInitialLanguage = (): LocaleCode => {
   const locales = Localization.getLocales();
@@ -66,6 +71,19 @@ if (!i18n.isInitialized) {
       escapeValue: false,
     },
   });
+
+  void (async () => {
+    try {
+      const persistedCode = await AsyncStorage.getItem(LANGUAGE_STORAGE_KEY);
+      if (persistedCode && isSupportedLanguage(persistedCode)) {
+        if (i18n.language !== persistedCode) {
+          await i18n.changeLanguage(persistedCode);
+        }
+      }
+    } catch (error) {
+      console.warn("i18n: failed to load persisted language", error);
+    }
+  })();
 }
 
 export const changeLanguage = async (code: LocaleCode) => {
@@ -73,7 +91,15 @@ export const changeLanguage = async (code: LocaleCode) => {
     return;
   }
 
-  await i18n.changeLanguage(code);
+  if (i18n.language !== code) {
+    await i18n.changeLanguage(code);
+  }
+
+  try {
+    await AsyncStorage.setItem(LANGUAGE_STORAGE_KEY, code);
+  } catch (error) {
+    console.warn("i18n: failed to persist language", error);
+  }
 };
 
 export { i18n };
